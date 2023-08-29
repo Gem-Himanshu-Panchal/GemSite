@@ -49,7 +49,10 @@
 		"BenefitsSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H1' aaname='Benefits We Offer' />",
 	"benefitsSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='Benefits_benefitHeading__jcvcu' aaname='{value}' />",
 	
+	"benefitsClubs":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H1' aaname='{value}' />",
+	"benefitsPara" : "<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' idx='1' />",
 	"Followbtn":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl parentclass='Instagram_followIconWrapper__UDgVm' />",
+	"careersValues": "<webctrl aaname='{value}' />",
 
 	"Instagrmaheading":"<html app='chrome.exe' title='Gemini Solutions (@gemini.solutions) • Instagram photos and videos' /><webctrl aria-label='Instagram' />",
 	"SolutionsOption":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='LI' innertext='Solutions' />",
@@ -62,7 +65,7 @@
 	"AddressBar":"<wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /><ctrl name='Address and search bar' role='editable text' />",
 		"CareersMenu":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='LI' innertext='Careers' />",
 		"ContactMenu":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='Contact ' tag='A' />",
-	"ContactHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' class='CaseStudy_heading__A9PDh mb-4' />",
+	"ContactHeading":"<webctrl tag='P' class='CaseStudy_heading__A9PDh mb-4' />",
 	
 	"SearchIcon":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl parentclass='search_icon flex-center' />",
 	"SearchInputbox":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='global-search-input-container' />",
