@@ -57,6 +57,7 @@
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
@@ -150,11 +151,7 @@
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1248" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="element">
-                        <Variable.Default>
-                          <Literal x:TypeArguments="x:String">Career</Literal>
-                        </Variable.Default>
-                      </Variable>
+                      <Variable x:TypeArguments="x:String" Default="Career" Name="element" />
                       <Variable x:TypeArguments="x:String" Name="Gem" />
                       <Variable x:TypeArguments="x:String" Name="URL" />
                       <Variable x:TypeArguments="x:String" Name="Careers" />

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Footer" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1337.3333333333333,4224" sap2010:WorkflowViewState.IdRef="Footer_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Footer" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1524,4165" sap2010:WorkflowViewState.IdRef="Footer_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
       <x:String>System.Activities</x:String>
@@ -106,7 +106,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Footer" sap:VirtualizedContainerService.HintSize="1347.3333333333333,4159.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Footer" sap:VirtualizedContainerService.HintSize="1347,4100" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ggm:GlobalConfig" Name="GlobalConf" />
       <Variable x:TypeArguments="ggm:SelectorMap" Name="SelectorMap" />
@@ -117,14 +117,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="1285.3333333333333,136" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Footer" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1285.3333333333333,3746" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="36be8d42-3e42-4971-b3cf-6d56027f9d6a" Version="V2">
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="1285,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Footer" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1285,3689" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="36be8d42-3e42-4971-b3cf-6d56027f9d6a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1251.3333333333333,3526.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1251,3472" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Flag" />
             </Sequence.Variables>
@@ -133,7 +133,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="1189.3333333333333,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="1189,82" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
               </Assign.To>
@@ -141,7 +141,7 @@
                 <InArgument x:TypeArguments="x:String">true</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NMouseScroll KeyModifiers="{x:Null}" DelayAfter="5" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="1189.3333333333333,240.66666666666666" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+            <uix:NMouseScroll KeyModifiers="{x:Null}" DelayAfter="5" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="1189,237" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
               <uix:NMouseScroll.SearchedElement>
                 <uix:SearchedElement>
                   <uix:SearchedElement.Target>
@@ -153,13 +153,13 @@
                 </uix:SearchedElement>
               </uix:NMouseScroll.SearchedElement>
             </uix:NMouseScroll>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1189.3333333333333,2190" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[TestData(0).ToArray]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1189,2143" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[TestData(0).ToArray]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1152.6666666666667,2061.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1118,1957" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="element" />
                     </Sequence.Variables>
@@ -168,7 +168,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="1090.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="1076,82" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[element]</OutArgument>
                       </Assign.To>
@@ -176,9 +176,9 @@
                         <InArgument x:TypeArguments="x:String">[SelectorMap("FooterLinks").ToString.Replace("{value}",currentItem.ToString)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1090.6666666666667,1820" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1076,1747" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5" Version="V3">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="636.6666666666666,1598.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="572,1530" sap2010:WorkflowViewState.IdRef="Sequence_2">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="Link" />
                             <Variable x:TypeArguments="x:String" Name="URL" />
@@ -188,32 +188,32 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="574.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
+                          <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[element]" Guid="aab3da51-c4ea-4209-b3c2-19b16090586f" SearchSteps="Selector" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <Assign sap:VirtualizedContainerService.HintSize="574.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_2">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[Link]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[currentItem.ToString.ToLower.Trim.Replace("digital offerings","digital transformation").Replace("cloud services &amp;amp; solutions","cloud-solutions").Replace("contact us","contact").Replace("meet our team","team").Replace("infrastructure","Infrastructure-services").Replace("@"," at ").Replace(" ","-").Replace("&amp;amp;","and")]</InArgument>
+                              <InArgument x:TypeArguments="x:String">[currentItem.ToString.ToLower.Trim.Replace("cloud services &amp;amp; solutions","cloud-solutions").Replace("contact us","contact").Replace("meet our team","team").Replace("technical infrastructure","Infrastructure-services").Replace("Quality Engineering","qa-coe").Replace("@"," at ").Replace(" ","-").Replace("&amp;amp;","and")]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <uix:NGetUrl CurrentUrl="[URL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="574.6666666666666,89.33333333333333" sap2010:WorkflowViewState.IdRef="NGetUrl_2" Version="V3" />
-                          <uix:NNavigateBrowser DisplayName="Navigate Browser - Go Back" sap:VirtualizedContainerService.HintSize="574.6666666666666,84.66666666666667" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" Version="V3" />
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="574.6666666666666,92" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[Link]" />
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="574.6666666666666,92" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[URL]" />
-                          <If Condition="[URL.Contains(Link)]" sap:VirtualizedContainerService.HintSize="574.6666666666666,640" sap2010:WorkflowViewState.IdRef="If_1">
+                          <uix:NGetUrl CurrentUrl="[URL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="NGetUrl_2" Version="V3" />
+                          <uix:NNavigateBrowser DisplayName="Navigate Browser - Go Back" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" Version="V3" />
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[Link]" />
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[URL]" />
+                          <If Condition="[URL.Contains(Link)]" sap:VirtualizedContainerService.HintSize="510,587" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
                                   </Assign.To>
@@ -224,13 +224,13 @@
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence sap:VirtualizedContainerService.HintSize="496,261.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <Sequence sap:VirtualizedContainerService.HintSize="476,235" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
                                   </Assign.To>
@@ -238,20 +238,20 @@
                                     <InArgument x:TypeArguments="x:String">false</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:Break sap:VirtualizedContainerService.HintSize="434,25.333333333333332" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_1" />
                               </Sequence>
                             </If.Else>
                           </If>
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,301.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,296" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Click on footer link" TestStepDesciption="[currentItem.ToString +&quot; is not present&quot;]" TestStepStatus="PASS" />
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="388,181" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Click on footer link" TestStepDesciption="[currentItem.ToString +&quot; is not present&quot;]" TestStepStatus="PASS" />
                         </Sequence>
                       </uix:NCheckState.IfNotExists>
                       <uix:NCheckState.Target>

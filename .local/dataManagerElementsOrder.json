@@ -104,11 +104,64 @@
       "Path": "Contact Navigation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Flag&Sequence_1",
+        "string1&Sequence_4",
+        "string2&Sequence_4",
         "GlobalConf&Sequence_1",
         "SelectorMap&Sequence_1",
         "TestData&Sequence_1",
-        "Flag&Sequence_4",
         "Heading&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Contact Details.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "element&Sequence_9",
+        "flag&Sequence_1",
+        "element&Sequence_3",
+        "GlobalConf&Sequence_1",
+        "TestData&Sequence_1",
+        "SelectorMap&Sequence_1",
+        "Heading&Sequence_2",
+        "string1&Sequence_2",
+        "string2&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Data Engineering Page.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DataEngineeringOption&Sequence_15",
+        "DataEngineeringOption&Sequence_12",
+        "GlobalConf&Sequence_1",
+        "SelectorMap&Sequence_1",
+        "TestData&Sequence_1",
+        "Content&Sequence_4",
+        "Flag&Sequence_4",
+        "DataEngineeringOption&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Footer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "GlobalConf&Sequence_1",
+        "SelectorMap&Sequence_1",
+        "TestData&Sequence_1",
+        "Flag&Sequence_5",
+        "element&Sequence_4",
+        "Link&Sequence_2",
+        "URL&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
