@@ -21155,15 +21155,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\himanshu.panchal\\.nuget\\packages\\": {}
+    "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "GemSite",
       "projectName": "GemSite",
-      "projectPath": "C:\\Users\\himanshu.panchal\\Desktop\\GemSIte\\GemSite\\.local",
-      "packagesPath": "C:\\Users\\himanshu.panchal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\himanshu.panchal\\Desktop\\GemSIte\\GemSite\\.local"
+      "projectPath": "C:\\Users\\Ramesh Kumar\\Desktop\\GemSite\\GemSite\\.local",
+      "packagesPath": "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ramesh Kumar\\Desktop\\GemSite\\GemSite\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -21199,7 +21199,7 @@
             "version": "[22.10.3, 22.10.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\himanshu.panchal\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Ramesh Kumar\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {

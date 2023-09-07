@@ -166,6 +166,22 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "SolutionsNavigation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Globalconf&Sequence_1",
+        "SelectorMap&Sequence_1",
+        "TestData&Sequence_1",
+        "flag&Sequence_3",
+        "element&Sequence_2",
+        "solutions&Sequence_2",
+        "Heading&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

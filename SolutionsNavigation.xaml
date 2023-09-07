@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SolutionsNavigation" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="821.3333333333334,3872.6666666666665" sap2010:WorkflowViewState.IdRef="SolutionsNavigation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SolutionsNavigation" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1514,4201" sap2010:WorkflowViewState.IdRef="SolutionsNavigation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
       <x:String>System.Activities</x:String>
@@ -106,7 +106,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SolutionsNavigation" sap:VirtualizedContainerService.HintSize="831.3333333333334,3808" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SolutionsNavigation" sap:VirtualizedContainerService.HintSize="831,4136" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ggm:GlobalConfig" Name="Globalconf" />
       <Variable x:TypeArguments="ggm:SelectorMap" Name="SelectorMap" />
@@ -117,14 +117,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="769.3333333333334,136" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Solutions Navigation" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="769.3333333333334,3394.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="5745ed70-4725-4bd0-98b2-037b509b7cf3" Version="V2">
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="769,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Solutions Navigation" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="769,3725" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="5745ed70-4725-4bd0-98b2-037b509b7cf3" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="735.3333333333334,3175.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648,3508" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="flag" />
             </Sequence.Variables>
@@ -133,7 +133,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="673.3333333333334,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[flag]</OutArgument>
               </Assign.To>
@@ -141,18 +141,18 @@
                 <InArgument x:TypeArguments="x:String">true</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="673.3333333333334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;SolutionsOption&quot;).ToString]" Guid="f531efa1-9f40-465b-9fa2-a03c406bad5c" SearchSteps="Selector" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="673.3333333333334,1920" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[TestData(0).ToArray]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="586,2314" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[TestData(0).ToArray]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="636.6666666666666,1791.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,2128" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="element" />
                       <Variable x:TypeArguments="x:String" Name="solutions" />
@@ -163,7 +163,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="574.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[element]</OutArgument>
                       </Assign.To>
@@ -171,12 +171,12 @@
                         <InArgument x:TypeArguments="x:String">[SelectorMap("SolutionsType").ToString.Replace("{value}",currentItem.ToString)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NClick ClickType="Single" DelayAfter="5" DelayBefore="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="574.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick ClickType="Single" DelayAfter="5" DelayBefore="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[element]" Guid="e1adb1e9-41b1-4453-9e65-2bd82b190fc4" SearchSteps="Selector" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <Assign sap:VirtualizedContainerService.HintSize="574.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[solutions]</OutArgument>
                       </Assign.To>
@@ -184,29 +184,28 @@
                         <InArgument x:TypeArguments="x:String">[currentItem.ToString.Replace("amp;","")]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="574.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[solutions]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[solutions.ToString.Replace("Offerings","Transformation")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="574.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" TextString="[Heading]" Version="V3">
+                    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                    <uix:NGetText DisplayName="Get Text 'Application Development'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="5745ed70-4725-4bd0-98b2-037b509b7cf3" ScrapingOptions="None" TextString="[Heading]" Version="V3">
                       <uix:NGetText.Target>
-                        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;solutionHeading&quot;).ToString]" Guid="60d4ae6e-886f-42f4-99d6-0b86509bf368" SearchSteps="Selector" />
+                        <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/services/application-development" DesignTimeRectangle="414, 365, 522, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Application Development'" FullSelectorArgument="&lt;webctrl aaname='Application Development' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='DIV' type='' class='react-reveal mb-4 mt-4 Content_heading__nrjV3' /&gt;" Guid="1ae534b4-5b75-4e9e-9906-dc5c4cb12d3e" InformativeScreenshot="d4eebec0f8dfc4f9443875cb922a3223.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <uix:NNavigateBrowser DelayAfter="5" DisplayName="Navigate Browser - Go Back" sap:VirtualizedContainerService.HintSize="574.6666666666666,84.66666666666667" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
-                    <If Condition="[Heading.Contains(solutions)]" sap:VirtualizedContainerService.HintSize="574.6666666666666,776" sap2010:WorkflowViewState.IdRef="If_1">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[Heading+&quot; &quot;+ solutions]" />
+                    <If Condition="[Heading.Contains(solutions)]" sap:VirtualizedContainerService.HintSize="510,770" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="496,332" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,353" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[flag]</OutArgument>
                             </Assign.To>
@@ -214,17 +213,17 @@
                               <InArgument x:TypeArguments="x:String">true</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[solutions + &quot; is navigated to the right page&quot;]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[solutions + &quot; is navigated to the right page&quot;]" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="496,261.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,235" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[flag]</OutArgument>
                             </Assign.To>
@@ -232,33 +231,39 @@
                               <InArgument x:TypeArguments="x:String">false</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:Break sap:VirtualizedContainerService.HintSize="434,25.333333333333332" sap2010:WorkflowViewState.IdRef="Break_1" />
+                          <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_1" />
                         </Sequence>
                       </If.Else>
                     </If>
+                    <uix:NNavigateBrowser DelayAfter="5" DisplayName="Navigate Browser - Go Back" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+                    <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click 'Solutions'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5745ed70-4725-4bd0-98b2-037b509b7cf3" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/" DesignTimeRectangle="959, 184, 62, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Solutions'" FullSelectorArgument="&lt;webctrl aaname='Solutions' class='menu-list' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Solutions' class='menu-list' tag='SPAN' type='' check:innerText='Solutions' /&gt;" Guid="3366f020-e703-4dc6-bc11-c8bed2876ee1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEIAAAAcCAYAAADV0GlvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQLSURBVFhH7VbNS2JRFPfPcOtGaDetwk1SEEQMBAYDBYMMzYAw0cKYRTjgInERLiIaKEYIBhQGHBgaHuFCYiCkhdhCEAzSFomLRJGIpyD85tz7znu+99SppmY2835w4X2cez5+93xcFxxIOEQwHCIYDhEMhwiGQwTDIYIxTES/h2qpgNypWBVU7/j7Q0H7261bqH1+/xOQjift/wNYiFBLaQSmfHBNLWM2EMTstB8u7xxW0zWoLHMvGkcIeMNINfj90WjiW4h8CJ+gzV/+BQZEdAuIvPDBt11A23Qa7bNd+LxLiBV6/OUePJaIEfLqBWXj1QPtPRMGRJwfwO1dQ+qa3w3QCX0IYuGwwu+Mu1tZAu2OzWFzYGPKRO3Qvi49iP/lDMmvIVk26RK67SXZZXstmz2zDX4e8omhyv20hG0bBkTIAPxY+VrnD2PQr0P5GCTSKH15ed6kUdQdNxMxMjuaSL31IZBpAoVdQ4dcb48gRPPb9Lxd0sTRQ/HzGjwmOfdiHIp+YGxjL3OAWcpoXcaznkVVP4C7EmKLVOai5Bdfwv0iiI1ja5ymHtFDfkcL0PMqikg6i+LV8GkW95fhmk9A0YPrVJAM+eHWa/oxRAiMkDET0T6OkuNhmTES/SaULeHDIYrCN7mfyAllUO5oIrgSWeZH5FTLjOIOkbBJ/nEsKh2AzxuFossTLM1SoH2ZRzK6yY2SHJp6h40MN8s+MUusr/5gp3SUDjE5KvgnE6HJTn6ylWUri1UKNFagZyYicqb90sD79sW+HnJbRFQ0b+l9aqtpKZEhIsxQb2pQdt5Rlvjx/piCl0ZH9JE+NVpyZuDYcxFBxA8FKVBH6jXrYCKkbQOaDaO8rok4mobu6SBWo2mkTmsWUgQGRIgGNbLJ9KBsklKR+tJoEMlL/qWjm8fGXyRi46fdrxqSgUcQIUCNtFrKIhmPYkFcEeZ3kTc1ZIOIRiYM1wzXnQVMBKWWigoSM+NKg2tuiIglJMpSimEKQuC3RNxCCY8rDdb7ACLktDBPCs5gvYcIDDKidYL3VP+e9TTy3CTVTh05WRrLiJ1rmxrfw1rzKjU1mas8IvN0/9gpaX3EElgNe/RvMnqi3VC7TRS/xOEjMg0ibrJYoaAiP6lmOSPNzVKlse4j+5FcXbN3w805lJUT5n4iiMxNkv9A8nzI7TJdHEnn3oX2LmDtEY0CEm/mjBEklns6jMQZOy0hxlkYE8aomsOCCFTPJNsJqxcZWZ+6bOBzBQoFahBBjubiPI5Hjk+gepzQ0lnq8GMiZB/X95TGXQV7IRqbcj8tMQDGj08T9MuL/VJjg0g5+3gdB3GJeqjsODxZh4hrzGVrNBH/IRwiGA4RDIcIhkMEwyGC4RDBcIiQAH4BoyfdkHLXBzkAAAAASUVORK5CYII=" InformativeScreenshot="316a2ac790a3c4ec83db2b3da6d6e9e4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <If Condition="[flag=&quot;true&quot;]" sap:VirtualizedContainerService.HintSize="673.3333333333334,774.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[flag=&quot;true&quot;]" sap:VirtualizedContainerService.HintSize="586,720" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,269" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Verifying all type of solutions are navigated to the right page" TestStepDesciption="all options are navigated to the rightpage" TestStepStatus="PASS" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Verifying all type of solutions are navigated to the right page" TestStepDesciption="all options are navigated to the rightpage" TestStepStatus="PASS" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,269" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_2" ScreenShot="Yes" TestStep="Verifying all type of solutions are navigated to the right page" TestStepDesciption="all options are not navigated to the rightpage" TestStepStatus="FAIL" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_2" ScreenShot="Yes" TestStep="Verifying all type of solutions are navigated to the right page" TestStepDesciption="all options are not navigated to the rightpage" TestStepStatus="FAIL" />
                 </Sequence>
               </If.Else>
             </If>
