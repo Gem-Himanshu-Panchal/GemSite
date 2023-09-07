@@ -155,6 +155,8 @@
       "Path": "Footer.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "test&Sequence_4",
+        "ele&Sequence_2",
         "GlobalConf&Sequence_1",
         "SelectorMap&Sequence_1",
         "TestData&Sequence_1",
@@ -178,6 +180,54 @@
         "element&Sequence_2",
         "solutions&Sequence_2",
         "Heading&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "TeamSection.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "GlobalConf&Sequence_1",
+        "SelectorMap&Sequence_1",
+        "TestData&Sequence_1",
+        "data&Sequence_3",
+        "element&Sequence_3",
+        "flag&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Technologies Options.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SelectorMap&Sequence_1",
+        "TestData&Sequence_1",
+        "GlobalConf&Sequence_1",
+        "flag&Sequence_1",
+        "elelement&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "GlobalConf"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "TechnologiesNavigation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "GlobalConf&Sequence_1",
+        "SelectorMap&Sequence_1",
+        "TestData&Sequence_1",
+        "flag&Sequence_5",
+        "element&Sequence_4",
+        "solutions&Sequence_4",
+        "Heading&Sequence_4",
+        "Technology&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
