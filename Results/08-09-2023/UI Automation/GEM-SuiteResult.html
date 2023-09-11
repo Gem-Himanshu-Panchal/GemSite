@@ -1,0 +1,1992 @@
+<!--version1.0.7-->
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+            integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+          integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+            integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+  .thumb {
+    border: 1px solid #ddd;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded border */
+    padding: 5px;
+    /* Some padding */
+    width: 100px;
+    /* Set a small width */
+    min-height: 86px;
+    max-height: 86px;
+  }
+
+  .thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  body {
+    background: #fafbff;
+    /* transform: scale(0.9);
+      transform-origin: top center; */
+      /* overflow: auto !important; */
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+.tableEx{
+  display: block !important;
+  overflow-x: auto !important;
+}
+
+  #heading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-pills.gempyp .nav-link.active {
+    background: rgba(33, 98, 132, 1);
+    border-radius: 5px;
+    color: white !important;
+  }
+
+  .nav-pills.gempyp .nav-link {
+    color: rgba(33, 98, 132, 1);
+  }
+
+  .nav-pills.gemsurf .nav-link.active {
+    background: rgba(48, 122, 100);
+    border-radius: 5px;
+    color: white !important;
+  }
+
+  .nav-pills.gemsurf .nav-link {
+    color: rgba(48, 122, 100);
+  }
+
+  .tableHeading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+    float: left;
+  }
+
+  .accordHeading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+  }
+
+  .title-card {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    float: left;
+  }
+
+  .text-card {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    float: left;
+  }
+
+  table {
+    font-size: 13px !important;
+  }
+
+  .passTest {
+    color: #2cae21 !important;
+    border-radius: 5px;
+  }
+
+  .failTest {
+    color: #ea3e3e !important;
+    border-radius: 5px;
+  }
+
+  .warnTest {
+    color: #ff6c37 !important;
+    border-radius: 5px;
+  }
+
+  .infoTest {
+    color: #f3bb2a !important;
+    border-radius: 5px;
+  }
+
+  .incompleteTest {
+    color: #f25c5c !important;
+    border-radius: 5px;
+  }
+
+  .othersTest {
+    color: #9e9e9e !important;
+    border-radius: 5px;
+  }
+
+  /* a{
+          color: white !important
+      } */
+  .head {
+    background-color: #375a64;
+    color: white;
+  }
+
+  .statusColorPass {
+    background-color: #2cae21 !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorInfo {
+    background-color: #f3bb2a !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorFail {
+    background-color: #ea3e3e !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorWarn {
+    background-color: #ff6c37 !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorIncomplete {
+    background-color: #f25c5c !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorOthers {
+    background-color: #9e9e9e !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .hiddenRow {
+    padding: 0px !important;
+  }
+
+  #myImg {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #myImg:hover {
+    opacity: 0.7;
+  }
+
+  /* The Modal (background) */
+  .modal-img {
+    display: none;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    padding-top: 5%;
+    position: fixed;
+    z-index: 1;
+    height: fit-content;
+    background-color: rgb(129, 125, 125);
+    background-color: rgba(129, 125, 125, 0.9);
+
+  }
+
+  .modal {
+    overflow-y: auto;
+  }
+
+  .modal-body {
+    word-wrap: break-word;
+  }
+
+  /* Modal Content (image) */
+  .modal-img-content {
+    /* max-height: 700px;
+height: 100%;
+  display: block;
+  width: 100vw; */
+
+  }
+
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation */
+  .modal-img-content,
+  #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(0)
+    }
+
+    to {
+      -webkit-transform: scale(1)
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0)
+    }
+
+    to {
+      transform: scale(1)
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Absolute Center Spinner */
+  .loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Transparent Overlay */
+  .loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fafbff;
+
+    background: #fafbff;
+  }
+
+  /* :not(:required) hides these rules from IE9 and below */
+  .loading:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 150ms infinite linear;
+    -moz-animation: spinner 150ms infinite linear;
+    -ms-animation: spinner 150ms infinite linear;
+    -o-animation: spinner 150ms infinite linear;
+    animation: spinner 150ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: black 1.5em 0 0 0, black 1.1em 1.1em 0 0, black 0 1.5em 0 0, black -1.1em 1.1em 0 0, black -1.5em 0 0 0, black -1.1em -1.1em 0 0, black 0 -1.5em 0 0, black 1.1em -1.1em 0 0;
+    box-shadow: black 1.5em 0 0 0, black 1.1em 1.1em 0 0, black 0 1.5em 0 0, black -1.1em 1.1em 0 0, black -1.5em 0 0 0, black -1.1em -1.1em 0 0, black 0 -1.5em 0 0, black 1.1em -1.1em 0 0;
+  }
+
+  /* Animation */
+
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-o-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .setWidth {
+    word-wrap: break-word;
+    max-width: 80px;
+  }
+
+  .substepIcon {
+    font-size: 20px;
+    color: #215c1e;
+    cursor: pointer;
+  }
+
+  .substepIcon:hover {
+    transform: scale(1.2);
+  }
+
+
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #918b92 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #918b92;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  *::-webkit-scrollbar:horizontal {
+    background-color: #918b92;
+    width: 5px !important;
+    border: 3px solid #ffffff;
+  }
+</style>
+
+<body onload="constructPage()">
+<div id="loading" class="loading">Loading&#8230;
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-keyboard="false" data-toggle="modal"
+     data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true" data-scroll="false">
+    <div class="modal-dialog modal-xl vertically-centered" role="document">
+        <div class="modal-content" style="width:80vw !important">
+            <!-- Modal heading -->
+            <div class="mb-5 float-right">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span style="color:black !important" aria-hidden="true">
+              ×
+            </span>
+                </button>
+            </div>
+
+            <!-- Modal body with image -->
+            <div class="modal-body mt-2 text-center mb-2">
+                <img style="width:70vw !important; max-height:450px" class="modal-img-content" id="img01">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------Extra Text Modal---------------- -->
+<div class="modal" id="trimModal" tabindex="-1" role="dialog" data-keyboard="false" data-toggle="modal"
+     data-backdrop="static" aria-labelledby="exampleModalLabel2" aria-hidden="true" data-scroll="false">
+    <div class="modal-dialog modal-xl vertically-centered" role="document">
+        <div class="modal-content" style="width:80vw !important">
+            <!-- Modal heading -->
+            <div class="modal-title mt-3 text-center">
+                <h2 id="trimModaltitle"></h2>
+            </div>
+            <div class="mb-3 float-right">
+                <button type="button" class="close" data-dismiss="modal" onClick="closeModal('trimModal')" aria-label="Close">
+
+            <span style="color:black !important" aria-hidden="true">
+              ×
+            </span>
+                </button>
+            </div>
+
+
+            <!-- Modal body with image -->
+            <div class="modal-body mt-2 text-center mb-2" id="trimModalcontent">
+                <!-- <img style="width:70vw !important; max-height:450px" class="modal-img-content" id="img01"> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onClick="closeModal('trimModal')">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------Extra Text Modal---------------- -->
+
+<div class="container-fluid">
+    <!-- <div class="mt-3 text-center">
+          <div id="myModal" class="modal-img">
+       <span onClick="closeImage()" class="close" style="color:black !important">&times;</span>
+        <img class="modal-img-content" id="img01">
+           <div id="caption"></div>
+         </div>
+        <div> -->
+
+
+
+    <h4 class="my-4" id="heading">
+        <b><span id="productType"></span> AUTOMATED TEST EXECUTION REPORT</b>
+    </h4>
+    <div class="ml-5 mt-3">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item mr-1" role="presentation">
+                <button class="btn nav-link active" id="pills-overview-tab" data-toggle="pill" data-target="#pills-overview"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="showFilter('overview')">
+                    Overview
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="btn nav-link" id="pills-testcase-tab" data-toggle="pill" data-target="#pills-testcase"
+                        type="button" role="tab" aria-controls="pills-profile" aria-selected="false"
+                        onclick="showFilter('testcase')">
+                    Testcase Details
+                </button>
+            </li>
+            <li id="filters" class="nav-item ml-auto" style="float: right; display: none">
+                <!-- <button
+                              class="btn"
+                              style="
+                          background: white;
+                          border-radius: 5px !important;
+                          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                        "
+                              onclick="showFilterCards('show')"
+                      >
+                          <i class="fa fa-filter"></i> Filters
+                      </button> -->
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active overview" id="pills-overview" role="tabpanel"
+             aria-labelledby="pills-overview-tab"></div>
+        <div class="tab-pane fade" id="pills-testcase" role="tabpanel" aria-labelledby="pills-testcase-tab">
+            <div class="mt-3 ml-5 mr-1">
+                <div class="card pt-3 pb-3" id="filtercard" style="
+                    display: none;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                    border-radius: 4px !important;
+                  ">
+                    <div class="d-flex mx-4 mb-3">
+                        <span id="filterHeading" class="tableHeading">Filters</span>
+                        <span class="ml-auto"><i class="fa fa-times" style="cursor: pointer" aria-hidden="true"
+                                                 onclick="showFilterCards('close')"></i>
+              </span>
+                    </div>
+                    <div class="d-flex ml-4">
+                        <div class="">
+                            <input class="form-control search-key" type="text" id="name" placeholder="Search by Tc_name"
+                                   style="width: 270px" />
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <select class="custom-select search-key" style="width: 270px" id="status"></select>
+                        </div>
+                    </div>
+                    <div class="mx-4 mt-3">
+                        <div class="d-flex">
+                            <!-- <button class="btn" id="applyfilter" onclick="applyfilter()" style="display:block; border-radius:5px !important; color: white !important">Apply Filters</button> -->
+                            <button class="btn ml-2" id="clear" onclick="myFunction()" style="
+                          display: block;
+                          border-radius: 5px !important;
+                          color: white !important;
+                        ">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script>
+  theme = {};
+  gempypThemes = {
+    0: "rgba(2, 59, 89)",
+    1: "rgba(33, 98, 132)",
+    2: "rgba(73, 132, 163)",
+  };
+  gemsurfThemes = {
+    0: "rgba(48, 122, 100)",
+    1: "rgba(91, 170, 147)",
+    2: "rgba(143, 210, 190)",
+  };var obj = {"reportProduct":"GEMSURF","Suits_Details":{"report_type":"UI Automation","s_end_time":null,"status":"EXE","project_name":"GemSite","run_type":"UI Automation","user":"Ramesh Kumar","env":"dev","machine":"DESKTOP-SCITCVD","initiated_by":"Ramesh Kumar","run_mode":"Windows 10","TestCase_Details":[{"tc_run_id":"AboutusSection_0ed47973-80ac-40aa-972e-687d73320ac1","start_time":1694154418633,"end_time":1694154472976,"name":"AboutusSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"BenefitsSection_d0619ae8-1397-4ed1-a917-c3947d0e0423","start_time":1694154474936,"end_time":1694154493971,"name":"BenefitsSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"AboutusSection_05b4788b-cc39-467c-bf91-9f2c89214665","start_time":1694155977278,"end_time":1694156031511,"name":"AboutusSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"BenefitsSection_d912d851-56ce-4131-b862-3dd056933748","start_time":1694156034604,"end_time":1694156052997,"name":"BenefitsSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"AboutusSection_5c178472-b8a1-447d-b654-7e0d8e886d66","start_time":1694156220050,"end_time":1694156274225,"name":"AboutusSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"BenefitsSection_3cfec176-4a56-456f-8b4b-ee4e6fe4647e","start_time":1694156279887,"end_time":1694156298685,"name":"BenefitsSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"AboutusSection_c0ccfb97-3ae6-427b-92ed-406f9ce485e8","start_time":1694156666308,"end_time":1694156723038,"name":"AboutusSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"BenefitsSection_5a74789c-455e-4204-a12c-a1ac04fe7c32","start_time":1694156728155,"end_time":1694156746241,"name":"BenefitsSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"AboutusSection_aa943e29-f430-4ef8-ad85-f265d37aa118","start_time":1694158705719,"end_time":1694158764941,"name":"AboutusSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"BenefitsSection_4f178d16-0273-4cd3-9762-e7bd38dc4595","start_time":1694158770114,"end_time":1694158789053,"name":"BenefitsSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Careers Navigation_fdcd2a2f-6610-49ca-aa0f-99b6376d63fa","start_time":1694158794280,"end_time":1694158833063,"name":"Careers Navigation","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Contact Details_029c1333-acc3-43bb-ba71-2dccd18857df","start_time":1694158838313,"end_time":1694158859133,"name":"Contact Details","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Contact navigation_d6520f0f-b5f0-40b8-bd91-ae9640502263","start_time":1694158864383,"end_time":1694158874789,"name":"Contact navigation","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Data Engineering Page_d823d950-2194-4776-aedf-4400baa6de03","start_time":1694158879823,"end_time":1694158889533,"name":"Data Engineering Page","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Footer_78df3b44-57d6-43c3-8962-c09bedc8d0e8","start_time":1694158894703,"end_time":1694158975568,"name":"Footer","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"GemU Navigation_fe91f652-bef8-404c-9aad-1a2b14e23e44","start_time":1694158980703,"end_time":1694159044178,"name":"GemU Navigation","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"GemuOptions_10cb5daa-1569-44ff-948a-cb8f4e64b186","start_time":1694159049450,"end_time":1694159059195,"name":"GemuOptions","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"GemUGrid_66ddc6d6-bd1e-41d6-892c-d3412db271ab","start_time":1694159064344,"end_time":1694159074917,"name":"GemUGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"HomePagecareerGrid_e84c639f-140a-4015-9616-de3b90f73a76","start_time":1694159080104,"end_time":1694159087406,"name":"HomePagecareerGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"TechnologiesGrid_d22bd8ac-68a1-42d0-8d0b-6a7707f2126d","start_time":1694159092539,"end_time":1694159116379,"name":"TechnologiesGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"AboutusSection_95287d76-3a82-4d8d-a998-8dd1c5cba459","start_time":1694159203772,"end_time":1694159260879,"name":"AboutusSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"BenefitsSection_8e1c3252-d09f-466d-871a-9ffcad9b3840","start_time":1694159266130,"end_time":1694159284729,"name":"BenefitsSection","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Careers Navigation_a9abc5a1-6029-4d61-86db-629ff891a685","start_time":1694159290045,"end_time":1694159328297,"name":"Careers Navigation","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Contact Details_dd07961b-b41c-43db-858a-be0f14152475","start_time":1694159333606,"end_time":1694159353924,"name":"Contact Details","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Contact navigation_6d8c2297-e846-4956-8ef5-34e28f0fb579","start_time":1694159359169,"end_time":1694159370014,"name":"Contact navigation","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Data Engineering Page_61b0d8e0-94e3-4205-a20e-294b8d5336e3","start_time":1694159375990,"end_time":1694159384604,"name":"Data Engineering Page","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Footer_bb655733-5739-464e-89fb-c2b744aa5fb2","start_time":1694159389904,"end_time":1694159470991,"name":"Footer","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"GemU Navigation_d12827df-e664-4fb4-9780-8f10b9e4f3fa","start_time":1694159476225,"end_time":1694159539033,"name":"GemU Navigation","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"GemuOptions_033257be-ca2a-4530-9873-87b0bad57eb9","start_time":1694159544347,"end_time":1694159554121,"name":"GemuOptions","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"GemUGrid_24d14931-1c6c-4ebb-90e9-9a6685d5575e","start_time":1694159559458,"end_time":1694159569785,"name":"GemUGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"HomePagecareerGrid_daab0147-fa81-44ad-829a-004a69c80c83","start_time":1694159574900,"end_time":1694159582377,"name":"HomePagecareerGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"TechnologiesGrid_30eacbeb-6cd3-4c4f-a1f0-26d67c3f2ff9","start_time":1694159587659,"end_time":1694159610628,"name":"TechnologiesGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"SolutionGrid_92acf651-7e3b-4bb8-86d3-cac142140df1","start_time":1694159615821,"end_time":1694159829178,"name":"SolutionGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"InsightGrid_170ff06c-bbe6-475c-a4bb-73c0d4c76856","start_time":1694159834437,"end_time":1694159846375,"name":"InsightGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Instagramfollowbtn_6237329a-b819-4212-a4e7-ba84e124667e","start_time":1694159851563,"end_time":1694159869923,"name":"Instagramfollowbtn","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Navigationbar_2fefbf53-5b77-49d7-bdad-9d5247491b49","start_time":1694159875138,"end_time":1694159881149,"name":"Navigationbar","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"OfficeGrid_dad9c73e-8b74-4ec5-b50a-adcc08b326ed","start_time":1694159886793,"end_time":1694159890043,"name":"OfficeGrid","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"Search Functionality_2ecb60a2-e31f-4575-9377-51788f0ebfd4","start_time":1694159895249,"end_time":1694159901700,"name":"Search Functionality","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"SolutionsType_e0e5c194-c14f-4223-9817-daec2f0e8d93","start_time":1694159907005,"end_time":1694159916957,"name":"SolutionsType","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false},{"tc_run_id":"SolutionMenu_2f871f9a-022a-4068-9543-46695a236557","start_time":1694160292974,"end_time":1694160339883,"name":"SolutionMenu","category":"None","status":"PASS","user":"Ramesh Kumar","machine":"DESKTOP-SCITCVD","ignore":false}],"Testcase_Info":{"FAIL":0,"PASS":40,"TOTAL":40},"s_run_id":"GemSite_dev_e46ada8b-6f28-40f1-8bca-8a22d24c33cf","s_start_time":1694154417645},"TestStep_Details":{"AboutusSection_0ed47973-80ac-40aa-972e-687d73320ac1":{"steps":[{"Title":"Verify if About Us page have correct details","Description":"All values are correct on About Us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/AboutusSection_0ed47973-80ac-40aa-972e-687d73320ac1/Screenshots/c1a9324d-6375-4bca-b2dd-e13eb7262a82.png"}],"metaData":[{"TESTCASE NAME":"AboutusSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694154418635,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694154418634,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694154472976,"type":"datetime"},"EXECUTION DURATION":"00h:00m:54s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"BenefitsSection_d0619ae8-1397-4ed1-a917-c3947d0e0423":{"steps":[{"Title":"Verify Benifits page details","Description":"All sections are present on page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/BenefitsSection_d0619ae8-1397-4ed1-a917-c3947d0e0423/Screenshots/4949681b-a9f2-4ed6-a49e-6c42c9715e3c.png"}],"metaData":[{"TESTCASE NAME":"BenefitsSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694154474936,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694154474936,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694154493971,"type":"datetime"},"EXECUTION DURATION":"00h:00m:19s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"AboutusSection_05b4788b-cc39-467c-bf91-9f2c89214665":{"steps":[{"Title":"Verify if About Us page have correct details","Description":"All values are correct on About Us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/AboutusSection_05b4788b-cc39-467c-bf91-9f2c89214665/Screenshots/e0ee9b91-f9ea-449d-9f59-97ec1d265f19.png"}],"metaData":[{"TESTCASE NAME":"AboutusSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694155977279,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694155977278,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694156031508,"type":"datetime"},"EXECUTION DURATION":"00h:00m:54s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"BenefitsSection_d912d851-56ce-4131-b862-3dd056933748":{"steps":[{"Title":"Verify Benifits page details","Description":"All sections are present on page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/BenefitsSection_d912d851-56ce-4131-b862-3dd056933748/Screenshots/b02a6f5d-4218-4aff-a7c7-091edba7d979.png"}],"metaData":[{"TESTCASE NAME":"BenefitsSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694156034604,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694156034604,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694156052997,"type":"datetime"},"EXECUTION DURATION":"00h:00m:18s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"AboutusSection_5c178472-b8a1-447d-b654-7e0d8e886d66":{"steps":[{"Title":"Verify if About Us page have correct details","Description":"All values are correct on About Us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/AboutusSection_5c178472-b8a1-447d-b654-7e0d8e886d66/Screenshots/f0983a7a-2ed8-4c56-ab57-a271b800dea3.png"}],"metaData":[{"TESTCASE NAME":"AboutusSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694156220050,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694156220050,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694156274223,"type":"datetime"},"EXECUTION DURATION":"00h:00m:54s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"BenefitsSection_3cfec176-4a56-456f-8b4b-ee4e6fe4647e":{"steps":[{"Title":"Verify Benifits page details","Description":"All sections are present on page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/BenefitsSection_3cfec176-4a56-456f-8b4b-ee4e6fe4647e/Screenshots/e530064d-30a8-4b92-a5bc-cada8138af4b.png"}],"metaData":[{"TESTCASE NAME":"BenefitsSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694156279887,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694156279887,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694156298685,"type":"datetime"},"EXECUTION DURATION":"00h:00m:18s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"AboutusSection_c0ccfb97-3ae6-427b-92ed-406f9ce485e8":{"steps":[{"Title":"Verify if About Us page have correct details","Description":"All values are correct on About Us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/AboutusSection_c0ccfb97-3ae6-427b-92ed-406f9ce485e8/Screenshots/9d607876-30b3-4141-a2aa-f5aeeea81214.png"}],"metaData":[{"TESTCASE NAME":"AboutusSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694156666308,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694156666308,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694156723037,"type":"datetime"},"EXECUTION DURATION":"00h:00m:56s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"BenefitsSection_5a74789c-455e-4204-a12c-a1ac04fe7c32":{"steps":[{"Title":"Verify Benifits page details","Description":"All sections are present on page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/BenefitsSection_5a74789c-455e-4204-a12c-a1ac04fe7c32/Screenshots/eba0a57a-4184-44b9-a62d-ff1c2fc2b624.png"}],"metaData":[{"TESTCASE NAME":"BenefitsSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694156728155,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694156728155,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694156746241,"type":"datetime"},"EXECUTION DURATION":"00h:00m:18s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"AboutusSection_aa943e29-f430-4ef8-ad85-f265d37aa118":{"steps":[{"Title":"Verify if About Us page have correct details","Description":"All values are correct on About Us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/AboutusSection_aa943e29-f430-4ef8-ad85-f265d37aa118/Screenshots/7408e167-1a8e-44e7-8801-de231a309cac.png"}],"metaData":[{"TESTCASE NAME":"AboutusSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694158705719,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694158705719,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694158764940,"type":"datetime"},"EXECUTION DURATION":"00h:00m:59s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"BenefitsSection_4f178d16-0273-4cd3-9762-e7bd38dc4595":{"steps":[{"Title":"Verify Benifits page details","Description":"All sections are present on page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/BenefitsSection_4f178d16-0273-4cd3-9762-e7bd38dc4595/Screenshots/3d956f9b-09e3-4c14-97bf-6eb3f0adac8e.png"}],"metaData":[{"TESTCASE NAME":"BenefitsSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694158770114,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694158770114,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694158789053,"type":"datetime"},"EXECUTION DURATION":"00h:00m:18s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Careers Navigation_fdcd2a2f-6610-49ca-aa0f-99b6376d63fa":{"steps":[{"Title":"Verify navigation through different career pages","Description":"User is able to navgate through all pages","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Careers Navigation_fdcd2a2f-6610-49ca-aa0f-99b6376d63fa/Screenshots/c507e5ce-ce8d-49c8-a041-d575abe6a9a7.png"}],"metaData":[{"TESTCASE NAME":"Careers Navigation","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694158794280,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694158794280,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694158833063,"type":"datetime"},"EXECUTION DURATION":"00h:00m:38s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Contact Details_029c1333-acc3-43bb-ba71-2dccd18857df":{"steps":[{"Title":"Verify if all details are present on contact us page","Description":"All details are present on contact us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Contact Details_029c1333-acc3-43bb-ba71-2dccd18857df/Screenshots/88046860-c6d9-4c24-b700-7b39f163c0c3.png"}],"metaData":[{"TESTCASE NAME":"Contact Details","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694158838313,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694158838313,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694158859133,"type":"datetime"},"EXECUTION DURATION":"00h:00m:20s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Contact navigation_d6520f0f-b5f0-40b8-bd91-ae9640502263":{"steps":[{"Title":"Verify if user is successfully navigated to Contact Us page","Description":"User is successfully navigated to contact us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Contact navigation_d6520f0f-b5f0-40b8-bd91-ae9640502263/Screenshots/c05a1732-edec-48f0-8321-12c8626dba8a.png"}],"metaData":[{"TESTCASE NAME":"Contact navigation","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694158864383,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694158864383,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694158874789,"type":"datetime"},"EXECUTION DURATION":"00h:00m:10s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Data Engineering Page_d823d950-2194-4776-aedf-4400baa6de03":{"steps":[{"Title":"Verify different Data Engineering Options","Description":"All options are present","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Data Engineering Page_d823d950-2194-4776-aedf-4400baa6de03/Screenshots/c5644784-d7da-4cac-9fb5-2be114fde552.png"}],"metaData":[{"TESTCASE NAME":"Data Engineering Page","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694158879823,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694158879823,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694158889533,"type":"datetime"},"EXECUTION DURATION":"00h:00m:09s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Footer_78df3b44-57d6-43c3-8962-c09bedc8d0e8":{"steps":[{"Title":"Verify if footer links are navigable","Description":"All links are naviagable to the right page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Footer_78df3b44-57d6-43c3-8962-c09bedc8d0e8/Screenshots/110a1d99-7417-4273-a095-e1245dac8cfc.png"}],"metaData":[{"TESTCASE NAME":"Footer","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694158894703,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694158894703,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694158975568,"type":"datetime"},"EXECUTION DURATION":"00h:01m:20s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"GemU Navigation_fe91f652-bef8-404c-9aad-1a2b14e23e44":{"steps":[{"Title":"Verifying all type of GemU are navigated to the right page","Description":"All options are navigated to the rightpage","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/GemU Navigation_fe91f652-bef8-404c-9aad-1a2b14e23e44/Screenshots/f4286fc5-c6a1-4f95-a684-2f0c2ca1aaa8.png"}],"metaData":[{"TESTCASE NAME":"GemU Navigation","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694158980703,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694158980703,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159044178,"type":"datetime"},"EXECUTION DURATION":"00h:01m:03s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"GemuOptions_10cb5daa-1569-44ff-948a-cb8f4e64b186":{"steps":[{"Title":"Verifying all type of GemU options are present","Description":"All options are present","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/GemuOptions_10cb5daa-1569-44ff-948a-cb8f4e64b186/Screenshots/ff1a7414-40d8-49d8-bf10-29c602d491f3.png"}],"metaData":[{"TESTCASE NAME":"GemuOptions","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159049450,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159049450,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159059195,"type":"datetime"},"EXECUTION DURATION":"00h:00m:09s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"GemUGrid_66ddc6d6-bd1e-41d6-892c-d3412db271ab":{"steps":[{"Title":"Verify GemUGrid options are navigation links","Description":"All options are present and navigable","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/GemUGrid_66ddc6d6-bd1e-41d6-892c-d3412db271ab/Screenshots/a15fd108-0382-4407-b5fd-3ac7aa33f45b.png"}],"metaData":[{"TESTCASE NAME":"GemUGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159064344,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159064344,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159074917,"type":"datetime"},"EXECUTION DURATION":"00h:00m:10s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"HomePagecareerGrid_e84c639f-140a-4015-9616-de3b90f73a76":{"steps":[{"Title":"Verifying view opening button navigable or not","Description":"Button is navigable","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/HomePagecareerGrid_e84c639f-140a-4015-9616-de3b90f73a76/Screenshots/371be6d5-3afa-4c43-b53f-62f974b39a63.png"}],"metaData":[{"TESTCASE NAME":"HomePagecareerGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159080104,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159080104,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159087406,"type":"datetime"},"EXECUTION DURATION":"00h:00m:07s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"TechnologiesGrid_d22bd8ac-68a1-42d0-8d0b-6a7707f2126d":{"steps":[{"Title":"Technologies Grid Buttons ","Description":"Buttons are navigated to the right page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/TechnologiesGrid_d22bd8ac-68a1-42d0-8d0b-6a7707f2126d/Screenshots/3252cf87-c950-4dbe-9080-5967ee42cac3.png"}],"metaData":[{"TESTCASE NAME":"TechnologiesGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159092539,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159092539,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159116379,"type":"datetime"},"EXECUTION DURATION":"00h:00m:23s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"AboutusSection_95287d76-3a82-4d8d-a998-8dd1c5cba459":{"steps":[{"Title":"Verify if About Us page have correct details","Description":"All values are correct on About Us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/AboutusSection_95287d76-3a82-4d8d-a998-8dd1c5cba459/Screenshots/c5b71f7c-d86a-42e5-b47f-9a29a11fb011.png"}],"metaData":[{"TESTCASE NAME":"AboutusSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159203772,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159203772,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159260879,"type":"datetime"},"EXECUTION DURATION":"00h:00m:57s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"BenefitsSection_8e1c3252-d09f-466d-871a-9ffcad9b3840":{"steps":[{"Title":"Verify Benifits page details","Description":"All sections are present on page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/BenefitsSection_8e1c3252-d09f-466d-871a-9ffcad9b3840/Screenshots/fa4388ff-6c52-47ae-b931-c6b62038b701.png"}],"metaData":[{"TESTCASE NAME":"BenefitsSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159266130,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159266130,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159284729,"type":"datetime"},"EXECUTION DURATION":"00h:00m:18s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Careers Navigation_a9abc5a1-6029-4d61-86db-629ff891a685":{"steps":[{"Title":"Verify navigation through different career pages","Description":"User is able to navgate through all pages","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Careers Navigation_a9abc5a1-6029-4d61-86db-629ff891a685/Screenshots/85cfe80d-305c-4c73-9bde-9b5b60221222.png"}],"metaData":[{"TESTCASE NAME":"Careers Navigation","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159290045,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159290045,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159328297,"type":"datetime"},"EXECUTION DURATION":"00h:00m:38s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Contact Details_dd07961b-b41c-43db-858a-be0f14152475":{"steps":[{"Title":"Verify if all details are present on contact us page","Description":"All details are present on contact us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Contact Details_dd07961b-b41c-43db-858a-be0f14152475/Screenshots/82942bcd-6633-4778-ad9e-546d5a4b4ad6.png"}],"metaData":[{"TESTCASE NAME":"Contact Details","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159333606,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159333606,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159353924,"type":"datetime"},"EXECUTION DURATION":"00h:00m:20s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Contact navigation_6d8c2297-e846-4956-8ef5-34e28f0fb579":{"steps":[{"Title":"Verify if user is successfully navigated to Contact Us page","Description":"User is successfully navigated to contact us page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Contact navigation_6d8c2297-e846-4956-8ef5-34e28f0fb579/Screenshots/8012a27a-8933-4572-9c70-c2633356144d.png"}],"metaData":[{"TESTCASE NAME":"Contact navigation","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159359169,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159359169,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159370014,"type":"datetime"},"EXECUTION DURATION":"00h:00m:10s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Data Engineering Page_61b0d8e0-94e3-4205-a20e-294b8d5336e3":{"steps":[{"Title":"Verify different Data Engineering Options","Description":"All options are present","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Data Engineering Page_61b0d8e0-94e3-4205-a20e-294b8d5336e3/Screenshots/0da088df-af58-4f45-a944-0f506e72fdb4.png"}],"metaData":[{"TESTCASE NAME":"Data Engineering Page","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159375990,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159375990,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159384604,"type":"datetime"},"EXECUTION DURATION":"00h:00m:08s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Footer_bb655733-5739-464e-89fb-c2b744aa5fb2":{"steps":[{"Title":"Verify if footer links are navigable","Description":"All links are naviagable to the right page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Footer_bb655733-5739-464e-89fb-c2b744aa5fb2/Screenshots/ff475d2e-9784-448a-b66d-66bd4caac367.png"}],"metaData":[{"TESTCASE NAME":"Footer","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159389905,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159389905,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159470991,"type":"datetime"},"EXECUTION DURATION":"00h:01m:21s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"GemU Navigation_d12827df-e664-4fb4-9780-8f10b9e4f3fa":{"steps":[{"Title":"Verifying all type of GemU are navigated to the right page","Description":"All options are navigated to the rightpage","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/GemU Navigation_d12827df-e664-4fb4-9780-8f10b9e4f3fa/Screenshots/ba402ba5-23a1-4231-877e-082e052aa59a.png"}],"metaData":[{"TESTCASE NAME":"GemU Navigation","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159476225,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159476225,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159539033,"type":"datetime"},"EXECUTION DURATION":"00h:01m:02s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"GemuOptions_033257be-ca2a-4530-9873-87b0bad57eb9":{"steps":[{"Title":"Verifying all type of GemU options are present","Description":"All options are present","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/GemuOptions_033257be-ca2a-4530-9873-87b0bad57eb9/Screenshots/3ff83642-265e-41b3-b478-01700b958554.png"}],"metaData":[{"TESTCASE NAME":"GemuOptions","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159544347,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159544347,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159554121,"type":"datetime"},"EXECUTION DURATION":"00h:00m:09s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"GemUGrid_24d14931-1c6c-4ebb-90e9-9a6685d5575e":{"steps":[{"Title":"Verify GemUGrid options are navigation links","Description":"All options are present and navigable","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/GemUGrid_24d14931-1c6c-4ebb-90e9-9a6685d5575e/Screenshots/2b199045-674b-4728-bda7-8fc86ddd1d99.png"}],"metaData":[{"TESTCASE NAME":"GemUGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159559458,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159559458,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159569785,"type":"datetime"},"EXECUTION DURATION":"00h:00m:10s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"HomePagecareerGrid_daab0147-fa81-44ad-829a-004a69c80c83":{"steps":[{"Title":"Verifying view opening button navigable or not","Description":"Button is navigable","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/HomePagecareerGrid_daab0147-fa81-44ad-829a-004a69c80c83/Screenshots/8234bb8c-0b08-47f0-8079-7acf38da68cd.png"}],"metaData":[{"TESTCASE NAME":"HomePagecareerGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159574900,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159574900,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159582377,"type":"datetime"},"EXECUTION DURATION":"00h:00m:07s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"TechnologiesGrid_30eacbeb-6cd3-4c4f-a1f0-26d67c3f2ff9":{"steps":[{"Title":"Technologies Grid Buttons ","Description":"Buttons are navigated to the right page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/TechnologiesGrid_30eacbeb-6cd3-4c4f-a1f0-26d67c3f2ff9/Screenshots/383aaf9a-d877-4c4b-9c97-2b0cb0c821c4.png"}],"metaData":[{"TESTCASE NAME":"TechnologiesGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159587659,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159587659,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159610628,"type":"datetime"},"EXECUTION DURATION":"00h:00m:22s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"SolutionGrid_92acf651-7e3b-4bb8-86d3-cac142140df1":{"steps":[{"Title":"Verify if Solutions grid buttons are clickable","Description":"Buttons are navigable","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/SolutionGrid_92acf651-7e3b-4bb8-86d3-cac142140df1/Screenshots/011ee50b-2224-440d-9bc7-2f85c4fb623e.png"}],"metaData":[{"TESTCASE NAME":"SolutionGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159615821,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159615821,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159829178,"type":"datetime"},"EXECUTION DURATION":"00h:03m:33s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"InsightGrid_170ff06c-bbe6-475c-a4bb-73c0d4c76856":{"steps":[{"Title":"Verify Insights Grid","Description":"All the button are navigated to the right page","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/InsightGrid_170ff06c-bbe6-475c-a4bb-73c0d4c76856/Screenshots/42929330-6f39-45b9-92ee-4816f66bca31.png"}],"metaData":[{"TESTCASE NAME":"InsightGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159834437,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159834437,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159846375,"type":"datetime"},"EXECUTION DURATION":"00h:00m:11s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Instagramfollowbtn_6237329a-b819-4212-a4e7-ba84e124667e":{"steps":[{"Title":"Verify if follow button is clickable","Description":"Instagram follow button is navigable","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Instagramfollowbtn_6237329a-b819-4212-a4e7-ba84e124667e/Screenshots/5366b3e3-f737-4d21-b6b6-cbfbb304ffa3.png"}],"metaData":[{"TESTCASE NAME":"Instagramfollowbtn","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159851564,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159851564,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159869923,"type":"datetime"},"EXECUTION DURATION":"00h:00m:18s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Navigationbar_2fefbf53-5b77-49d7-bdad-9d5247491b49":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Navigationbar_2fefbf53-5b77-49d7-bdad-9d5247491b49/Screenshots/d2f75bb9-c41f-443c-8bfd-c0d5a899b586.png"},{"Title":"Verify options in header bar","Description":"All options are present on header bar","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Navigationbar_2fefbf53-5b77-49d7-bdad-9d5247491b49/Screenshots/6bfc699d-e348-48f7-a14d-169c34308f52.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159875138,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159875138,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159881149,"type":"datetime"},"EXECUTION DURATION":"00h:00m:06s"},{"TOTAL":2,"PASS":2,"FAIL":0,"INFO":0}]},"OfficeGrid_dad9c73e-8b74-4ec5-b50a-adcc08b326ed":{"steps":[{"Title":"Verify different Office Locations","Description":"All locations are present","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/OfficeGrid_dad9c73e-8b74-4ec5-b50a-adcc08b326ed/Screenshots/e04d9b90-cb47-4e8d-a3d1-64112fe53f00.png"}],"metaData":[{"TESTCASE NAME":"OfficeGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159886794,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159886794,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159890043,"type":"datetime"},"EXECUTION DURATION":"00h:00m:03s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Search Functionality_2ecb60a2-e31f-4575-9377-51788f0ebfd4":{"steps":[{"Title":"Check searching functionality","Description":"Search functinality is working fine","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/Search Functionality_2ecb60a2-e31f-4575-9377-51788f0ebfd4/Screenshots/f0d6c77c-80fc-42d0-a18e-bd4a715a281c.png"}],"metaData":[{"TESTCASE NAME":"Search Functionality","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159895249,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159895249,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159901700,"type":"datetime"},"EXECUTION DURATION":"00h:00m:06s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"SolutionsType_e0e5c194-c14f-4223-9817-daec2f0e8d93":{"steps":[{"Title":"Verifying all type of solutions are availble","Description":"All options are availble","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/SolutionsType_e0e5c194-c14f-4223-9817-daec2f0e8d93/Screenshots/cf36ed40-495c-46f7-92a8-f6af8793d3ce.png"}],"metaData":[{"TESTCASE NAME":"SolutionsType","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694159907005,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694159907005,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694159916957,"type":"datetime"},"EXECUTION DURATION":"00h:00m:09s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"SolutionMenu_2f871f9a-022a-4068-9543-46695a236557":{"steps":[{"Title":"Verify if solutions links are navigable or not","Description":"Links are navigated to the right page ","status":"PASS","Screenshot":".//Results/08-09-2023/UI Automation/SolutionMenu_2f871f9a-022a-4068-9543-46695a236557/Screenshots/8beed389-c393-453b-a462-2547ba26eb3b.png"}],"metaData":[{"TESTCASE NAME":"SolutionMenu","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694160292976,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694160292975,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694160339882,"type":"datetime"},"EXECUTION DURATION":"00h:00m:46s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]}}};console.log(obj);
+  if (obj.reportProduct === "GEMPYP") {
+    theme = gempypThemes;
+  } else if (obj.reportProduct === "GEMSURF") {
+    theme = gemsurfThemes;
+  } else {
+  }
+  obj.Suits_Details.TestCase_Details = changeFormat(
+    obj.Suits_Details.TestCase_Details
+  );
+  var excludeHeader = [
+    "TC_RUN_ID",
+    "STEPS",
+    "EXECUTION_METADATA",
+    "RESULT_FILE",
+    "IGNORE",
+  ];
+  var sortType = "";
+  var lastsortHeader = "";
+  var exeHeaders = {
+    STATUS: "status",
+    "PROJECT NAME": "project_name",
+    "REPORT TYPE": "report_type",
+    ENV: "env",
+    "START TIME": "s_start_time",
+    "END TIME": "s_end_time",
+    DURATION: "duration",
+  };
+  var infraHeaders = {
+    "EXECUTED BY": "user",
+    "EXECUTED ON": "machine",
+    RUN_TYPE: "run_type",
+    RUN_MODE: "run_mode",
+  };
+  var options = getOptions(obj.Suits_Details.TestCase_Details);
+  for (var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    $("#status").append(el);
+  }
+
+  function changeFormat(value) {
+
+    for (var j in value) {
+      var keys = Object.keys(value[j]);
+      var key, newkey, i = 0, n = keys.length;
+      var newobj = {}
+      while (i < n) {
+        key = keys[i];
+        if (key.includes('_time')) {
+          newobj[key.replace('_', " ").toUpperCase()] = value[j][key];
+        }
+        else
+        {
+          newobj[key.toUpperCase()] = value[j][key];
+        }
+        i++;
+      }
+      value[j] = newobj;
+    }
+
+    for (var i = 0; i < value.length; i++) {
+      var keys = Object.keys(value[i]);
+      for (var j = 0; j < keys.length; j++) {
+        if (typeof value[i][keys[j]] != "object") {
+          value[i][keys[j]] = {
+            value: value[i][keys[j]],
+            sortValue: value[i][keys[j]],
+          };
+        }
+      }
+    }
+    return value;
+  }
+  function constructPage() {
+
+    var infraTable = getInfraDetailsTable(obj.Suits_Details);
+    $("#pills-overview").append(infraTable);
+    var cardDetailsOverview = getCardDetails(obj.Suits_Details.Testcase_Info, 'overview');
+    var cardDetailsTestcase = getCardDetails(obj.Suits_Details.Testcase_Info, 'testcase');
+
+    $("#pills-overview").append(cardDetailsOverview);
+    $("#pills-testcase").append(cardDetailsTestcase);
+    var exeTable = getExecutionDetailsTable(obj.Suits_Details);
+    $("#pills-overview").append(exeTable);
+
+    document.getElementById("productType").innerText = obj.reportProduct;
+    $("#heading").css("color", theme[0]);
+    $("#filterHeading").css("color", theme[0]);
+    $("#filtercard").hover(
+      function () {
+        var col = "1px solid " + theme[0];
+        $(this).css("border", col);
+      },
+      function () {
+        $(this).css("border", "none");
+      }
+    );
+    $("#clear").css("background-color", theme[2]);
+    if (obj.reportProduct === "GEMPYP") {
+      $(".nav-pills").addClass("gempyp");
+    } else if (obj.reportProduct === "GEMSURF") {
+      $(".nav-pills").addClass("gemsurf");
+    } else {
+    }
+
+    var testcaseDetailsTable = getTestcaseDetailsTable(
+      obj.Suits_Details.TestCase_Details
+    );
+    $("#pills-testcase").append(testcaseDetailsTable);
+
+    $('#loading').hide();
+
+  }
+
+  function getTestcaseDetailsTable(list) {
+    var div = $("<div/>").addClass("mt-5 mx-4 container-fluid tableEx");
+    var cols = [];
+
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+          if (!excludeHeader.includes(k)) {
+            cols.push(k.toUpperCase());
+          }
+        }
+      }
+    }
+
+    if (!cols.includes("DURATION")) {
+      cols.push("DURATION");
+    }
+    if (!cols.includes("S.No.")) {
+      cols.unshift("S.NO.");
+    }
+    // Create a table element
+    var table = document.createElement("table");
+    table.id = "tab";
+    table.className =
+      "table table-borderless table-responsive d-block d-md-table";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i];
+      if((cols[i].includes('START TIME')) || (cols[i].includes('END TIME')))
+      {
+        theader.style.minWidth = "120px";
+      }
+      if(cols[i].includes('TIME'))
+      {
+        const col_id = cols[i].split(' ')
+        theader.id = col_id[0] + '_' + col_id[1] + "_tc";
+      }
+      else
+      {
+      theader.id = cols[i] + "_tc";
+      }
+
+      theader.addEventListener("click", getsort, true);
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+
+    // Adding the data to the table
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      if (list[i]["IGNORE"] !== true) {
+        trow = table.insertRow(-1);
+        trow.setAttribute("data-toggle", "collapse");
+        trow.setAttribute("data-target", "#accord" + i);
+        trow.className = "checkCollapse";
+        trow.style.background = "white";
+        for (var j = 0; j < cols.length; j++) {
+          var cell = trow.insertCell(-1);
+          cell.addEventListener("click", function () {
+            $("#tab").find("tbody").find("tr").not(".accordRow").not(".checkCollapse").not(":first").fadeIn("fast");
+          });
+
+          var att = document.createAttribute("data-input");
+
+          if (cols[j].includes("_")) {
+            var v = cols[j].replace("_", " ");
+            att.value = v;
+          } else {
+            att.value = cols[j];
+          }
+          cell.setAttributeNode(att);
+          if (cols[j] === "STATUS") {
+            // cell.innerHTML = list[i][cols[j]];
+            var link = document.createElement("div");
+            link.className = "btn-sm";
+            cell.setAttribute("class", "status");
+            link.innerHTML = list[i][cols[j]]["value"];
+            cell.appendChild(link);
+            if (list[i][cols[j]]["value"] === "PASS") {
+              link.className = "statusColorPass";
+            } else if (list[i][cols[j]]["value"] === "FAIL") {
+              link.className = "statusColorFail";
+            } else if (list[i][cols[j]]["value"] === "INFO") {
+              link.className = "statusColorInfo";
+            } else if (list[i][cols[j]]["value"] === "WARN") {
+              link.className = "statusColorWarn";
+            } else if (list[i][cols[j]]["value"] === "INCOMPLETE") {
+              link.className = "statusColorIncomplete";
+            } else {
+              link.className = "statusColorOthers";
+            }
+            // link.style.width='fit-content';
+          } else if ((cols[j].includes("START TIME")) || (cols[j].includes("END TIME"))) {
+            cell.innerHTML = changeTime(list[i][cols[j]]["value"]);
+          } else if (cols[j].includes("S.NO.")) {
+            cell.innerHTML = changeSerial(i)["value"];
+            // cell.style.maxWidth ="20px !important";
+          } else if (cols[j].includes("DURATION")) {
+            cell.innerHTML = getDuration(
+              list[i]["START TIME"]["value"],
+              list[i]["END TIME"]["value"],
+              i
+            )["value"];
+          }
+          else if (cols[j].includes("LOG_FILE")) {
+            if (!list[i][cols[j]]) {
+              cell.innerHTML = "None";
+            }
+            else {
+              var link = document.createElement("a");
+              if(list[i][cols[j]]["value"])
+              {
+                link.href = list[i][cols[j]]["value"];
+              }
+              else {
+                link.href = list[i][cols[j].toLowerCase()]["value"];
+              }
+              // link.href = list[i][cols[j].toLowerCase()]["value"];
+              // link.href = list[i][cols[j]]["value"];
+              link.target = "_blank";
+              link.innerHTML = "View";
+              link.addEventListener("click", function (e) {
+                e.stopImmediatePropagation();
+              });
+              cell.appendChild(link);
+            }
+          }
+          else if (cols[j].toUpperCase().includes("NAME")) {
+            cell.setAttribute("class", "testfilt");
+            cell.innerHTML = list[i][cols[j]]["value"];
+          }
+          else {
+            if (!list[i][cols[j]]) {
+              cell.innerHTML = "None";
+            } else {
+              cell.innerHTML = list[i][cols[j]]["value"];
+            }
+          }
+        }
+      }
+      trowAccor = table.insertRow(-1);
+      tcellAccord = trowAccor.insertCell(-1);
+      tcellAccord.className = "hiddenRow";
+      tcellAccord.setAttribute("colspan", cols.length);
+
+
+
+
+      var accordDiv = document.createElement("div");
+      accordDiv.className = "accordion-body collapse";
+      accordDiv.id = "accord" + i;
+      accordDiv.setAttribute("data-parent", "#tab");
+      var accordHeading = $("<div/>")
+        .html("Test Step Report")
+        .addClass("mb-2 accordHeading mt-4 text-center")
+        .css("color", theme[0]);
+      accordDiv.append(accordHeading[0]);
+      var stepCard = createAccordionCards(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].metaData[2],
+        i
+      );
+      stepCard.addClass("mt-4");
+      accordDiv.append(stepCard[0]);
+      var stepDetails = createAccordionMetaDetails(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].metaData
+      );
+      accordDiv.append(stepDetails[0]);
+      var tableAccord = createAccordionTable(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].steps,
+        i
+      );
+      accordDiv.append(tableAccord[0]);
+      // tcellAccord.append(imgmodaldiv);
+      tcellAccord.append(accordDiv);
+    }
+
+    div.append(table);
+    return div;
+  }
+  function createAccordionTable(list, index) {
+    var div = $("<div/>").addClass("mt-5 mx-5 mb-2");
+
+    var cols = [];
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+          if (!excludeHeader.includes(k)) {
+            cols.push(k);
+          }
+        }
+      }
+    }
+    if (!cols.includes("S.No.")) {
+      cols.unshift("S.NO.");
+    }
+
+    var table = document.createElement("table");
+    table.id = "tabAccord" + index;
+    table.className =
+      "table table-borderless table-responsive d-block d-md-table w-100";
+    //  table.style.width="100%";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i].toUpperCase();
+      theader.id = cols[i] + "_tcaccord";
+      if (cols[i] === "STATUS" || cols[i] === "status") {
+        theader.style.width = "130px";
+      }
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      trow = table.insertRow(-1);
+      trow.className = "accordRow";
+      trow.style.backgroundColor = "#FFFFFF";
+      for (var j = 0; j < cols.length; j++) {
+        var cell = trow.insertCell(-1);
+        cell.setAttribute("class", "align-middle setWidth");
+
+        var att = document.createAttribute("data-input");
+
+        if (cols[j].includes(" ")) {
+          var v = cols[j].replace(" ", "_");
+          att.value = v;
+        } else {
+          att.value = cols[j];
+        }
+        cell.setAttributeNode(att);
+        if (cols[j].toLowerCase() === "substeps") {
+          cell.style.width = "20px";
+          cell.style.verticalAlign = "middle";
+          cell.setAttribute("class", "text-center");
+          if (list[i][cols[j]]) {
+            var divIcon = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.id = i;
+            icon.setAttribute("title", "View Substeps");
+            icon.setAttribute("class", "fa fa-eye substepIcon");
+            var index = i;
+            console.log(list[index]);
+            console.log(cols[j]);
+            divIcon.addEventListener("click", (event) => {
+              console.log(list);
+              createSubsteps(list, event);
+
+              trimModal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+            });
+            divIcon.appendChild(icon);
+            cell.appendChild(divIcon);
+
+          }
+          else {
+            cell.innerHTML = "-";
+
+          }
+        }
+        else if (cols[j] && cols[j].toLowerCase() === 'screenshot') {
+          if (list[i][cols[j]] !== "N/A") {
+            var image = document.createElement("img");
+			var temp=list[i][cols[j]].split("/");
+			var relativePath=temp[temp.length-3]+"/"+temp[temp.length-2]+"/"+temp[temp.length-1];
+            image.setAttribute('src', relativePath);
+            image.setAttribute('class', "thumb");
+            image.setAttribute('image', "Screenshot");
+            image.addEventListener("click", function () {
+              var modal = document.getElementById("myModal");
+
+              // Get the image and insert it inside the modal - use its "alt" text as a caption
+              var img = document.getElementById("myImg");
+              var modalImg = document.getElementById("img01");
+              var captionText = document.getElementById("caption");
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            });
+
+            image.setAttribute('data-toggle', 'modal');
+            image.setAttribute('data-target', '#myModal');
+            // modal.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            image.setAttribute('id', "myImg");
+            cell.appendChild(image);
+
+          } else {
+            var divHandle = document.createElement("div");
+			divHandle.innerHTML="N/A";
+            // divHandle.setAttribute('class','text-center');
+            // divHandle.innerHTML="(blank)";
+            cell.appendChild(divHandle);
+          }
+        }
+        else if (list[i][cols[j]] && typeof list[i][cols[j]] === "object") {
+          var a = document.createElement("a");
+          a.href = list[i][cols[j]]["href"];
+          a.target = "_blank";
+          a.innerHTML = list[i][cols[j]]["LinkName"];
+          cell.appendChild(a);
+        } else if (cols[j] === "STATUS" || cols[j] === "status") {
+          var cont = document.createElement("div");
+
+          if (list[i][cols[j]] === "PASS") {
+            cont.className = "statusColorPass statusAccord ";
+          } else if (list[i][cols[j]] === "FAIL") {
+            cont.className = "statusColorFail statusAccord";
+          } else if (list[i][cols[j]] === "INFO") {
+            cont.className = "statusColorInfo statusAccord";
+          } else if (list[i][cols[j]] === "WARN") {
+            cont.className = "statusColorWarn statusAccord";
+          } else if (list[i][cols[j]] === "INCOMPLETE") {
+            cont.className = "statusColorIncomplete statusAccord";
+          } else {
+            cont.className = "statusColorOthers statusAccord";
+          }
+          cont.innerText = list[i][cols[j]];
+          cell.appendChild(cont);
+        } else if (cols[j] === "TIME" || cols[j] === "time") {
+          cell.innerHTML = convertIntoDateTime(list[i][cols[j]]);
+        } else if (cols[j] === "S.NO.") {
+          cell.innerHTML = i + 1;
+          cell.style.width = "20px";
+
+        } else {
+          if (list[i][cols[j]] === undefined) {
+            list[i][cols[j]] = "-";
+          }
+          cell.append(getTrimData(list[i][cols[j]], cols[j]));
+        }
+      }
+    }
+    div.append(table);
+    return div;
+  }
+
+  function getExecutionDetailsTable(data) {
+    var div = $("<div/>").addClass(" mx-5 mt-5");
+    var exeHeading = $("<span/>")
+      .html("Execution Details")
+      .addClass("tableHeading mb-2")
+      .css("color", theme[0]);
+    $(div).append(exeHeading);
+    var table = $("<table/>")
+      .addClass(
+        "table table-borderless table-responsive w-100 d-block d-md-table"
+      )
+      .css("box-shadow", " 0px 3px 6px rgba(0, 71, 136, 0.05)")
+      .css("border-radius", "4px");
+    var cols = Headers(exeHeaders);
+    var headers = $("<tr>");
+    var content = $("<tr/>");
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[cols[colIndex]];
+      var backOpacity = theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      headers
+        .append($("<th/>").html(cols[colIndex]))
+        .css("color", "black")
+        .css("background-color", backOpacity);
+
+      $(table).append(headers);
+    }
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[exeHeaders[cols[colIndex]]];
+
+      if (cols[colIndex].toUpperCase().includes("STATUS")) {
+        val = document.createElement("div");
+        val.innerText = data[exeHeaders[cols[colIndex]]];
+        if (data[exeHeaders[cols[colIndex]]] === "PASS") {
+          val.className = "statusColorPass";
+        } else if (data[exeHeaders[cols[colIndex]]] === "FAIL") {
+          val.className = "statusColorFail";
+        } else if (data[exeHeaders[cols[colIndex]]] === "INFO") {
+          val.className = "statusColorInfo";
+        } else if (data[exeHeaders[cols[colIndex]]] === "WARN") {
+          val.className = "statusColorWarn";
+        } else if (data[exeHeaders[cols[colIndex]]] === "INCOMPLETE") {
+          val.className = "statusColorIncomplete";
+        } else {
+          val.className = "statusColorOthers";
+        }
+      }
+      else if((cols[colIndex].toUpperCase().includes("START TIME"))){
+        val = changeTime(data[exeHeaders[cols[colIndex]]]);
+      }
+
+      else if ((cols[colIndex].toUpperCase().includes("END TIME"))) {
+        if(data[exeHeaders[cols[0]]] === "EXE"){
+        val = "-------------";
+        }
+        else{
+          val=changeTime(data[exeHeaders[cols[colIndex]]]);
+        }
+      }
+
+      else if (cols[colIndex].toUpperCase().includes("DURATION")) {
+        if(data[exeHeaders[cols[0]]] === "EXE"){
+        val = "-------------";
+        }
+        else{
+        val = getDuration(
+          data[exeHeaders["START TIME"]],
+          data[exeHeaders["END TIME"]],
+          colIndex + "_col"
+        )["value"];
+        }
+      }
+      else if (val === undefined) {
+        val = "None";
+      }
+
+
+
+
+      content.append($("<td/>").html(val).css("background-color", "white"));
+
+      $(table).append(content);
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function createAccordionMetaDetails(data) {
+    var div = $("<div/>")
+      .addClass("mt-4 mx-5 card p-3")
+      .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+      .css("border-radius", "6px")
+      .css("display", "block")
+      .hover(
+        function () {
+          var col = "1px solid " + theme[0];
+          $(this).css("border", col).css("cursor", "pointer");
+        },
+        function () {
+          $(this).css("border", "none");
+        }
+      );
+    var table = $("<table/>").addClass(
+      "table table-borderless table-responsive w-100 d-block d-md-table"
+    );
+    for (var m = 0; m < data.length - 1; m++) {
+      var headers = $("<tr>");
+      headers.addClass("accordRow");
+      var content = $("<tr/>");
+      content.addClass("accordRow");
+      var cols = Headers(data[m]);
+      for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+        var val = data[m][cols[colIndex]];
+
+        headers
+          .append($("<th/>").html(cols[colIndex]))
+          .css("color", theme[0])
+          .css("max-width", "3px");
+
+        $(table).append(headers);
+      }
+
+      for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+        var val = data[m][cols[colIndex]];
+        if (val === undefined) {
+          val = "None";
+        }
+        if (val.type) {
+          content.append($("<td/>").html(changeDate(val)));
+        } else {
+          content.append($("<td/>").html(val));
+        }
+        $(table).append(content);
+      }
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function getInfraDetailsTable(data) {
+    var div = $("<div/>")
+      .addClass("mt-4 mx-5 card p-3")
+      .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+      .css("border-radius", "6px")
+      .css("display", "block")
+      .hover(
+        function () {
+          var col = "1px solid " + theme[0];
+          $(this).css("border", col).css("cursor", "pointer");
+        },
+        function () {
+          $(this).css("border", "none");
+        }
+      );
+
+    var infraHeading = $("<span/>")
+      .html("Infra Details")
+      .addClass("tableHeading mb-2 ml-2");
+    infraHeading.css("color", theme[0]);
+    $(div).append(infraHeading);
+    var table = $("<table/>").addClass(
+      "table table-borderless table-responsive w-100 d-block d-md-table"
+    );
+    var cols = Headers(infraHeaders);
+    var headers = $("<tr>");
+    var content = $("<tr/>");
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[cols[colIndex]];
+
+      headers.append($("<th/>").html(cols[colIndex])).css("color", theme[0]);
+
+      $(table).append(headers);
+    }
+
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[infraHeaders[cols[colIndex]]];
+      if (val === undefined) {
+        val = "None";
+      }
+
+      content.append($("<td/>").html(val));
+
+      $(table).append(content);
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function createAccordionCards(val, index) {
+    var key, keys = Object.keys(val);
+    var n = keys.length;
+    var newobj = {}
+    while (n--) {
+      key = keys[n];
+      newobj[key.toUpperCase()] = val[key];
+    }
+    val = newobj;
+    var cards = Object.keys(val);
+    var dummy_card = new Set();
+    dummy_card.add("TOTAL");
+    dummy_card.add("PASS");
+    dummy_card.add("FAIL");
+    cards.forEach((ele) => {
+      dummy_card.add(ele.toUpperCase());
+    });
+    cards = Array.from(dummy_card);
+
+    var div = $("<div/>").addClass("mx-4 mt-4");
+    var flex = $("<div/>").addClass("d-flex flex-wrap justify-content-start");
+    for (var i = 0; i < cards.length; i++) {
+      var card = $("<div/>")
+        .addClass("card mx-4 mt-2")
+        .css("height", "92px")
+        .css("width", "170px")
+        .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+        .css("border-radius", "6px")
+        .hover(
+          function () {
+            var col = "1px solid " + theme[0];
+
+            $(this).css("border", col).css("cursor", "pointer");
+
+          },
+          function () {
+            $(this).css("border", "1px solid rgba(0,0,0,.125)");
+          }
+        );
+
+      var cardBody = $("<div/>")
+        .addClass("card-body")
+        .css("align-self", "flex-start");
+      var cardTitle = $("<span/>")
+        .addClass("title-card")
+        .css("color", theme[0]);
+      // if(data[cards[i]]){
+      cardTitle.html(cards[i]);
+      //         }else{
+      // cardTitle.html(0);
+      //         }
+      var cardText = $("<span/>").addClass("text-card");
+      if (val[cards[i]]) {
+
+        card.attr("title", "Click to Filter");
+
+
+        cardText.html(val[cards[i]]);
+      } else {
+
+        card.css("background-color", "#EEEEEE");
+        card.hover(function () {
+          $(this).css('cursor', 'not-allowed');
+        });
+        cardText.html(0);
+      }
+      if (cards[i] === "PASS") {
+        cardText.addClass("passTest");
+      } else if (cards[i] === "FAIL") {
+        cardText.addClass("failTest");
+      } else if (cards[i] === "WARN") {
+        cardText.addClass("warnTest");
+      } else if (cards[i] === "INFO") {
+        cardText.addClass("infoTest");
+      } else if (cards[i] === "INCOMPLETE") {
+        cardText.addClass("incompleteTest");
+      } else if (cards[i] === "TOTAL") {
+        cardText.css("color", theme[0]);
+      } else {
+        cardText.addClass("othersTest");
+      }
+      cardBody.append(cardTitle).append("<br/>").append(cardText);
+      card.append(cardBody);
+
+      flex.append(card);
+      card.click(function (event) {
+        filterTable(
+          event.currentTarget.firstChild.firstChild.innerText,
+          index,
+          event.currentTarget.firstChild.lastChild.innerText
+        );
+      });
+    }
+
+    div.append(flex);
+    return div;
+  }
+  function filterTable(val, index, check) {
+    if (check > 0) {
+      var $filterableRows = $("#tabAccord" + index)
+        .find("tbody")
+        .find("tr")
+        .not(":first");
+      $filterableRows
+        .hide()
+        .filter(function () {
+          return (
+            $(this).filter(function () {
+              var tdText = $(this).find(".statusAccord").text().toLowerCase();
+
+              if (val === "TOTAL") {
+                val = "";
+              }
+              if (val === undefined) {
+                val = "";
+              } else {
+                val = val.toLowerCase();
+              }
+
+              return tdText.includes(val);
+            }).length === $(this).length
+          );
+        })
+        .show();
+    }
+  }
+
+  function getCardDetails(data, type) {
+    var key, keys = Object.keys(data);
+    var n = keys.length;
+    var newobj = {}
+    while (n--) {
+      key = keys[n];
+      newobj[key.toUpperCase()] = data[key];
+    }
+    data = newobj;
+    var cards = Object.keys(data);
+    var dummy_card = new Set();
+    dummy_card.add("TOTAL");
+    dummy_card.add("PASS");
+    dummy_card.add("FAIL");
+    cards.forEach((ele) => {
+      dummy_card.add(ele.toUpperCase());
+    });
+    cards = Array.from(dummy_card);
+
+    var cardValues = Object.values(data);
+    var div = $("<div/>").addClass("col-12 mx-2 mt-4");
+    var flex = $("<div/>").addClass("d-flex flex-wrap justify-content-start");
+    for (var i = 0; i < cards.length; i++) {
+      var card = $("<div/>")
+        .addClass("card mx-4 mt-2")
+        .css("height", "92px")
+        .css("width", "170px")
+        .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+        .css("border-radius", "6px")
+        .hover(
+          function () {
+            var col = "1px solid " + theme[0];
+            $(this).css("border", col);
+            if (type === 'testcase') {
+              $(this).css("cursor", "pointer");
+            }
+          },
+          function () {
+
+            $(this).css("border", "1px solid rgba(0,0,0,.125)");
+
+          }
+        );
+
+      var cardBody = $("<div/>").addClass("card-body");
+      var cardTitle = $("<span/>")
+        .addClass("title-card")
+        .css("color", theme[0]);
+      // if(data[cards[i]]){
+      cardTitle.html(cards[i]);
+      //         }else{
+      // cardTitle.html(0);
+      //         }
+      var cardText = $("<span/>").addClass("text-card");
+      if (data[cards[i]]) {
+        if (type === 'testcase') {
+          card.attr("title", "Click to Filter");
+        }
+        cardText.html(data[cards[i]]);
+      } else {
+        if (type === 'testcase') {
+          card.css("background-color", "#EEEEEE");
+          card.hover(function () {
+            $(this).css('cursor', 'not-allowed');
+          });
+        }
+        cardText.html(0);
+      }
+      if (cards[i] === "PASS") {
+        cardText.addClass("passTest");
+      } else if (cards[i] === "FAIL") {
+        cardText.addClass("failTest");
+      } else if (cards[i] === "WARN") {
+        cardText.addClass("warnTest");
+      } else if (cards[i] === "INFO") {
+        cardText.addClass("infoTest");
+      } else if (cards[i] === "INCOMPLETE") {
+        cardText.addClass("incompleteTest");
+      } else if (cards[i] === "TOTAL") {
+        cardText.css("color", theme[0]);
+      } else {
+        cardText.addClass("othersTest");
+      }
+      cardBody.append(cardTitle).append("<br/>").append(cardText);
+      card.append(cardBody);
+      if (type === 'testcase') {
+        card.attr("data-toggle", "tooltip");
+        card.attr("data-placement", "bottom");
+
+        card.click(function (event) {
+
+          $("#tab").find("tbody").find("tr").not(".accordRow").not(".checkCollapse").not(":first").fadeOut("fast");
+
+          statusSearch(event.currentTarget.firstChild.firstChild.innerText, event.currentTarget.firstChild.lastChild.innerText);
+        });
+      }
+      flex.append(card);
+    }
+    div.append(flex);
+    return div;
+  }
+
+  function changeSerial(val) {
+    var serialobj = {
+      value: val + 1,
+      sortValue: val + 1,
+    };
+    return serialobj;
+  }
+
+  function changeTime(val) {
+    var data = new Date(val);
+    var abbrTZ = data.toString().match(/\(([A-Za-z\s].*)\)/)[1].split(' ').map(function (item) { return item[0] }).join('');
+    return data.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' }) + " " + data.toLocaleTimeString() + " (" + abbrTZ + ")";
+
+  }
+
+  function getDuration(start, end, index) {
+    var startTime = new Date(start).getTime();
+    var endTime = new Date(end).getTime();
+    var dur = (endTime - startTime) / 1000;
+    var objans = {
+      value: ans,
+      sortValue: dur,
+    };
+    if (dur < 60) {
+      objans.value = dur + " sec(s)";
+    } else if (dur >= 60 && dur < 3600) {
+      var ans = Math.floor(dur / 60) + " min ";
+      if (Math.floor(dur % 60) !== 0) {
+        ans = ans + Math.floor(dur % 60) + " sec(s)";
+      }
+      objans.value = ans;
+    } else if (dur >= 60 && dur < 86400) {
+      var ans = Math.floor(dur / 3600) + " hour ";
+      if (Math.floor((dur % 3600) / 60) !== 0) {
+        ans = ans + Math.floor((dur % 3600) / 60) + " min";
+      }
+      if (Math.floor((dur % 3600) % 60) !== 0) {
+        ans = ans + Math.floor((dur % 3600) % 60) + " sec(s)";
+      }
+
+      objans.value = ans;
+    }
+    if (!isNaN(index)) {
+      obj.Suits_Details.TestCase_Details[index]["DURATION"] = objans;
+    }
+    return objans;
+  }
+
+  function getOptions(val) {
+    var options = new Set();
+    options.add("All");
+    for (var i = 0; i < val.length; i++) {
+      options.add(val[i]["STATUS"]["value"]);
+    }
+    return Array.from(options);
+  }
+
+  function getsort(val) {
+    if (
+      val.target.className === "fa fa-angle-up ml-1" ||
+      val.target.className === "fa fa-angle-down ml-1"
+    ) {
+      if (lastsortHeader === "") {
+        lastsortHeader = val.target.id;
+        sortType = "asc";
+      } else if (val.target.id === lastsortHeader) {
+        if (sortType === "asc") {
+          sortType = "desc";
+        } else {
+          sortType = "asc";
+        }
+        lastsortHeader = val.target.id;
+      } else {
+        sortType = "asc";
+        lastsortHeader = val.target.id;
+      }
+      var tab = [...obj.Suits_Details.TestCase_Details];
+      if (sortType === "asc") {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.id]["sortValue"] >
+              tab[j][val.target.id]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.id]["sortValue"] <
+              tab[j][val.target.id]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      }
+      obj.Suits_Details.TestCase_Details = tab;
+      $("#pills-testcase").children("div")[2].remove();
+      var testcaseDetailsTable = getTestcaseDetailsTable(tab);
+      $("#pills-testcase").append(testcaseDetailsTable);
+      myFunction();
+      var icon = $("<i/>").addClass("fa").css("font-size", "18px");
+      if (sortType === "asc") {
+        icon.addClass("fa-angle-up ml-1").css("vertical-align", "middle");
+      }
+      if (sortType === "desc") {
+        icon.addClass("fa-angle-down ml-1").css("vertical-align", "middle");
+      }
+      icon.attr("id", lastsortHeader);
+      if(lastsortHeader.includes('TIME'))
+      {
+        const arrid = lastsortHeader.split(' ');
+        var targetId = "#" + arrid[0] + "_" + arrid[1] + "_tc";
+        $(targetId).append(icon);
+
+      }
+      else
+      {
+      // icon.addEventListener("click",(e)=>{
+      // e.stopPropagation();
+      // });
+      var targetId = "#" + lastsortHeader + "_tc";
+      $(targetId).append(icon);
+      }
+
+      var $filterableRows = $("#tab").find("tbody").find("tr").not(":first");
+    }
+
+
+    else {
+      if (lastsortHeader === "") {
+        lastsortHeader = val.target.innerText;
+        sortType = "asc";
+      } else if (val.target.innerText === lastsortHeader) {
+        if (sortType === "asc") {
+          sortType = "desc";
+        } else {
+          sortType = "asc";
+        }
+        lastsortHeader = val.target.innerText;
+      } else {
+        sortType = "asc";
+        lastsortHeader = val.target.innerText;
+      }
+      var tab = [...obj.Suits_Details.TestCase_Details];
+      tab = changeFormat(tab);
+      if (sortType === "asc") {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.innerText]["sortValue"] >
+              tab[j][val.target.innerText]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.innerText]["sortValue"] <
+              tab[j][val.target.innerText]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      }
+      obj.Suits_Details.TestCase_Details = tab;
+      $("#pills-testcase").children("div")[2].remove();
+      var testcaseDetailsTable = getTestcaseDetailsTable(tab);
+      $("#pills-testcase").append(testcaseDetailsTable);
+      myFunction();
+
+      var icon = $("<i/>").addClass("fa").css("font-size", "18px");
+      if (sortType === "asc") {
+        icon.addClass("fa-angle-up ml-1").css("vertical-align", "middle");
+      }
+      if (sortType === "desc") {
+        icon.addClass("fa-angle-down ml-1").css("vertical-align", "middle");
+      }
+
+      icon.attr("id", lastsortHeader);
+      if(lastsortHeader.includes('TIME'))
+      {
+        const arrid = lastsortHeader.split(' ');
+        var targetId = "#" + arrid[0] + "_" + arrid[1] + "_tc";
+        $(targetId).append(icon);
+
+      }
+      else
+      {
+      // icon.addEventListener("click",(e)=>{
+      // e.stopPropagation();
+      // });
+      var targetId = "#" + lastsortHeader + "_tc";
+      $(targetId).append(icon);
+      }
+
+      var $filterableRows = $("#tab").find("tbody").find("tr").not(":first");
+    }
+  }
+
+  function clickFunc(event) {
+    event.stopPropagation();
+  }
+  function Headers(list) {
+    var columns = [];
+    row = list;
+    for (var k in row) {
+      if ($.inArray(k, columns) == -1) {
+        columns.push(k);
+      }
+    }
+    return columns;
+  }
+
+
+  function showFilterCards(val) {
+    if (val === "show") {
+      $("#filtercard").css("display", "block");
+    } else {
+      $("#filtercard").css("display", "none");
+    }
+  }
+
+  function showFilter(val) {
+    if (val !== "overview") {
+      $("#filters").css("display", "block");
+    } else {
+      $("#filters").css("display", "none");
+    }
+  }
+
+  function myFunction() {
+    var inputs = $(".search-key");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].id === "status") {
+        inputs[i].value = "All";
+      } else {
+        inputs[i].value = "";
+      }
+    }
+
+    var $filterableRows = $("#tab tbody tr");
+    $filterableRows.show();
+  }
+
+  function openDialog() {
+    $("a[name=Test]").on("click", function (e) {
+      e.preventDefault();
+      $("#modal").load(this.href).dialog({ modal: true });
+    });
+  }
+
+  function changeDate(val) {
+    var temp = val.type.toLowerCase();
+    var d = new Date(val.value);
+    if (temp === "date") {
+      return d.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' });
+    } else if (temp === "time") {
+      return d.toLocaleTimeString();
+    } else if (temp === "datetime") {
+      return d.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+    }
+  }
+
+  function convertIntoDateTime(value) {
+    var date = new Date(value);
+    return date.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+  }
+  function closeModal(id) {
+    var modal = document.getElementById(id);
+    document.getElementById("trimModalcontent").innerHTML = "";
+    document.getElementById("trimModaltitle").innerHTML = "";
+    modal.style.display = "none";
+
+  }
+  function getTrimData(data, column) {
+    var div = document.createElement("div");
+    var span = document.createElement("span");
+    var button = document.createElement("button");
+    button.innerHTML = "See More";
+    button.addEventListener("click", function () {
+      var trimModal = document.getElementById("trimModal");
+      trimModal.style.display = "block";
+      var trimModalcontent = document.getElementById("trimModalcontent");
+      trimModalcontent.innerHTML = data;
+      var trimModaltitle = document.getElementById("trimModaltitle");
+      trimModaltitle.innerHTML = column.toUpperCase();
+      trimModal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
+    });
+    button.setAttribute("class", "ml-2 btn btn-link");
+    if (data && data.length > 150) {
+      span.innerHTML = data.slice(0, 150) + "...";
+      span.appendChild(button);
+    } else {
+      span.innerHTML = data;
+    }
+    div.appendChild(span);
+
+    return div;
+  }
+
+
+
+  function createSubsteps(val, event) {
+    var modal = document.getElementById("trimModal");
+    modal.style.display = "block";
+    var trimModaltitle = document.getElementById("trimModaltitle");
+    trimModaltitle.innerHTML = "SUBSTEPS";
+    var trimModalcontent = document.getElementById("trimModalcontent");
+    var list = val[parseInt(event.target.id)]['subSteps'];
+    var cols = [];
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+
+          cols.push(k);
+        }
+      }
+    }
+
+
+
+    var table = document.createElement("table");
+    table.className =
+      "table table-borderless d-block d-md-table text-center";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i];
+
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+
+
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      trow = table.insertRow(-1);
+
+      trow.style.backgroundColor = "#FFFFFF";
+      for (var j = 0; j < cols.length; j++) {
+        var cell = trow.insertCell(-1);
+        cell.setAttribute("class", "align-middle setWidth");
+        if (cols[j] === "status") {
+          // cell.innerHTML = list[i][cols[j]];
+          var link = document.createElement("div");
+          link.className = "btn-sm";
+          link.innerHTML = list[i][cols[j]];
+          cell.appendChild(link);
+          if (list[i][cols[j]] === "PASS") {
+            link.className = "statusColorPass";
+          } else if (list[i][cols[j]] === "FAIL") {
+            link.className = "statusColorFail";
+          } else if (list[i][cols[j]] === "INFO") {
+            link.className = "statusColorInfo";
+          } else if (list[i][cols[j]] === "WARN") {
+            link.className = "statusColorWarn";
+          } else if (list[i][cols[j]] === "INCOMPLETE") {
+            link.className = "statusColorIncomplete";
+          } else {
+            link.className = "statusColorOthers";
+          }
+        } else {
+          cell.innerHTML = list[i][cols[j]];
+        }
+      }
+    }
+
+    trimModalcontent.append(table);
+    console.log(cols);
+  }
+
+
+  function statusSearch(val, count) {
+    if (count > 0) {
+      var $filterableRows = $("#tab")
+        .find("tbody")
+        .find(".checkCollapse")
+
+      $filterableRows
+        .hide()
+        .filter(function () {
+          return (
+            $(this).filter(function () {
+              var tdText = $(this).find(".status").text().toLowerCase();
+              console.log(tdText);
+
+
+              if (val === "TOTAL") {
+                val = "";
+              }
+              if (val === undefined) {
+                val = "";
+              } else {
+                val = val.toLowerCase();
+              }
+
+              return tdText.includes(val);
+            }).length === $(this).length
+          );
+        })
+        .show();
+    }
+  }
+
+</script>
+
+</html>

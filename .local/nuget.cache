@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YQ56wO1LqXof3MmYlDMGJWHG0o+P2f0wCrVxxN0GlKS6Llev/7YmeNLlUoUZSrd65lGPTMEyl5jvoJhByroY3w==",
+  "dgSpecHash": "RL//bFx/yDSiTkPg+Bvw3vVeMfYkTr2ul7wLWJ+e/u6m3r6wNcEVfPueyJyntNHDmYYnsmP0bM2z/jpMw+38Eg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ramesh Kumar\\Desktop\\GemSite\\GemSite\\.local\\",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\documentformat.openxml\\2.12.1\\documentformat.openxml.2.12.1.nupkg.sha512",
     "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
-    "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202\\gemecosystem.gemsurf.activities.0.1.0.831070202.nupkg.sha512",
+    "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0\\gemecosystem.gemsurf.activities.0.1.0.nupkg.sha512",
     "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\google.apis\\1.55.0\\google.apis.1.55.0.nupkg.sha512",
     "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\google.apis.auth\\1.55.0\\google.apis.auth.1.55.0.nupkg.sha512",
     "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\google.apis.calendar.v3.1.55.0.2554.nupkg.sha512",

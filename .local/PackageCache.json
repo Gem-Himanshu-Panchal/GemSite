@@ -2,18 +2,6 @@
   "Packages": [
     {
       "Package": {
-        "Id": "GemEcosystem.GemSURF.Activities",
-        "Version": "0.1.0.831070202"
-      },
-      "Assemblies": [
-        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202\\lib/net6.0-windows7.0/GemEcosystem.GemSURF.Activities.Design.dll",
-        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202\\lib/net6.0-windows7.0/GemEcosystem.GemSURF.Activities.dll",
-        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202\\lib/net6.0-windows7.0/GemEcosystem.GemSURF.dll"
-      ],
-      "Path": "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202"
-    },
-    {
-      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.16.0"
       },
@@ -242,6 +230,18 @@
         "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\uipath.vision\\3.6.0\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3"
+    },
+    {
+      "Package": {
+        "Id": "GemEcosystem.GemSURF.Activities",
+        "Version": "0.1.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0\\lib/net6.0-windows7.0/GemEcosystem.GemSURF.Activities.Design.dll",
+        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0\\lib/net6.0-windows7.0/GemEcosystem.GemSURF.Activities.dll",
+        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0\\lib/net6.0-windows7.0/GemEcosystem.GemSURF.dll"
+      ],
+      "Path": "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0"
     }
   ],
   "Conflicts": [],
@@ -351,7 +351,7 @@
     },
     "GemEcosystem.GemSURF.Activities": {
       "Id": "GemEcosystem.GemSURF.Activities",
-      "Version": "0.1.0.831070202",
+      "Version": "0.1.0",
       "Dependencies": []
     },
     "Google.Apis": {
@@ -4883,14 +4883,14 @@
     {
       "Package": {
         "Id": "GemEcosystem.GemSURF.Activities",
-        "Version": "0.1.0.831070202"
+        "Version": "0.1.0"
       },
       "Assemblies": [
-        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202\\lib\\net6.0-windows7.0\\GemEcosystem.GemSURF.Activities.Design.dll",
-        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202\\lib\\net6.0-windows7.0\\GemEcosystem.GemSURF.Activities.dll",
-        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202\\lib\\net6.0-windows7.0\\GemEcosystem.GemSURF.dll"
+        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0\\lib\\net6.0-windows7.0\\GemEcosystem.GemSURF.Activities.Design.dll",
+        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0\\lib\\net6.0-windows7.0\\GemEcosystem.GemSURF.Activities.dll",
+        "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0\\lib\\net6.0-windows7.0\\GemEcosystem.GemSURF.dll"
       ],
-      "Path": "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0.831070202"
+      "Path": "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\gemecosystem.gemsurf.activities\\0.1.0"
     },
     {
       "Package": {
