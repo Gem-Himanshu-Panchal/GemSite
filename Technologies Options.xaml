@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1514,2878</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1524,3202</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Technologies_Options_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="78">
@@ -114,7 +114,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Technologies_Options" sap:VirtualizedContainerService.HintSize="1280,2813" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Technologies_Options" sap:VirtualizedContainerService.HintSize="1280,3137" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="flag" />
     </Sequence.Variables>
@@ -124,13 +124,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="1218,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Technologies Options" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1218,1644" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8a23a106-888b-47ec-8bf9-5212657b6a57" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1218,1968" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8a23a106-888b-47ec-8bf9-5212657b6a57" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1184,1427" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1184,1751" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -149,13 +149,14 @@
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;TechnologiesMenu&quot;).ToString]" Guid="f531efa1-9f40-465b-9fa2-a03c406bad5c" SearchSteps="Selector" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1122,993" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[TestData(0).ToArray]">
+            <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="1122,181" sap2010:WorkflowViewState.IdRef="LogStatus_3" ScreenShot="Yes" TestStep="Click on Technology button" TestStepDesciption="Successfully clicked on Technology button" TestStepStatus="PASS" />
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1122,1096" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[TestData(0).ToArray]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1088,807" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1088,910" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="elelement" />
                     </Sequence.Variables>
@@ -172,15 +173,15 @@
                         <InArgument x:TypeArguments="x:String">[SelectorMap("SolutionsType").ToString.Replace("{value}",currentItem.ToString)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1046,597" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1046,700" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5" Version="V3">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,380" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,418" sap2010:WorkflowViewState.IdRef="Sequence_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[currentItem.ToString + &quot; is present&quot;]" />
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="[&quot;Verify if &quot;+currentItem.ToString+&quot; element is present on screen&quot;]" TestStepDesciption="[currentItem.ToString+&quot; element is present&quot;]" TestStepStatus="PASS" />
                           <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[flag]</OutArgument>
@@ -192,7 +193,7 @@
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,262" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,483" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -206,6 +207,7 @@
                               <InArgument x:TypeArguments="x:String">false</InArgument>
                             </Assign.Value>
                           </Assign>
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_5" ScreenShot="Yes" TestStep="[&quot;Verify if &quot;+currentItem.ToString+&quot; element is present on screen&quot;]" TestStepDesciption="[currentItem.ToString+&quot; element is not present&quot;]" TestStepStatus="FAIL" />
                           <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_1" />
                         </Sequence>
                       </uix:NCheckState.IfNotExists>

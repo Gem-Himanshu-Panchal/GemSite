@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1514,4060</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1524,4254</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GemU_Navigation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -116,7 +116,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GemU_Navigation" sap:VirtualizedContainerService.HintSize="744,3995" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GemU_Navigation" sap:VirtualizedContainerService.HintSize="744,4189" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Gemu" />
       <Variable x:TypeArguments="x:String" Name="GemU" />
@@ -127,13 +127,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="682,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="GemU Navigation" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="682,3586" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="5b1263bb-5fdd-4034-bc79-e3be90b647d1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="682,3780" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="5b1263bb-5fdd-4034-bc79-e3be90b647d1" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648,3369" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648,3563" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="flag" />
             </Sequence.Variables>
@@ -155,13 +155,13 @@
                 <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/" DesignTimeRectangle="1205, 184, 44, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'GemU'" FullSelectorArgument="&lt;webctrl aaname='GemU' class='menu-list' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='GemU' class='menu-list' tag='SPAN' type='' check:innerText='GemU' /&gt;" Guid="2aaf4804-825d-4e52-b91a-d246519d0eec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAcCAYAAAAnbDzKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK9SURBVFhH7ZXBaxpBFMb3z/DqZaE3cwqepIIgUggYKNiLhKbgofQQyUFy8BBP4iGE9hAiBAIKhRWKEkoCHgIiPSxehICFaA4RL6JIkFUQvr7ZHc24rmmjFhH2BwM7b9/Oe9/Mm7cSNhxbwLqxBawbW8C6mStAe6yhWFL1Ub5vQxvxF/+T0RDdzpBPZtF6T+gO+IQzK6BXxdc9HyTZDac/DG8wBCc9S9sxpH/PX3wlqKcU9xRlPp2mjcy+G0GlzecG0wJGNaT8bjhCZyi2uI0xaOLqOATJdYCcaF81ywroFmKUZBxXHW4QGTWQfk/iklVu4AzoWDs0eqbTEcuhb/iIZaiXg8m2pIA2chGLBEVYIpNEh6icfzbKiw/nXhaVPn/Nk8n8iD37UBnmHug0Y3Saou1x+psFBVSRoAXNDvPo/ozDQSWVeeCGXg3piAeOYxUam+vJuOFOquiyXR7RBh3Se5cPH743mQfZmkhTUlK8LHyzYgGVc3aRxUG7zBfzXja4F6d6gS2ZSrBHz3oyJFC8M79mE2wpB5D289DdlhNAF/gtOYx3h1O/OUPqxBhHkV0ewBBrdClh7LyDY5y0lQCLBFcoYIhinI7zyzW63GKmfhnmwQwB0Zu2cYFNQ7+Yywiw/OdQEwm+KIA6Ay2wJYeQUC36fZ+SphYbyLITMi6898JUQv0myqUaWuxns4iAVh5B2YPorUX8ewUBeRcpU4+ZEsBOoZxk/T6MqEKJ8B1tVfOI7ngg+Sk47zLabYou5CckSk1jxzs1ZKi7OCLXwm6+UgDrbCdG/KNCYxK/rmbxcZs65HhtAZMAxhB3SgoB+mDS6mQfAocKKuxyCtQLop8Hbw4U3E210dcKIEZPqGTj8Lqm4we/qWhZlJaFgGcsfzYWaP/gswhs3b/Ff1HAJmALWDe2gHVjC1g3Gy4A+AMf/pulCAElqwAAAABJRU5ErkJggg==" InformativeScreenshot="cac9c20979b8ec9ecfacf592f3848232.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="586,2175" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[TestData(0).ToArray]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="586,2369" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[TestData(0).ToArray]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1989" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,2183" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="element" />
                       <Variable x:TypeArguments="x:String" Name="Gem" />
@@ -211,9 +211,9 @@
                     </Assign>
                     <uix:NGetUrl CurrentUrl="[URL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="510,87" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V3" />
                     <uix:NNavigateBrowser DisplayName="Navigate Browser - Go Back" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
-                    <If Condition="[URL.Contains(Gem)]" sap:VirtualizedContainerService.HintSize="510,770" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[URL.Contains(Gem)]" sap:VirtualizedContainerService.HintSize="510,964" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="476,353" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -227,11 +227,11 @@
                               <InArgument x:TypeArguments="x:String">true</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Gem + &quot; is navigated to the right page&quot;]" />
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_3" ScreenShot="Yes" TestStep="Verify if user is navigated to right place" TestStepDesciption="[Gem + &quot; is navigated to the right page&quot;]" TestStepStatus="PASS" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="476,235" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -245,7 +245,7 @@
                               <InArgument x:TypeArguments="x:String">false</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_1" />
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="Verify if user is navigated to right place" TestStepDesciption="[Gem + &quot; is not navigated to the right page&quot;]" TestStepStatus="FAIL" />
                         </Sequence>
                       </If.Else>
                     </If>

@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1514,2919</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1524,3140</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>HomePagecareerGrid_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -116,7 +116,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="HomePagecareerGrid" sap:VirtualizedContainerService.HintSize="1134,2854" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="HomePagecareerGrid" sap:VirtualizedContainerService.HintSize="1134,3075" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -130,13 +130,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </gga:InitialiseTest>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1072,2445" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2e812cce-95c3-4271-b4bb-5090400b8458" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1072,2666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2e812cce-95c3-4271-b4bb-5090400b8458" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1038,2228" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1038,2449" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -163,6 +163,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
+            <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="976,181" sap2010:WorkflowViewState.IdRef="LogStatus_5" ScreenShot="Yes" TestStep="Click on View Openings button" TestStepDesciption="Successfully clicked on View Openings button" TestStepStatus="PASS" />
             <uix:NCheckState DisplayName="Check App State 'Search for'" sap:VirtualizedContainerService.HintSize="976,1639" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="2e812cce-95c3-4271-b4bb-5090400b8458" Timeout="[5s]" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="472,1422" sap2010:WorkflowViewState.IdRef="Sequence_11">
@@ -177,11 +178,7 @@
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="410,90" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Heading checking" />
                   <uix:NGetText DisplayName="Get Text 'Search for'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="2e812cce-95c3-4271-b4bb-5090400b8458" TextString="[Heading]" Version="V3">
                     <uix:NGetText.Target>
-                      <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/careers" DesignTimeRectangle="639, 393, 639, 60" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Search for'" FullSelectorArgument="[SelectorMap(&quot;CareerHeading&quot;).ToString]" Guid="0827ac11-295f-45df-82c3-c5884a3210eb" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
+                      <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/careers/linux-unix-administrator" DesignTimeRectangle="469, 284, 426, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Search for'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='careersBanner_heading__8ureV' /&gt;" Guid="e7bed98b-1a6f-4dc5-8ba3-1269afca3272" InformativeScreenshot="0e911514c98706e433b11772b2ac639c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
                     </uix:NGetText.Target>
                   </uix:NGetText>
                   <If Condition="[Heading.Contains(TestData(0)(0).ToString)]" sap:VirtualizedContainerService.HintSize="410,980" sap2010:WorkflowViewState.IdRef="If_2">
@@ -204,7 +201,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[Heading +&quot; is not present&quot;]" />
-                        <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="Click view opening button" TestStepDesciption="Verifying view opening button clickable or not" TestStepStatus="FAIL" />
+                        <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="Verifying view opening button clickable or not" TestStepDesciption="User is unable to navigate to job search page" TestStepStatus="FAIL" />
                       </Sequence>
                     </If.Else>
                   </If>

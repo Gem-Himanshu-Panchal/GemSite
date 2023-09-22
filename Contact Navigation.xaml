@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Contact_Navigation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Contact_Navigation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TestData" Type="InOutArgument(ggm:TestData)" />
     <x:Property Name="Globalconf" Type="InOutArgument(ggm:GlobalConfig)" />
@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1514,3979</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1524,5448</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Contact_Navigation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
@@ -112,7 +112,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Contact_Navigation" sap:VirtualizedContainerService.HintSize="668,3914" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Contact_Navigation" sap:VirtualizedContainerService.HintSize="668,5383" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Flag" />
     </Sequence.Variables>
@@ -121,14 +121,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="606,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Contact navigation" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="606,2745" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="34817570-ef69-4d18-a32a-72614cb4f72d" Version="V2">
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="606,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Contact navigation" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="606,4214" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="34817570-ef69-4d18-a32a-72614cb4f72d" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572,2528" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572,3997" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Heading" />
               <Variable x:TypeArguments="x:String" Name="string1" />
@@ -147,29 +147,29 @@
                 <InArgument x:TypeArguments="x:String">false</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click 'Contact'" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="34817570-ef69-4d18-a32a-72614cb4f72d" Version="V3">
+            <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click 'Contact'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="34817570-ef69-4d18-a32a-72614cb4f72d" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.geminisolutions.com/" DesignTimeRectangle="1120, 107, 53, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Contact'" FullSelectorArgument="&lt;webctrl aaname='Contact ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contact ' tag='A' type='' class='' check:innerText='Contact' /&gt;" Guid="9db1bdf7-af06-4e51-bd06-9a8a4228cf4a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAcCAYAAADbeRcAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANjSURBVFhH7VbPS2JRGPXPcNvGta7ibUYKghgGAoNggoihgqBhFsososBF4SJchMzADAlBYCuFwZAoEAkGaSG2eBA4kM2icJEoIvIMhDPfve97vudTs6Y2mQce3Pvdn+fec8/3HHgDGJEcFoxIDgtGJIcFvUm27lFUc0j/Fp+KywrHXym6SFYvDuEbV+BwTUHxLWLynZfKXkxuZlBscadXhk6Sl/tQBKFQFiULoeplHEtE3BnMQuPYSyC7Q4e5o3LtJVBGbFmBL17mug4LyToSX2jR5SRKHLFCy0Xgca0g+pcDDK1SR1V8TQ4YaFCsoRe1mt5HsxyciKW2aL2tbFebeC5yTnvcQJ92rVJAdIFIHhQ62kySdyeYdykInN1zoBuSUIPbbzIIzAgpC2nr8vbtFdo3LW8plKSDmzL7uBexnRPj9RM3xyoU18cVj0OYdFvaxtcR/WPuSVON58SfmPO8Ti0qto2Y/PyI8W2ZJOmmrA0PolVAeFqBQrdgyFpIet7txdqxWJBJuj5iI83SadWRDs3CMRdHUY90y7VygiXXLAKnfcZUMlijNebFTfG6pdMwPG4/EnLfg+T6FJLU1+laR8LmuvnvtCGWuySwkGwTkpBrBJGq6dUuklKGNiXJMRFkqViK++GY2Ee+Q8JlpPd+InYhDncQSTIdj+szYjdcfwByMTsBgXNzQ5KA/X3bDrKLpEBJRYw2HQ4F4RPuPi3kbpkzxLruiUEkm1kESMtLR7rcekG+STIYSdJnys6AdhZ+Hkl29/f0llMiR+euUUrb5nzQ4Qe66z3SW2Qk0zQhu6IVGt1S213lrfeRqz+DKpX/h2T+B423KaR6tN4mWfr1XLkKNMihyFCcMxEkrsps07fIHuqOp+yqfIplJFa9cK7Gkb+jNyT+kOjEFTKa7Qv9TT2GZH6XDnU5Tn9Uut1Xj4PklkE2EaqrSXZwnSQaOWxM6IZXFBfRLCN/4IeTxqTkgYt9KfCIPN8zhRioqYh+XcGY1Y7HVxCIX3fKpFHAt9UPZECWPse33Pg4kriKt9OBTCGtW6Q2F9tzjn06RD4txjBJAZG65sy05JwJIWZJMdWzCKcgc51ukgaMhFuzuZ0dot+gPk9FU+RjLvfDY/ow+pMcIoxIDgtGJIcFI5LDgjdAEvgHeUU/N28BO1sAAAAASUVORK5CYII=" InformativeScreenshot="e0d49a22b26e620f3173efe28b9b4ed8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NGetText DisplayName="Get Text 'Our Locations'" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="34817570-ef69-4d18-a32a-72614cb4f72d" TextString="[Heading]" Version="V3">
+            <uix:NGetText DisplayName="Get Text 'Our Locations'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="34817570-ef69-4d18-a32a-72614cb4f72d" TextString="[Heading]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.geminisolutions.com/contact" DesignTimeRectangle="566, 201, 234, 58" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Our Locations'" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='react-reveal Map_worldMapHeading__fk4ru' /&gt;" Guid="d8f1f626-5da3-46e6-877e-bdb5585d96e1" InformativeScreenshot="81394c198868921f8a31abe5ec725400.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
               </uix:NGetText.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <If Condition="[Heading.Contains(TestData(0)(0).ToString)]" sap:VirtualizedContainerService.HintSize="510,535" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[Heading.Contains(TestData(0)(0).ToString)]" sap:VirtualizedContainerService.HintSize="510,964" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,13 +177,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,353" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Heading]" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_3" ScreenShot="Yes" TestStep="Verify if correct heading is displayed" TestStepDesciption="Correct heading is displayed" TestStepStatus="PASS" />
                   <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
@@ -195,12 +195,13 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_5" ScreenShot="Yes" TestStep="Verify if correct heading is displayed" TestStepDesciption="Correct heading is not displayed" TestStepStatus="FAIL" />
                   <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
@@ -212,18 +213,18 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NGetText DisplayName="Get Text 'View Our Work'" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="34817570-ef69-4d18-a32a-72614cb4f72d" TextString="[string1]" Version="V3">
+            <uix:NGetText DisplayName="Get Text 'View Our Work'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="34817570-ef69-4d18-a32a-72614cb4f72d" TextString="[string1]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.geminisolutions.com/contact" DesignTimeRectangle="125, 383, 736, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'View Our Work'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='CaseStudy_heading__A9PDh mb-4' /&gt;" Guid="b2924ec8-b0b6-40df-8fb3-0e937c40458f" InformativeScreenshot="de4e8c5b61b4f60ed73310ceab872cf1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
               </uix:NGetText.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <If Condition="[string1.Contains(TestData(0)(1).ToString)]" sap:VirtualizedContainerService.HintSize="510,654" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[string1.Contains(TestData(0)(1).ToString)]" sap:VirtualizedContainerService.HintSize="510,964" sap2010:WorkflowViewState.IdRef="If_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -231,13 +232,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,302" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[string1]" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_6" ScreenShot="Yes" TestStep="Verify if correct subheading is displayed" TestStepDesciption="Correct sub heading is displayed" TestStepStatus="PASS" />
                   <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
@@ -249,12 +250,13 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_7" ScreenShot="Yes" TestStep="Verify if correct subheading is displayed" TestStepDesciption="Incorrect sub heading is displayed" TestStepStatus="FAIL" />
                   <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
@@ -266,18 +268,18 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NGetText DisplayName="Get Text 'Our work'" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="34817570-ef69-4d18-a32a-72614cb4f72d" TextString="[string2]" Version="V3">
+            <uix:NGetText DisplayName="Get Text 'Our work'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="34817570-ef69-4d18-a32a-72614cb4f72d" TextString="[string2]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.geminisolutions.com/contact" DesignTimeRectangle="125, 447, 552, 54" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Our work'" FullSelectorArgument="&lt;webctrl idx='2' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='CaseStudy_description__BAFk5 w-75' /&gt;" Guid="05802441-8848-4434-987a-9a3d581f88e6" InformativeScreenshot="b8a70f509db5a4c92615bbca294cb014.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
               </uix:NGetText.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <If Condition="[string2.Contains(TestData(0)(2).ToString)]" sap:VirtualizedContainerService.HintSize="510,654" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[string2.Contains(TestData(0)(2).ToString)]" sap:VirtualizedContainerService.HintSize="510,964" sap2010:WorkflowViewState.IdRef="If_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -285,13 +287,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,302" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[string2]" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_8" ScreenShot="Yes" TestStep="Verify if correct para is displayed" TestStepDesciption="Correct para is displayed" TestStepStatus="PASS" />
                   <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
@@ -303,12 +305,13 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_9" ScreenShot="Yes" TestStep="Verify if correct para is displayed" TestStepDesciption="Incorrect para is displayed" TestStepStatus="FAIL" />
                   <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
@@ -341,7 +344,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Verify if user is successfully navigated to Contact Us page" TestStepDesciption="User is successfully navigated to contact us page" TestStepStatus="PASS" />
+          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Verify if user is successfully navigated to Contact Us page" TestStepDesciption="User is successfully navigated to contact us page" TestStepStatus="PASS" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -351,7 +354,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_2" ScreenShot="Yes" TestStep="Verify if user is successfully navigated to Contact Us page" TestStepDesciption="Unable to navigat to contact us page" TestStepStatus="FAIL" />
+          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_2" ScreenShot="Yes" TestStep="Verify if user is successfully navigated to Contact Us page" TestStepDesciption="Unable to navigat to contact us page" TestStepStatus="FAIL" />
         </Sequence>
       </If.Else>
     </If>

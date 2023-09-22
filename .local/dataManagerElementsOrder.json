@@ -12,7 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "variable1&Sequence_1",
+        "TestList&Sequence_1",
         "Globalconf&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
@@ -23,9 +23,6 @@
       "Path": "AboutusSection.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Globalconf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "element&Sequence_2",
         "Result&Sequence_2",
         "flag&Sequence_2",
@@ -34,7 +31,11 @@
         "Data&Sequence_7",
         "element&Sequence_7"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "SelectorMap",
+        "TestData",
+        "Globalconf"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -143,14 +144,15 @@
       "VariablesSectionElementsOrder": [
         "DataEngineeringOption&Sequence_15",
         "DataEngineeringOption&Sequence_12",
-        "GlobalConf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "Content&Sequence_4",
         "Flag&Sequence_4",
         "DataEngineeringOption&Sequence_5"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -160,15 +162,16 @@
       "VariablesSectionElementsOrder": [
         "test&Sequence_4",
         "ele&Sequence_2",
-        "GlobalConf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "Flag&Sequence_5",
         "element&Sequence_4",
         "Link&Sequence_2",
         "URL&Sequence_2"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -176,15 +179,16 @@
       "Path": "SolutionsNavigation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Globalconf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "flag&Sequence_3",
         "element&Sequence_2",
         "solutions&Sequence_2",
         "Heading&Sequence_2"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -192,14 +196,15 @@
       "Path": "TeamSection.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "GlobalConf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "data&Sequence_3",
         "element&Sequence_3",
         "flag&Sequence_3"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -207,14 +212,13 @@
       "Path": "Technologies Options.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
-        "GlobalConf&Sequence_1",
         "flag&Sequence_1",
         "elelement&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [
-        "GlobalConf"
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -223,16 +227,17 @@
       "Path": "TechnologiesNavigation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "GlobalConf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "flag&Sequence_5",
         "element&Sequence_4",
         "solutions&Sequence_4",
         "Heading&Sequence_4",
         "Technology&Sequence_4"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -272,9 +277,6 @@
       "Path": "GemuGrid.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Globlconf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "Content&Sequence_2",
         "Flag&Sequence_2",
         "Result&Sequence_2",
@@ -283,7 +285,11 @@
         "DataEngineeringOption&Sequence_10",
         "DataEngineeringOption&Sequence_11"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -291,12 +297,13 @@
       "Path": "HomePagecareerGrid.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "globalconf&Sequence_1",
-        "Selector&Sequence_1",
-        "Data&Sequence_1",
         "Heading&Sequence_11"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -304,14 +311,14 @@
       "Path": "HomePageTechnologiesGrid.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "GlobalCong&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
-        "GlobalConfgg&Sequence_1",
         "Flag&Sequence_2",
         "DataEngineeringOption&Sequence_12"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -340,14 +347,15 @@
       "Path": "InsightsGrid.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Conf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "flag&Sequence_2",
         "Heading&Sequence_2",
         "element&Sequence_12"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -355,12 +363,13 @@
       "Path": "Instagram.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Globalconf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "URL&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -368,14 +377,14 @@
       "Path": "NavigationBar.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "globalconfig&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "data&Sequence_7",
-        "Flag&Sequence_7",
-        "ItemDataValue&Sequence_10"
+        "Flag&Sequence_7"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -398,9 +407,6 @@
       "Path": "Search Functionality.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "GlobalConf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "Flag&Sequence_1",
         "UiBrowser&Sequence_1",
         "Result&Sequence_3",
@@ -412,7 +418,11 @@
         "element&Sequence_6",
         "text&Sequence_4"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -420,13 +430,14 @@
       "Path": "Solution Options.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Globalconf&Sequence_1",
-        "Selector&Sequence_1",
-        "TestData&Sequence_1",
         "flag&Sequence_2",
         "elelement&Sequence_3"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -434,14 +445,69 @@
       "Path": "SolutionMenu.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "GlobalConf&Sequence_1",
-        "SelectorMap&Sequence_1",
-        "TestData&Sequence_1",
         "flag&Sequence_2",
         "element&Sequence_5",
         "url&Sequence_5"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "HomePageSolutionsGrid.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "element&Sequence_2",
+        "Flag&Sequence_2",
+        "Re&Sequence_3",
+        "Element&Sequence_3",
+        "Result&Sequence_3",
+        "Url&Sequence_3",
+        "visibility&Sequence_3",
+        "urlString&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "TestData",
+        "Globalconf",
+        "SelectorMap"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Hiring Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "subHeading&Sequence_2",
+        "heading&Sequence_2",
+        "extractedURL&Sequence_2",
+        "Flag&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Globalconf",
+        "SelectorMap",
+        "TestData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PerksAndBenifits.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "subheading&Sequence_2",
+        "heading&Sequence_2",
+        "extractedURL&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Globalconf",
+        "SelectorMap",
+        "TestData"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

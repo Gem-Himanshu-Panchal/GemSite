@@ -1,5 +1,5 @@
 ﻿{
-"Navigationbar":["About Us","Solutions","Technologies","GemU","Careers","Contact","search"],
+"Navigationbar":["About Us","Solutions","Technologies","GemU","Careers","Contact ","search"],
 "HomePagecareerGrid":["Search for your dream job"],
 "GridsHeading":["Careers","Our Culture","Solutions we offer","Technologies","Highly professional team of Developers","Featured Insights","Learn with us at GemU","Clients reviews","Office Locations"],
 "SolutionGrid":["Application Development","Digital Offerings","Managed Services","Data Science","DevSecOps","Quality Engineering","Technical Infrastructure","Data Engineering","Cloud Solutions"],
@@ -19,6 +19,9 @@
 "Solutions Navigation":["Application Development","Digital Offerings","Managed Services","Data Science","DevSecOps","Quality Engineering","Technical Infrastructure","Data Engineering"],
 
 "Technologies Options":["Front-End","Core Development","Databases","Cloud Services","BI &amp; Analytics","Mobility"],
+
+"HiringProcess":["Our Hiring Process","Interviews can be a stressful experience, especially if you don’t know what to expect. We, however, want you to succeed. Take a dive into our typical interview process.",["Initial Screening","Coding Test","Technical Interviews","Assignment (if required)","HR Discussion","Management Interaction"]],
+"PerksAndBenifits":["Amazing Benefits","At Gemini, we believe in supporting our colleagues with comprehensive benefits that promote health, financial security, and peace of mind for themselves and their families","Benefits for Full-Time Employees","Experience a culture of care and support with our generous employee perks and the benefits.",["Engaging Workplace","Skill Development","Health &amp; Wellness Benefits","Leave Benefits","Refer &amp; Earn","Lifestyle Benefits","Financial Support","Tax Saving Components","Retirement Benefits"]],
 
 "TechnologiesNavigation":["Front-End","Core Development","Databases","Cloud Services","BI &amp; Analytics","Mobility"],
 "GemuOptions":["About GemU","Campus Connect","Blogs"],

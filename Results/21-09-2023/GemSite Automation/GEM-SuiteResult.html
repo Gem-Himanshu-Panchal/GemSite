@@ -1,0 +1,1992 @@
+<!--version1.0.7-->
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+            integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+          integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+            integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+  .thumb {
+    border: 1px solid #ddd;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded border */
+    padding: 5px;
+    /* Some padding */
+    width: 100px;
+    /* Set a small width */
+    min-height: 86px;
+    max-height: 86px;
+  }
+
+  .thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  body {
+    background: #fafbff;
+    /* transform: scale(0.9);
+      transform-origin: top center; */
+      /* overflow: auto !important; */
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+.tableEx{
+  display: block !important;
+  overflow-x: auto !important;
+}
+
+  #heading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-pills.gempyp .nav-link.active {
+    background: rgba(33, 98, 132, 1);
+    border-radius: 5px;
+    color: white !important;
+  }
+
+  .nav-pills.gempyp .nav-link {
+    color: rgba(33, 98, 132, 1);
+  }
+
+  .nav-pills.gemsurf .nav-link.active {
+    background: rgba(48, 122, 100);
+    border-radius: 5px;
+    color: white !important;
+  }
+
+  .nav-pills.gemsurf .nav-link {
+    color: rgba(48, 122, 100);
+  }
+
+  .tableHeading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+    float: left;
+  }
+
+  .accordHeading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+  }
+
+  .title-card {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    float: left;
+  }
+
+  .text-card {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    float: left;
+  }
+
+  table {
+    font-size: 13px !important;
+  }
+
+  .passTest {
+    color: #2cae21 !important;
+    border-radius: 5px;
+  }
+
+  .failTest {
+    color: #ea3e3e !important;
+    border-radius: 5px;
+  }
+
+  .warnTest {
+    color: #ff6c37 !important;
+    border-radius: 5px;
+  }
+
+  .infoTest {
+    color: #f3bb2a !important;
+    border-radius: 5px;
+  }
+
+  .incompleteTest {
+    color: #f25c5c !important;
+    border-radius: 5px;
+  }
+
+  .othersTest {
+    color: #9e9e9e !important;
+    border-radius: 5px;
+  }
+
+  /* a{
+          color: white !important
+      } */
+  .head {
+    background-color: #375a64;
+    color: white;
+  }
+
+  .statusColorPass {
+    background-color: #2cae21 !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorInfo {
+    background-color: #f3bb2a !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorFail {
+    background-color: #ea3e3e !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorWarn {
+    background-color: #ff6c37 !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorIncomplete {
+    background-color: #f25c5c !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorOthers {
+    background-color: #9e9e9e !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .hiddenRow {
+    padding: 0px !important;
+  }
+
+  #myImg {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #myImg:hover {
+    opacity: 0.7;
+  }
+
+  /* The Modal (background) */
+  .modal-img {
+    display: none;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    padding-top: 5%;
+    position: fixed;
+    z-index: 1;
+    height: fit-content;
+    background-color: rgb(129, 125, 125);
+    background-color: rgba(129, 125, 125, 0.9);
+
+  }
+
+  .modal {
+    overflow-y: auto;
+  }
+
+  .modal-body {
+    word-wrap: break-word;
+  }
+
+  /* Modal Content (image) */
+  .modal-img-content {
+    /* max-height: 700px;
+height: 100%;
+  display: block;
+  width: 100vw; */
+
+  }
+
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation */
+  .modal-img-content,
+  #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(0)
+    }
+
+    to {
+      -webkit-transform: scale(1)
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0)
+    }
+
+    to {
+      transform: scale(1)
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Absolute Center Spinner */
+  .loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Transparent Overlay */
+  .loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fafbff;
+
+    background: #fafbff;
+  }
+
+  /* :not(:required) hides these rules from IE9 and below */
+  .loading:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 150ms infinite linear;
+    -moz-animation: spinner 150ms infinite linear;
+    -ms-animation: spinner 150ms infinite linear;
+    -o-animation: spinner 150ms infinite linear;
+    animation: spinner 150ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: black 1.5em 0 0 0, black 1.1em 1.1em 0 0, black 0 1.5em 0 0, black -1.1em 1.1em 0 0, black -1.5em 0 0 0, black -1.1em -1.1em 0 0, black 0 -1.5em 0 0, black 1.1em -1.1em 0 0;
+    box-shadow: black 1.5em 0 0 0, black 1.1em 1.1em 0 0, black 0 1.5em 0 0, black -1.1em 1.1em 0 0, black -1.5em 0 0 0, black -1.1em -1.1em 0 0, black 0 -1.5em 0 0, black 1.1em -1.1em 0 0;
+  }
+
+  /* Animation */
+
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-o-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .setWidth {
+    word-wrap: break-word;
+    max-width: 80px;
+  }
+
+  .substepIcon {
+    font-size: 20px;
+    color: #215c1e;
+    cursor: pointer;
+  }
+
+  .substepIcon:hover {
+    transform: scale(1.2);
+  }
+
+
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #918b92 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #918b92;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  *::-webkit-scrollbar:horizontal {
+    background-color: #918b92;
+    width: 5px !important;
+    border: 3px solid #ffffff;
+  }
+</style>
+
+<body onload="constructPage()">
+<div id="loading" class="loading">Loading&#8230;
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-keyboard="false" data-toggle="modal"
+     data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true" data-scroll="false">
+    <div class="modal-dialog modal-xl vertically-centered" role="document">
+        <div class="modal-content" style="width:80vw !important">
+            <!-- Modal heading -->
+            <div class="mb-5 float-right">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span style="color:black !important" aria-hidden="true">
+              ×
+            </span>
+                </button>
+            </div>
+
+            <!-- Modal body with image -->
+            <div class="modal-body mt-2 text-center mb-2">
+                <img style="width:70vw !important; max-height:450px" class="modal-img-content" id="img01">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------Extra Text Modal---------------- -->
+<div class="modal" id="trimModal" tabindex="-1" role="dialog" data-keyboard="false" data-toggle="modal"
+     data-backdrop="static" aria-labelledby="exampleModalLabel2" aria-hidden="true" data-scroll="false">
+    <div class="modal-dialog modal-xl vertically-centered" role="document">
+        <div class="modal-content" style="width:80vw !important">
+            <!-- Modal heading -->
+            <div class="modal-title mt-3 text-center">
+                <h2 id="trimModaltitle"></h2>
+            </div>
+            <div class="mb-3 float-right">
+                <button type="button" class="close" data-dismiss="modal" onClick="closeModal('trimModal')" aria-label="Close">
+
+            <span style="color:black !important" aria-hidden="true">
+              ×
+            </span>
+                </button>
+            </div>
+
+
+            <!-- Modal body with image -->
+            <div class="modal-body mt-2 text-center mb-2" id="trimModalcontent">
+                <!-- <img style="width:70vw !important; max-height:450px" class="modal-img-content" id="img01"> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onClick="closeModal('trimModal')">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------Extra Text Modal---------------- -->
+
+<div class="container-fluid">
+    <!-- <div class="mt-3 text-center">
+          <div id="myModal" class="modal-img">
+       <span onClick="closeImage()" class="close" style="color:black !important">&times;</span>
+        <img class="modal-img-content" id="img01">
+           <div id="caption"></div>
+         </div>
+        <div> -->
+
+
+
+    <h4 class="my-4" id="heading">
+        <b><span id="productType"></span> AUTOMATED TEST EXECUTION REPORT</b>
+    </h4>
+    <div class="ml-5 mt-3">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item mr-1" role="presentation">
+                <button class="btn nav-link active" id="pills-overview-tab" data-toggle="pill" data-target="#pills-overview"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="showFilter('overview')">
+                    Overview
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="btn nav-link" id="pills-testcase-tab" data-toggle="pill" data-target="#pills-testcase"
+                        type="button" role="tab" aria-controls="pills-profile" aria-selected="false"
+                        onclick="showFilter('testcase')">
+                    Testcase Details
+                </button>
+            </li>
+            <li id="filters" class="nav-item ml-auto" style="float: right; display: none">
+                <!-- <button
+                              class="btn"
+                              style="
+                          background: white;
+                          border-radius: 5px !important;
+                          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                        "
+                              onclick="showFilterCards('show')"
+                      >
+                          <i class="fa fa-filter"></i> Filters
+                      </button> -->
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active overview" id="pills-overview" role="tabpanel"
+             aria-labelledby="pills-overview-tab"></div>
+        <div class="tab-pane fade" id="pills-testcase" role="tabpanel" aria-labelledby="pills-testcase-tab">
+            <div class="mt-3 ml-5 mr-1">
+                <div class="card pt-3 pb-3" id="filtercard" style="
+                    display: none;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                    border-radius: 4px !important;
+                  ">
+                    <div class="d-flex mx-4 mb-3">
+                        <span id="filterHeading" class="tableHeading">Filters</span>
+                        <span class="ml-auto"><i class="fa fa-times" style="cursor: pointer" aria-hidden="true"
+                                                 onclick="showFilterCards('close')"></i>
+              </span>
+                    </div>
+                    <div class="d-flex ml-4">
+                        <div class="">
+                            <input class="form-control search-key" type="text" id="name" placeholder="Search by Tc_name"
+                                   style="width: 270px" />
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <select class="custom-select search-key" style="width: 270px" id="status"></select>
+                        </div>
+                    </div>
+                    <div class="mx-4 mt-3">
+                        <div class="d-flex">
+                            <!-- <button class="btn" id="applyfilter" onclick="applyfilter()" style="display:block; border-radius:5px !important; color: white !important">Apply Filters</button> -->
+                            <button class="btn ml-2" id="clear" onclick="myFunction()" style="
+                          display: block;
+                          border-radius: 5px !important;
+                          color: white !important;
+                        ">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script>
+  theme = {};
+  gempypThemes = {
+    0: "rgba(2, 59, 89)",
+    1: "rgba(33, 98, 132)",
+    2: "rgba(73, 132, 163)",
+  };
+  gemsurfThemes = {
+    0: "rgba(48, 122, 100)",
+    1: "rgba(91, 170, 147)",
+    2: "rgba(143, 210, 190)",
+  };var obj = {"reportProduct":"GEMSURF","Suits_Details":{"report_type":"GemSite Automation","s_end_time":null,"status":"EXE","project_name":"GemSite","run_type":"GemSite Automation","user":"Himanshu.panchal","env":"dev","machine":"GEMGN-200141","initiated_by":"Himanshu.panchal","run_mode":"Windows 10","TestCase_Details":[{"tc_run_id":"Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8","start_time":1695271450922,"end_time":1695271459746,"name":"Navigationbar","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37","start_time":1695271498050,"end_time":1695271505719,"name":"Navigationbar","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf","start_time":1695272079636,"end_time":1695272084683,"name":"Navigationbar","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"Instagramfollowbtn_1f9c094a-4320-462c-b55a-5fe72ff4ce3c","start_time":1695272200206,"end_time":1695272217992,"name":"Instagramfollowbtn","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906","start_time":1695273006664,"end_time":1695273025221,"name":"InsightGrid","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"TechnologiesGrid_00c42b6d-a48f-4c89-b1e7-96edcb81ee02","start_time":1695273192768,"end_time":1695273217001,"name":"TechnologiesGrid","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d","start_time":1695273690620,"end_time":1695273903216,"name":"SolutionGrid","category":"None","status":"FAIL","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4","start_time":1695274068286,"end_time":1695274293219,"name":"SolutionGrid","category":"None","status":"FAIL","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5","start_time":1695282035104,"end_time":1695282253861,"name":"SolutionGrid","category":"None","status":"FAIL","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f","start_time":1695282321853,"end_time":1695282535408,"name":"SolutionGrid","category":"None","status":"FAIL","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9","start_time":1695282637771,"end_time":1695282857137,"name":"SolutionGrid","category":"None","status":"FAIL","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5","start_time":1695283521097,"end_time":1695283743005,"name":"SolutionGrid","category":"None","status":"FAIL","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"HomePagecareerGrid_936a83d5-7216-4deb-a18b-bf059bf793cd","start_time":1695299002491,"end_time":1695299011059,"name":"HomePagecareerGrid","category":"None","status":"FAIL","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"HomePagecareerGrid_b6484108-b543-40f9-ab7f-e62959f24a8d","start_time":1695299042170,"end_time":1695299079034,"name":"HomePagecareerGrid","category":"None","status":"FAIL","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"HomePagecareerGrid_bf70c783-8e50-4f86-b1f3-a22f12a131f5","start_time":1695299216698,"end_time":1695299242431,"name":"HomePagecareerGrid","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false}],"Testcase_Info":{"FAIL":8,"PASS":7,"TOTAL":15},"s_run_id":"GemSite_dev_e3295414-6a24-4976-9c9d-d5b323dc8372","s_start_time":1695271450918},"TestStep_Details":{"Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8":{"steps":[{"Title":"Verify if Gemini Logo is visible on dashboard","Description":"Gemini logo is visible","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/8f1301a2-9c5f-4e1b-8853-fbdb794a967a.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/022be9c6-8052-4499-b2d1-83190e8cb423.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/c51ef02b-abb7-4a13-b8b1-6757d84fae1a.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/705ff32a-482a-49a9-86ad-a2d303e0400e.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/afb08113-b21b-4c38-9154-076ede79030c.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/e0d88996-a53d-48d5-b853-c32e78f90f27.png"},{"Title":"Verify if Technologies button is presnt in Navbar","Description":"Technologies button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/1733adae-0e3c-4c05-acca-148e2a66f252.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/c7377807-9435-489f-8a67-97ccc3ed3ecd.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/1b00743c-ab76-43ad-ad81-42ab9903073d.png"},{"Title":"Verify if Technologies button is presnt in Navbar","Description":"Technologies button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/c73e71f4-fb23-43ea-80d0-4f2880795552.png"},{"Title":"Verify if GemU button is presnt in Navbar","Description":"GemU button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/bebc4b40-3f93-4488-9c52-e008b685edef.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/edf6d832-7626-4624-beae-4966a6bcc511.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/207e7f3e-9a3e-44d2-b3bf-7caf4f4ae9a6.png"},{"Title":"Verify if Technologies button is presnt in Navbar","Description":"Technologies button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/21448340-2ec5-4a86-a2df-bcc08addb648.png"},{"Title":"Verify if GemU button is presnt in Navbar","Description":"GemU button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/2f4baca4-cfc6-421e-ae36-75002b49425a.png"},{"Title":"Verify if Careers button is presnt in Navbar","Description":"Careers button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/56f9d1da-8b83-42ac-9c44-b66164bc09e5.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/7aee24df-bbdc-447e-ba2f-8fe25e111b85.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/2e7ea655-2316-4bbf-82cc-3044b210c05a.png"},{"Title":"Verify if Technologies button is presnt in Navbar","Description":"Technologies button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/76628469-13e6-45bd-a5dd-a5d2d8e1cc37.png"},{"Title":"Verify if GemU button is presnt in Navbar","Description":"GemU button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/2ae09cef-92e7-46da-997e-63d958083af5.png"},{"Title":"Verify if Careers button is presnt in Navbar","Description":"Careers button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/aa9b84ad-fc66-42dd-81db-6c7432eea31e.png"},{"Title":"Verify if Contact button is presnt in Navbar","Description":"Contact button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/c40914ec-b9e0-46db-a40e-8b1b380fc652.png"},{"Title":"Verify options in header bar","Description":"All options are present on header bar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_c62317a7-4858-4288-af62-0b67ce4d5de8/Screenshots/d9a250c9-b8c1-4fe4-b75e-1c1b360ca75c.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695271450923,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695271450923,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695271459746,"type":"datetime"},"EXECUTION DURATION":"00h:00m:08s"},{"TOTAL":23,"PASS":23,"FAIL":0,"INFO":0}]},"Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37":{"steps":[{"Title":"Verify if Gemini Logo is visible on dashboard","Description":"Gemini logo is visible","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/40e60343-f4dc-46f7-8a25-7bb80c09a14b.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/30ac14e7-35a4-457d-8332-0d36300be170.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/d59fbbf5-dfe1-4988-81a1-ed38ed233ffc.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/1ceb6946-54f4-4dd3-94fd-9be42935cbda.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/00e8766e-9d37-4f14-b690-e26957a157de.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/988987a4-3ca4-45fb-8ada-db32904afd78.png"},{"Title":"Verify if Technologies button is presnt in Navbar","Description":"Technologies button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/5af30674-cf82-487a-9d7c-5b67b8ba9b23.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/d13cab53-cbb1-4a31-95a5-d7d6659806fb.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/70245ef9-9426-4023-b8ae-6ea85983a851.png"},{"Title":"Verify if Technologies button is presnt in Navbar","Description":"Technologies button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/fa81a0c2-03b5-4a24-aa5c-26d763b61958.png"},{"Title":"Verify if GemU button is presnt in Navbar","Description":"GemU button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/fe34ebc6-f483-4b79-92cd-5feb24e27568.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/0631509f-6993-40f2-acdd-07b140151952.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/3ce01841-62f0-4ec5-ba9e-f72da000cba7.png"},{"Title":"Verify if Technologies button is presnt in Navbar","Description":"Technologies button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/77ac04e8-c96b-4297-a2b0-98484e133870.png"},{"Title":"Verify if GemU button is presnt in Navbar","Description":"GemU button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/0b81552b-902d-4037-b9b4-e950228c22fc.png"},{"Title":"Verify if Careers button is presnt in Navbar","Description":"Careers button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/aaa78169-88da-4b6d-a7dc-85570461e96e.png"},{"Title":"Verify if About Us button is presnt in Navbar","Description":"About Us button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/06bc4432-d56d-47e3-ae14-bd20c721e0dd.png"},{"Title":"Verify if Solutions button is presnt in Navbar","Description":"Solutions button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/86a17629-b175-4cdb-b243-19f603db17fa.png"},{"Title":"Verify if Technologies button is presnt in Navbar","Description":"Technologies button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/7f893152-53f3-483f-875e-8b2e3c96291a.png"},{"Title":"Verify if GemU button is presnt in Navbar","Description":"GemU button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/319ee563-8a0a-413c-8d1b-f0923dc9de32.png"},{"Title":"Verify if Careers button is presnt in Navbar","Description":"Careers button is not present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/ff15e845-7c82-4703-83a0-771a0cbbe2df.png"},{"Title":"Verify if Contact button is presnt in Navbar","Description":"Contact button is present","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/22f146ab-ef42-4e74-a2c3-43083cfc6057.png"},{"Title":"Verify options in header bar","Description":"All options are present on header bar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_6186a4e2-0f97-48ea-8ce2-e1fda53a1c37/Screenshots/8776786e-8a61-41ea-8547-c75a839ff302.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695271498051,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695271498051,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695271505719,"type":"datetime"},"EXECUTION DURATION":"00h:00m:07s"},{"TOTAL":23,"PASS":23,"FAIL":0,"INFO":0}]},"Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf":{"steps":[{"Title":"Verify if Gemini Logo is visible on dashboard","Description":"Gemini logo is visible","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/ce89d613-2d29-46a2-aa3c-67955548270b.png"},{"Title":"Verify if About Us button is present","Description":"About Us button is present on navbar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/44acf0c0-298f-4fe9-85f5-aa17712f2b70.png"},{"Title":"Verify if Solutions button is present","Description":"Solutions button is present on navbar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/3fec10f8-a0a4-47c1-9933-507e6fb816c7.png"},{"Title":"Verify if Technologies button is present","Description":"Technologies button is present on navbar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/b19536b3-5888-4a2f-8886-f7544d0f1f31.png"},{"Title":"Verify if GemU button is present","Description":"GemU button is present on navbar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/a9fcb8f6-1596-4cb9-a174-721aca42df65.png"},{"Title":"Verify if Careers button is present","Description":"Careers button is present on navbar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/1277ae5b-bb24-43a9-9aae-dcfc20c49a23.png"},{"Title":"Verify if Contact  button is present","Description":"Contact  button is present on navbar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/14238611-9280-4fd1-aa43-3db0f2a26fcc.png"},{"Title":"Verify if search button is present","Description":"search button is present on navbar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/ee98cfe3-8019-4a12-aa83-3037fbebf172.png"},{"Title":"Verify options in header bar","Description":"All options are present on header bar","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Navigationbar_444ff624-69da-4ec7-9046-83b1de2702cf/Screenshots/7bbd4ff6-8a3d-4a26-9025-482144e38282.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695272079636,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695272079636,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695272084682,"type":"datetime"},"EXECUTION DURATION":"00h:00m:05s"},{"TOTAL":9,"PASS":9,"FAIL":0,"INFO":0}]},"Instagramfollowbtn_1f9c094a-4320-462c-b55a-5fe72ff4ce3c":{"steps":[{"Title":"Click on Instagram button","Description":"Successfully clicked on Instagram button","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Instagramfollowbtn_1f9c094a-4320-462c-b55a-5fe72ff4ce3c/Screenshots/4a6628fa-a759-4472-89a5-32a12d7b5b4e.png"},{"Title":"Verify if follow button is clickable","Description":"Instagram follow button is navigable","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/Instagramfollowbtn_1f9c094a-4320-462c-b55a-5fe72ff4ce3c/Screenshots/2c1f2344-4521-4d33-b645-9cdd4c1b81f1.png"}],"metaData":[{"TESTCASE NAME":"Instagramfollowbtn","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695272200207,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695272200207,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695272217991,"type":"datetime"},"EXECUTION DURATION":"00h:00m:17s"},{"TOTAL":2,"PASS":2,"FAIL":0,"INFO":0}]},"InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906":{"steps":[{"Title":"Click on Contact button","Description":"Successfully clicked on Contact button","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/b7d4fa68-696d-4443-b2e4-ba877112b567.png"},{"Title":"Click on View Case Studies button","Description":"Successfully clicked on View case studies button","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/78566831-2211-4ccc-b55d-cc85b9536adc.png"},{"Title":"Verify if Recovery and Stabilization of Business-Critical Applications   is present on page","Description":"Recovery and Stabilization of Business-Critical Applications   is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/378dcb17-10a5-42fd-9f51-d55528369e76.png"},{"Title":"Verify if Setting Up AWS Serverless Lambda Infrastructure Along with Imple* is present on page","Description":"Setting Up AWS Serverless Lambda Infrastructure Along with Imple* is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/dc33e9b6-a607-4fce-b08f-5bbc2eafddea.png"},{"Title":"Verify if The Client&apos;s Major Focus is on Facilitating &amp; Providing Device F* is present on page","Description":"The Client&apos;s Major Focus is on Facilitating &amp; Providing Device F* is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/d16a6d77-3dd5-43c1-9cc8-bee7e651df0a.png"},{"Title":"Verify if An Overview of DBT is present on page","Description":"An Overview of DBT is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/8c89050f-58fa-4d4f-af21-3d0cf5db3067.png"},{"Title":"Verify if Converting Legacy to Metadata Driven Framework is present on page","Description":"Converting Legacy to Metadata Driven Framework is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/56cb2a6e-7400-4284-ac6b-44d4952ed9d6.png"},{"Title":"Verify if End to End Portfolio Management Support Services for Large Asset* is present on page","Description":"End to End Portfolio Management Support Services for Large Asset* is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/9169afa8-eb14-4c5c-b417-19c6b951a41d.png"},{"Title":"Verify if Pricing Portal Application is present on page","Description":"Pricing Portal Application is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/018b52d2-1666-4993-931a-9c5319f86481.png"},{"Title":"Verify if Oracle 19c ANA Upgrade Regression Test  is present on page","Description":"Oracle 19c ANA Upgrade Regression Test  is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/829496f6-1e36-47e6-93b7-3eaf3af99838.png"},{"Title":"Verify if Make Data Useful for PMs and Research Analysts is present on page","Description":"Make Data Useful for PMs and Research Analysts is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/ad2815ef-94d9-4f5a-b771-8aeb961a2e07.png"},{"Title":"Verify if Need to Show Stressed Data is present on page","Description":"Need to Show Stressed Data is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/4f44cc9c-d1ff-4fe3-a71d-4253764911ea.png"},{"Title":"Verify if Support for Applications in Dynamic Cloud Atmosphere is present on page","Description":"Support for Applications in Dynamic Cloud Atmosphere is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/27d84c7b-c1be-4e5d-95da-416451ec1a68.png"},{"Title":"Verify if Disaster Recovery Site Setup is present on page","Description":"Disaster Recovery Site Setup is present on screen","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/a19d0767-63e4-4574-833a-030fc3038d69.png"},{"Title":"Verify Insights Grid","Description":"All the button are navigated to the right page","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/InsightGrid_c1a28dc1-10b7-4737-a9db-6a73e2900906/Screenshots/bb8bf29c-3d3a-4416-a3b0-709aad267cb0.png"}],"metaData":[{"TESTCASE NAME":"InsightGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695273006665,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695273006664,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695273025220,"type":"datetime"},"EXECUTION DURATION":"00h:00m:18s"},{"TOTAL":15,"PASS":15,"FAIL":0,"INFO":0}]},"TechnologiesGrid_00c42b6d-a48f-4c89-b1e7-96edcb81ee02":{"steps":[{"Title":"Verify if Core Development is present on screen","Description":"Core Development is present on page","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/TechnologiesGrid_00c42b6d-a48f-4c89-b1e7-96edcb81ee02/Screenshots/813bbdfa-b5dd-4f64-9b2b-ce3620d65f29.png"},{"Title":"Verify if Databases is present on screen","Description":"Databases is present on page","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/TechnologiesGrid_00c42b6d-a48f-4c89-b1e7-96edcb81ee02/Screenshots/9027255f-51ba-456d-af56-4783a5bc3bcd.png"},{"Title":"Verify if Cloud is present on screen","Description":"Cloud is present on page","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/TechnologiesGrid_00c42b6d-a48f-4c89-b1e7-96edcb81ee02/Screenshots/9c79bbc6-d181-416b-9dfc-bf1c0e0b49ef.png"},{"Title":"Verify if BI &amp; Analytics is present on screen","Description":"BI &amp; Analytics is present on page","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/TechnologiesGrid_00c42b6d-a48f-4c89-b1e7-96edcb81ee02/Screenshots/f62d0ed6-b17f-474d-8147-b5a8c3d84e2b.png"},{"Title":"Verify if Mobility is present on screen","Description":"Mobility is present on page","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/TechnologiesGrid_00c42b6d-a48f-4c89-b1e7-96edcb81ee02/Screenshots/2f2441f4-fc8a-4544-a6bd-d627ee69e8a2.png"},{"Title":"Technologies Grid Buttons ","Description":"Buttons are navigated to the right page","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/TechnologiesGrid_00c42b6d-a48f-4c89-b1e7-96edcb81ee02/Screenshots/aa5dfac8-e60c-4f3e-b1ad-f2f7760c851b.png"}],"metaData":[{"TESTCASE NAME":"TechnologiesGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695273192769,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695273192769,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695273217000,"type":"datetime"},"EXECUTION DURATION":"00h:00m:24s"},{"TOTAL":6,"PASS":6,"FAIL":0,"INFO":0}]},"SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d":{"steps":[{"Title":"Click on Application Development button","Description":"Successfully clicked on Application Development","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/46340f8c-5fda-4762-8c75-81f7b9e11c19.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/60b072ee-40ab-48a3-873a-5118cf6c4f66.png"},{"Title":"Click on Digital Offerings button","Description":"Successfully clicked on Digital Offerings","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/61ec687f-21e4-4642-9fe6-13b0a5f9d88c.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/1c03bb69-7f5f-4474-94cc-f8ea5e45c454.png"},{"Title":"Click on Managed Services button","Description":"Successfully clicked on Managed Services","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/68f8038d-da6d-42a8-9433-baeca9a968bf.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/82aa07d9-7441-4d23-a02d-871d34cebc85.png"},{"Title":"Click on Data Science button","Description":"Successfully clicked on Data Science","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/58e3d2ff-7f47-4a9d-8990-46f2a98d84f2.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/37e28e64-b081-46ca-856e-fe8e08e59aab.png"},{"Title":"Click on DevSecOps button","Description":"Successfully clicked on DevSecOps","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/745868c8-927b-4047-95a4-a8773af92dee.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/ac7c903b-f7f0-460f-876d-3eb865cbced9.png"},{"Title":"Click on Quality Engineering button","Description":"Successfully clicked on Quality Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/c5069bff-a8c0-47d2-b96e-020307d910e0.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/6764ea7d-4b8e-49d3-a0b6-aabeb0f2e1a9.png"},{"Title":"Click on Technical Infrastructure button","Description":"Successfully clicked on Technical Infrastructure","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/2021943c-3f4b-4188-9c8d-71dc45bc6fd5.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/8197cbe4-c98e-4480-a304-fac2c4dff8d1.png"},{"Title":"Click on Data Engineering button","Description":"Successfully clicked on Data Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/329a89c1-a810-4b5e-a108-89adb78901ec.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/3082d8bf-98df-4b93-9b68-fe6404c418c6.png"},{"Title":"Click on Cloud Solutions button","Description":"Successfully clicked on Cloud Solutions","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/ccb5f89c-a56e-4133-8bd7-9bc6062ce993.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/48894a90-d06c-440a-b3a5-0877e3ee1081.png"},{"Title":"Verify if Solutions grid buttons are clickable","Description":"Buttons are not navigable","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_bd05174c-e8f5-48ea-8112-8d32fbc60d3d/Screenshots/cb62150a-019d-4155-9945-20e7ab416456.png"}],"metaData":[{"TESTCASE NAME":"SolutionGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695273690621,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695273690621,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695273903216,"type":"datetime"},"EXECUTION DURATION":"00h:03m:32s"},{"TOTAL":19,"PASS":18,"FAIL":1,"INFO":0}]},"SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4":{"steps":[{"Title":"Click on Application Development button","Description":"Successfully clicked on Application Development","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/8ca24e68-f3b6-4f38-9217-453f4f168591.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/5c71da99-3fa1-4696-847a-8650d2447366.png"},{"Title":"Click on Digital Offerings button","Description":"Successfully clicked on Digital Offerings","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/911a0874-16e1-4792-ae90-a3273668ad5b.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/bfc2232b-d997-4f47-bc9c-93e57cef9c0e.png"},{"Title":"Click on Managed Services button","Description":"Successfully clicked on Managed Services","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/651d12da-c7b5-41c1-80c0-ade61f971de2.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/6a04b316-7df4-4896-9972-902fd3f0028b.png"},{"Title":"Click on Data Science button","Description":"Successfully clicked on Data Science","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/7155b3a5-183b-4dd9-8fa8-9f9045e142a7.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/4730eea7-2ca0-406c-94be-ad8c6e203d63.png"},{"Title":"Click on DevSecOps button","Description":"Successfully clicked on DevSecOps","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/b1ae4589-4526-410b-a4bc-00ee6b041411.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/f048270f-eeb0-4bcd-b5ce-193f88ada255.png"},{"Title":"Click on Quality Engineering button","Description":"Successfully clicked on Quality Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/eb5ebb59-c579-4bda-90fb-99a3e1fad837.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/70d3fe59-647f-40a7-9c84-72b6f3f32981.png"},{"Title":"Click on Technical Infrastructure button","Description":"Successfully clicked on Technical Infrastructure","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/c1cefec8-0084-4513-a463-ea5694e8a93b.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/c4533e25-d82e-4525-8535-60b474e50300.png"},{"Title":"Click on Data Engineering button","Description":"Successfully clicked on Data Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/4dd0bd7b-1f59-4eaa-a04c-75fb9754c4e5.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/3a59b929-8c56-41eb-a829-1937316ab695.png"},{"Title":"Click on Cloud Solutions button","Description":"Successfully clicked on Cloud Solutions","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/a3de625e-7c48-422e-99ab-ab663341afc2.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/b49fc00a-e85c-4687-a71a-70edc4cccbfc.png"},{"Title":"Verify if Solutions grid buttons are clickable","Description":"Buttons are navigable","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ab7b9e54-1cf6-4812-9895-2a1a81f88de4/Screenshots/9e613644-1f99-4405-86e1-a328594fc882.png"}],"metaData":[{"TESTCASE NAME":"SolutionGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695274068287,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695274068287,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695274293219,"type":"datetime"},"EXECUTION DURATION":"00h:03m:44s"},{"TOTAL":19,"PASS":17,"FAIL":2,"INFO":0}]},"SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5":{"steps":[{"Title":"Click on Application Development button","Description":"Successfully clicked on Application Development","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/911ee8ab-91b2-408a-ae4f-760313f9837c.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/b01abec6-87f8-436b-92e7-a783caf3df94.png"},{"Title":"Click on Digital Offerings button","Description":"Successfully clicked on Digital Offerings","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/e6dead10-e533-48c4-8776-b387c626775d.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/a5ff9bc9-33d1-467a-b150-918f374b403e.png"},{"Title":"Click on Managed Services button","Description":"Successfully clicked on Managed Services","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/c7cb38e0-f11e-4db4-a8e1-0ba0dc0e6ff4.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/40dcc378-a84e-4aa5-82f4-1da0469fb8f6.png"},{"Title":"Click on Data Science button","Description":"Successfully clicked on Data Science","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/0cdfda88-8f2b-4167-ab6d-8aceff9f4a37.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/2601b2bb-883e-40ca-8119-08561c67d10a.png"},{"Title":"Click on DevSecOps button","Description":"Successfully clicked on DevSecOps","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/5f52adbf-0ab4-4ded-b86d-48577e70eebf.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/223276d4-12d4-4556-8470-c100db1a8a92.png"},{"Title":"Click on Quality Engineering button","Description":"Successfully clicked on Quality Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/63074860-3117-47e1-9228-fbfe5f4c2f29.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/5bbc087d-a6aa-4012-ace2-2a76b4e7c9db.png"},{"Title":"Click on Technical Infrastructure button","Description":"Successfully clicked on Technical Infrastructure","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/1ad966cb-2b49-46a3-ad8c-b73ff761950c.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/44eb848d-e4b9-44e0-9aa0-b693d648011f.png"},{"Title":"Click on Data Engineering button","Description":"Successfully clicked on Data Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/f61b0865-4aad-4da1-9f91-93202236019e.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/0deba558-38a4-47d6-ae00-97f8409299eb.png"},{"Title":"Click on Cloud Solutions button","Description":"Successfully clicked on Cloud Solutions","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/19f967cc-51b5-4118-9fe5-68e7499cf029.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/2d7c485e-be8e-4b78-97c9-6455db700659.png"},{"Title":"Verify if Solutions grid buttons are clickable","Description":"Buttons are navigable","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_252861c9-4779-4542-84b9-cbf04fa8a0c5/Screenshots/2957a08d-f50f-44b4-98e1-f68c56dc3f19.png"}],"metaData":[{"TESTCASE NAME":"SolutionGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695282035104,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695282035104,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695282253860,"type":"datetime"},"EXECUTION DURATION":"00h:03m:38s"},{"TOTAL":19,"PASS":18,"FAIL":1,"INFO":0}]},"SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f":{"steps":[{"Title":"Click on Application Development button","Description":"Successfully clicked on Application Development","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/2a8d40bf-b80a-4192-b5bd-cded23214cd9.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/28277788-a087-4e69-8ec4-babd7dfa4478.png"},{"Title":"Click on Digital Offerings button","Description":"Successfully clicked on Digital Offerings","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/ded3a2e8-81a1-48b8-b18a-8baa1e39fc34.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/f650d902-a20e-4264-b21c-704a6fb006f9.png"},{"Title":"Click on Managed Services button","Description":"Successfully clicked on Managed Services","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/cc353708-07fc-4cb5-82d3-9c2fc4c1baa1.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/b5925704-7aec-438c-9ad2-e70504ef2c5c.png"},{"Title":"Click on Data Science button","Description":"Successfully clicked on Data Science","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/d0f51d83-79d3-4cf3-8812-ba17869a8fd8.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/a541988c-63e7-4858-96c7-0341f9132200.png"},{"Title":"Click on DevSecOps button","Description":"Successfully clicked on DevSecOps","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/eb779c07-d300-4b26-b2e6-073bbf626633.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/c41ee0bc-c4e3-4640-b549-0663810b0812.png"},{"Title":"Click on Quality Engineering button","Description":"Successfully clicked on Quality Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/eecd61ed-acba-4b7a-8770-82ac111264dd.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/51c5063c-17eb-4930-b1a7-69c0402188f0.png"},{"Title":"Click on Technical Infrastructure button","Description":"Successfully clicked on Technical Infrastructure","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/a853b1be-2547-401e-b7ea-d4469d1aa9ec.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/a2f788a9-036a-45b6-be4e-cb723c09ffb4.png"},{"Title":"Click on Data Engineering button","Description":"Successfully clicked on Data Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/a59a12e4-3343-440e-ba2a-457b857894ce.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/916870b3-b3d4-443c-b40b-60db4b27565c.png"},{"Title":"Click on Cloud Solutions button","Description":"Successfully clicked on Cloud Solutions","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/815c7056-5d88-4d99-8cc8-2a9c7b5fd1ad.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/ca56f7da-c204-4145-b9e4-830ec0bb319e.png"},{"Title":"Verify if Solutions grid buttons are clickable","Description":"Buttons are navigable","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_ff539d55-4d1b-40f7-863a-52d977b8a13f/Screenshots/cc61ab29-767c-4189-804f-69f4e563e1aa.png"}],"metaData":[{"TESTCASE NAME":"SolutionGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695282321853,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695282321853,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695282535408,"type":"datetime"},"EXECUTION DURATION":"00h:03m:33s"},{"TOTAL":19,"PASS":17,"FAIL":2,"INFO":0}]},"SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9":{"steps":[{"Title":"Click on Application Development button","Description":"Successfully clicked on Application Development","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/abfd0c1b-c9ce-4929-8022-7ca10c0ce960.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/4e3fddb4-11a4-475d-ab16-209fc0224a72.png"},{"Title":"Click on Digital Offerings button","Description":"Successfully clicked on Digital Offerings","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/1e97be11-e3e5-482d-afb3-dfa020d7d377.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/e00d441a-7059-4549-8d22-670d0177898b.png"},{"Title":"Click on Managed Services button","Description":"Successfully clicked on Managed Services","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/29302a30-0977-4752-9848-6a823e392e05.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/50182012-a5c6-4bd4-9102-6bd2eccecb40.png"},{"Title":"Click on Data Science button","Description":"Successfully clicked on Data Science","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/192d5ada-0adf-4fb2-887c-84571a567d2d.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/1a800e9d-ed74-42a8-a058-627aef5f45b9.png"},{"Title":"Click on DevSecOps button","Description":"Successfully clicked on DevSecOps","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/0b894d0f-631f-4963-a7b5-43661ab3c78f.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/f8b9ddb8-06bf-4f44-9951-691b604cfbfa.png"},{"Title":"Click on Quality Engineering button","Description":"Successfully clicked on Quality Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/7fe5ea5c-e9bb-4ccd-86ca-2c601a9b99d4.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/aad1ca06-7446-4ef7-83ef-3812532ab121.png"},{"Title":"Click on Technical Infrastructure button","Description":"Successfully clicked on Technical Infrastructure","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/e0d154c1-5324-4b3e-afee-7f90e325d20e.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/460f5fdc-305b-4d6c-8787-ab60c3820893.png"},{"Title":"Click on Data Engineering button","Description":"Successfully clicked on Data Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/6f6cb1df-19fb-494d-91a2-d3ade083f1f5.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/d06404e0-0347-4e16-8e7f-112a8705d7ff.png"},{"Title":"Click on Cloud Solutions button","Description":"Successfully clicked on Cloud Solutions","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/1587677e-d94b-4573-a6b8-f95e179c3d1f.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/7461e2a5-1738-40f5-96fd-75edd5e34043.png"},{"Title":"Verify if Solutions grid buttons are clickable","Description":"Buttons are navigable","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_661de642-3446-4ffc-bf62-6cc0f5f7bdd9/Screenshots/69fd01c1-cf21-46e8-b82d-f53fd89cf940.png"}],"metaData":[{"TESTCASE NAME":"SolutionGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695282637771,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695282637771,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695282857137,"type":"datetime"},"EXECUTION DURATION":"00h:03m:39s"},{"TOTAL":19,"PASS":17,"FAIL":2,"INFO":0}]},"SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5":{"steps":[{"Title":"Click on Application Development button","Description":"Successfully clicked on Application Development","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/2cb5bfc8-1311-4262-b101-81fe6f2b8b59.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/2485d5c3-9e84-493a-9150-3fd0b3f7c461.png"},{"Title":"Click on Digital Offerings button","Description":"Successfully clicked on Digital Offerings","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/3cf5cf4b-5536-4a06-951b-1bb39c00011e.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/7f407238-7595-4353-904b-1e42a57134f3.png"},{"Title":"Click on Managed Services button","Description":"Successfully clicked on Managed Services","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/1b31a5ec-e146-4812-b0a0-05dafdd2df73.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/4ab33ac7-2512-411f-b02e-f50f994f8dcd.png"},{"Title":"Click on Data Science button","Description":"Successfully clicked on Data Science","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/224a3bcc-dc09-4595-b68a-66031f79ac4b.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/d7a373a1-9885-4276-bf6f-105c3bd9f6d0.png"},{"Title":"Click on DevSecOps button","Description":"Successfully clicked on DevSecOps","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/bae6eb11-799e-4f31-88b4-129734710a75.png"},{"Title":"Verify if correct page is opened","Description":"Incorrect page is opened","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/636525f5-be87-4b50-af20-922dc907a1a8.png"},{"Title":"Click on Quality Engineering button","Description":"Successfully clicked on Quality Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/3b6abc45-1700-4715-ab3d-3beb522597bf.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/8cd50c9f-8b0c-4f68-9e96-71422dc76c4e.png"},{"Title":"Click on Technical Infrastructure button","Description":"Successfully clicked on Technical Infrastructure","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/bb938996-0b13-40cf-a4ff-2aa1d3faeb2a.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/e5bbf63e-f5f4-4d09-a7c0-2513a88cc942.png"},{"Title":"Click on Data Engineering button","Description":"Successfully clicked on Data Engineering","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/09d785f8-5b75-46e4-8015-8a5da8250aed.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/98ad355a-d60f-4a0c-ac18-a02a434a8a5d.png"},{"Title":"Click on Cloud Solutions button","Description":"Successfully clicked on Cloud Solutions","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/035e4905-d5ff-48ce-a12e-e1cc9a144b0a.png"},{"Title":"Verify if correct page is opened","Description":"Correct page is opened","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/a53c08be-cdb4-4119-85b6-edbcc387ca0c.png"},{"Title":"Verify if Solutions grid buttons are clickable","Description":"Buttons are navigable","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/SolutionGrid_233140d8-4f9c-4964-b418-e0d49f1e56f5/Screenshots/6ecc8183-1518-496f-9748-7edf7be74763.png"}],"metaData":[{"TESTCASE NAME":"SolutionGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695283521098,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695283521097,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695283743004,"type":"datetime"},"EXECUTION DURATION":"00h:03m:41s"},{"TOTAL":19,"PASS":18,"FAIL":1,"INFO":0}]},"HomePagecareerGrid_936a83d5-7216-4deb-a18b-bf059bf793cd":{"steps":[{"Title":"Click on View Openings button","Description":"Successfully clicked on View Openings button","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/HomePagecareerGrid_936a83d5-7216-4deb-a18b-bf059bf793cd/Screenshots/f6deb6d1-0bfd-4f0d-a094-726a64b745b1.png"},{"Title":"Click view opening button","Description":"Verifying view opening button clickable or not","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/HomePagecareerGrid_936a83d5-7216-4deb-a18b-bf059bf793cd/Screenshots/be545025-0075-4a3e-9349-a0f9acae5b4c.png"}],"metaData":[{"TESTCASE NAME":"HomePagecareerGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695299002491,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695299002491,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695299011058,"type":"datetime"},"EXECUTION DURATION":"00h:00m:08s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"HomePagecareerGrid_b6484108-b543-40f9-ab7f-e62959f24a8d":{"steps":[{"Title":"Click on View Openings button","Description":"Successfully clicked on View Openings button","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/HomePagecareerGrid_b6484108-b543-40f9-ab7f-e62959f24a8d/Screenshots/48819f47-69d3-4e9a-8d24-2504148c5ff7.png"},{"Title":"Click view opening button","Description":"Verifying view opening button clickable or not","status":"FAIL","Screenshot":".//Results/21-09-2023/GemSite Automation/HomePagecareerGrid_b6484108-b543-40f9-ab7f-e62959f24a8d/Screenshots/64c24b04-acc8-4206-b1ee-086581f312be.png"}],"metaData":[{"TESTCASE NAME":"HomePagecareerGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695299042171,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695299042170,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695299079034,"type":"datetime"},"EXECUTION DURATION":"00h:00m:36s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"HomePagecareerGrid_bf70c783-8e50-4f86-b1f3-a22f12a131f5":{"steps":[{"Title":"Click on View Openings button","Description":"Successfully clicked on View Openings button","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/HomePagecareerGrid_bf70c783-8e50-4f86-b1f3-a22f12a131f5/Screenshots/ad7af74e-871b-48c5-b181-45670a91b390.png"},{"Title":"Verifying view opening button navigable or not","Description":"Button is navigable","status":"PASS","Screenshot":".//Results/21-09-2023/GemSite Automation/HomePagecareerGrid_bf70c783-8e50-4f86-b1f3-a22f12a131f5/Screenshots/bd6c668c-0b24-49e1-a8af-217326a3cd37.png"}],"metaData":[{"TESTCASE NAME":"HomePagecareerGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1695299216699,"type":"date"}},{"EXECUTION STARTED ON":{"value":1695299216698,"type":"datetime"},"EXECUTION ENDED ON":{"value":1695299242430,"type":"datetime"},"EXECUTION DURATION":"00h:00m:25s"},{"TOTAL":2,"PASS":2,"FAIL":0,"INFO":0}]}}};console.log(obj);
+  if (obj.reportProduct === "GEMPYP") {
+    theme = gempypThemes;
+  } else if (obj.reportProduct === "GEMSURF") {
+    theme = gemsurfThemes;
+  } else {
+  }
+  obj.Suits_Details.TestCase_Details = changeFormat(
+    obj.Suits_Details.TestCase_Details
+  );
+  var excludeHeader = [
+    "TC_RUN_ID",
+    "STEPS",
+    "EXECUTION_METADATA",
+    "RESULT_FILE",
+    "IGNORE",
+  ];
+  var sortType = "";
+  var lastsortHeader = "";
+  var exeHeaders = {
+    STATUS: "status",
+    "PROJECT NAME": "project_name",
+    "REPORT TYPE": "report_type",
+    ENV: "env",
+    "START TIME": "s_start_time",
+    "END TIME": "s_end_time",
+    DURATION: "duration",
+  };
+  var infraHeaders = {
+    "EXECUTED BY": "user",
+    "EXECUTED ON": "machine",
+    RUN_TYPE: "run_type",
+    RUN_MODE: "run_mode",
+  };
+  var options = getOptions(obj.Suits_Details.TestCase_Details);
+  for (var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    $("#status").append(el);
+  }
+
+  function changeFormat(value) {
+
+    for (var j in value) {
+      var keys = Object.keys(value[j]);
+      var key, newkey, i = 0, n = keys.length;
+      var newobj = {}
+      while (i < n) {
+        key = keys[i];
+        if (key.includes('_time')) {
+          newobj[key.replace('_', " ").toUpperCase()] = value[j][key];
+        }
+        else
+        {
+          newobj[key.toUpperCase()] = value[j][key];
+        }
+        i++;
+      }
+      value[j] = newobj;
+    }
+
+    for (var i = 0; i < value.length; i++) {
+      var keys = Object.keys(value[i]);
+      for (var j = 0; j < keys.length; j++) {
+        if (typeof value[i][keys[j]] != "object") {
+          value[i][keys[j]] = {
+            value: value[i][keys[j]],
+            sortValue: value[i][keys[j]],
+          };
+        }
+      }
+    }
+    return value;
+  }
+  function constructPage() {
+
+    var infraTable = getInfraDetailsTable(obj.Suits_Details);
+    $("#pills-overview").append(infraTable);
+    var cardDetailsOverview = getCardDetails(obj.Suits_Details.Testcase_Info, 'overview');
+    var cardDetailsTestcase = getCardDetails(obj.Suits_Details.Testcase_Info, 'testcase');
+
+    $("#pills-overview").append(cardDetailsOverview);
+    $("#pills-testcase").append(cardDetailsTestcase);
+    var exeTable = getExecutionDetailsTable(obj.Suits_Details);
+    $("#pills-overview").append(exeTable);
+
+    document.getElementById("productType").innerText = obj.reportProduct;
+    $("#heading").css("color", theme[0]);
+    $("#filterHeading").css("color", theme[0]);
+    $("#filtercard").hover(
+      function () {
+        var col = "1px solid " + theme[0];
+        $(this).css("border", col);
+      },
+      function () {
+        $(this).css("border", "none");
+      }
+    );
+    $("#clear").css("background-color", theme[2]);
+    if (obj.reportProduct === "GEMPYP") {
+      $(".nav-pills").addClass("gempyp");
+    } else if (obj.reportProduct === "GEMSURF") {
+      $(".nav-pills").addClass("gemsurf");
+    } else {
+    }
+
+    var testcaseDetailsTable = getTestcaseDetailsTable(
+      obj.Suits_Details.TestCase_Details
+    );
+    $("#pills-testcase").append(testcaseDetailsTable);
+
+    $('#loading').hide();
+
+  }
+
+  function getTestcaseDetailsTable(list) {
+    var div = $("<div/>").addClass("mt-5 mx-4 container-fluid tableEx");
+    var cols = [];
+
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+          if (!excludeHeader.includes(k)) {
+            cols.push(k.toUpperCase());
+          }
+        }
+      }
+    }
+
+    if (!cols.includes("DURATION")) {
+      cols.push("DURATION");
+    }
+    if (!cols.includes("S.No.")) {
+      cols.unshift("S.NO.");
+    }
+    // Create a table element
+    var table = document.createElement("table");
+    table.id = "tab";
+    table.className =
+      "table table-borderless table-responsive d-block d-md-table";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i];
+      if((cols[i].includes('START TIME')) || (cols[i].includes('END TIME')))
+      {
+        theader.style.minWidth = "120px";
+      }
+      if(cols[i].includes('TIME'))
+      {
+        const col_id = cols[i].split(' ')
+        theader.id = col_id[0] + '_' + col_id[1] + "_tc";
+      }
+      else
+      {
+      theader.id = cols[i] + "_tc";
+      }
+
+      theader.addEventListener("click", getsort, true);
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+
+    // Adding the data to the table
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      if (list[i]["IGNORE"] !== true) {
+        trow = table.insertRow(-1);
+        trow.setAttribute("data-toggle", "collapse");
+        trow.setAttribute("data-target", "#accord" + i);
+        trow.className = "checkCollapse";
+        trow.style.background = "white";
+        for (var j = 0; j < cols.length; j++) {
+          var cell = trow.insertCell(-1);
+          cell.addEventListener("click", function () {
+            $("#tab").find("tbody").find("tr").not(".accordRow").not(".checkCollapse").not(":first").fadeIn("fast");
+          });
+
+          var att = document.createAttribute("data-input");
+
+          if (cols[j].includes("_")) {
+            var v = cols[j].replace("_", " ");
+            att.value = v;
+          } else {
+            att.value = cols[j];
+          }
+          cell.setAttributeNode(att);
+          if (cols[j] === "STATUS") {
+            // cell.innerHTML = list[i][cols[j]];
+            var link = document.createElement("div");
+            link.className = "btn-sm";
+            cell.setAttribute("class", "status");
+            link.innerHTML = list[i][cols[j]]["value"];
+            cell.appendChild(link);
+            if (list[i][cols[j]]["value"] === "PASS") {
+              link.className = "statusColorPass";
+            } else if (list[i][cols[j]]["value"] === "FAIL") {
+              link.className = "statusColorFail";
+            } else if (list[i][cols[j]]["value"] === "INFO") {
+              link.className = "statusColorInfo";
+            } else if (list[i][cols[j]]["value"] === "WARN") {
+              link.className = "statusColorWarn";
+            } else if (list[i][cols[j]]["value"] === "INCOMPLETE") {
+              link.className = "statusColorIncomplete";
+            } else {
+              link.className = "statusColorOthers";
+            }
+            // link.style.width='fit-content';
+          } else if ((cols[j].includes("START TIME")) || (cols[j].includes("END TIME"))) {
+            cell.innerHTML = changeTime(list[i][cols[j]]["value"]);
+          } else if (cols[j].includes("S.NO.")) {
+            cell.innerHTML = changeSerial(i)["value"];
+            // cell.style.maxWidth ="20px !important";
+          } else if (cols[j].includes("DURATION")) {
+            cell.innerHTML = getDuration(
+              list[i]["START TIME"]["value"],
+              list[i]["END TIME"]["value"],
+              i
+            )["value"];
+          }
+          else if (cols[j].includes("LOG_FILE")) {
+            if (!list[i][cols[j]]) {
+              cell.innerHTML = "None";
+            }
+            else {
+              var link = document.createElement("a");
+              if(list[i][cols[j]]["value"])
+              {
+                link.href = list[i][cols[j]]["value"];
+              }
+              else {
+                link.href = list[i][cols[j].toLowerCase()]["value"];
+              }
+              // link.href = list[i][cols[j].toLowerCase()]["value"];
+              // link.href = list[i][cols[j]]["value"];
+              link.target = "_blank";
+              link.innerHTML = "View";
+              link.addEventListener("click", function (e) {
+                e.stopImmediatePropagation();
+              });
+              cell.appendChild(link);
+            }
+          }
+          else if (cols[j].toUpperCase().includes("NAME")) {
+            cell.setAttribute("class", "testfilt");
+            cell.innerHTML = list[i][cols[j]]["value"];
+          }
+          else {
+            if (!list[i][cols[j]]) {
+              cell.innerHTML = "None";
+            } else {
+              cell.innerHTML = list[i][cols[j]]["value"];
+            }
+          }
+        }
+      }
+      trowAccor = table.insertRow(-1);
+      tcellAccord = trowAccor.insertCell(-1);
+      tcellAccord.className = "hiddenRow";
+      tcellAccord.setAttribute("colspan", cols.length);
+
+
+
+
+      var accordDiv = document.createElement("div");
+      accordDiv.className = "accordion-body collapse";
+      accordDiv.id = "accord" + i;
+      accordDiv.setAttribute("data-parent", "#tab");
+      var accordHeading = $("<div/>")
+        .html("Test Step Report")
+        .addClass("mb-2 accordHeading mt-4 text-center")
+        .css("color", theme[0]);
+      accordDiv.append(accordHeading[0]);
+      var stepCard = createAccordionCards(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].metaData[2],
+        i
+      );
+      stepCard.addClass("mt-4");
+      accordDiv.append(stepCard[0]);
+      var stepDetails = createAccordionMetaDetails(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].metaData
+      );
+      accordDiv.append(stepDetails[0]);
+      var tableAccord = createAccordionTable(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].steps,
+        i
+      );
+      accordDiv.append(tableAccord[0]);
+      // tcellAccord.append(imgmodaldiv);
+      tcellAccord.append(accordDiv);
+    }
+
+    div.append(table);
+    return div;
+  }
+  function createAccordionTable(list, index) {
+    var div = $("<div/>").addClass("mt-5 mx-5 mb-2");
+
+    var cols = [];
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+          if (!excludeHeader.includes(k)) {
+            cols.push(k);
+          }
+        }
+      }
+    }
+    if (!cols.includes("S.No.")) {
+      cols.unshift("S.NO.");
+    }
+
+    var table = document.createElement("table");
+    table.id = "tabAccord" + index;
+    table.className =
+      "table table-borderless table-responsive d-block d-md-table w-100";
+    //  table.style.width="100%";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i].toUpperCase();
+      theader.id = cols[i] + "_tcaccord";
+      if (cols[i] === "STATUS" || cols[i] === "status") {
+        theader.style.width = "130px";
+      }
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      trow = table.insertRow(-1);
+      trow.className = "accordRow";
+      trow.style.backgroundColor = "#FFFFFF";
+      for (var j = 0; j < cols.length; j++) {
+        var cell = trow.insertCell(-1);
+        cell.setAttribute("class", "align-middle setWidth");
+
+        var att = document.createAttribute("data-input");
+
+        if (cols[j].includes(" ")) {
+          var v = cols[j].replace(" ", "_");
+          att.value = v;
+        } else {
+          att.value = cols[j];
+        }
+        cell.setAttributeNode(att);
+        if (cols[j].toLowerCase() === "substeps") {
+          cell.style.width = "20px";
+          cell.style.verticalAlign = "middle";
+          cell.setAttribute("class", "text-center");
+          if (list[i][cols[j]]) {
+            var divIcon = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.id = i;
+            icon.setAttribute("title", "View Substeps");
+            icon.setAttribute("class", "fa fa-eye substepIcon");
+            var index = i;
+            console.log(list[index]);
+            console.log(cols[j]);
+            divIcon.addEventListener("click", (event) => {
+              console.log(list);
+              createSubsteps(list, event);
+
+              trimModal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+            });
+            divIcon.appendChild(icon);
+            cell.appendChild(divIcon);
+
+          }
+          else {
+            cell.innerHTML = "-";
+
+          }
+        }
+        else if (cols[j] && cols[j].toLowerCase() === 'screenshot') {
+          if (list[i][cols[j]] !== "N/A") {
+            var image = document.createElement("img");
+			var temp=list[i][cols[j]].split("/");
+			var relativePath=temp[temp.length-3]+"/"+temp[temp.length-2]+"/"+temp[temp.length-1];
+            image.setAttribute('src', relativePath);
+            image.setAttribute('class', "thumb");
+            image.setAttribute('image', "Screenshot");
+            image.addEventListener("click", function () {
+              var modal = document.getElementById("myModal");
+
+              // Get the image and insert it inside the modal - use its "alt" text as a caption
+              var img = document.getElementById("myImg");
+              var modalImg = document.getElementById("img01");
+              var captionText = document.getElementById("caption");
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            });
+
+            image.setAttribute('data-toggle', 'modal');
+            image.setAttribute('data-target', '#myModal');
+            // modal.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            image.setAttribute('id', "myImg");
+            cell.appendChild(image);
+
+          } else {
+            var divHandle = document.createElement("div");
+			divHandle.innerHTML="N/A";
+            // divHandle.setAttribute('class','text-center');
+            // divHandle.innerHTML="(blank)";
+            cell.appendChild(divHandle);
+          }
+        }
+        else if (list[i][cols[j]] && typeof list[i][cols[j]] === "object") {
+          var a = document.createElement("a");
+          a.href = list[i][cols[j]]["href"];
+          a.target = "_blank";
+          a.innerHTML = list[i][cols[j]]["LinkName"];
+          cell.appendChild(a);
+        } else if (cols[j] === "STATUS" || cols[j] === "status") {
+          var cont = document.createElement("div");
+
+          if (list[i][cols[j]] === "PASS") {
+            cont.className = "statusColorPass statusAccord ";
+          } else if (list[i][cols[j]] === "FAIL") {
+            cont.className = "statusColorFail statusAccord";
+          } else if (list[i][cols[j]] === "INFO") {
+            cont.className = "statusColorInfo statusAccord";
+          } else if (list[i][cols[j]] === "WARN") {
+            cont.className = "statusColorWarn statusAccord";
+          } else if (list[i][cols[j]] === "INCOMPLETE") {
+            cont.className = "statusColorIncomplete statusAccord";
+          } else {
+            cont.className = "statusColorOthers statusAccord";
+          }
+          cont.innerText = list[i][cols[j]];
+          cell.appendChild(cont);
+        } else if (cols[j] === "TIME" || cols[j] === "time") {
+          cell.innerHTML = convertIntoDateTime(list[i][cols[j]]);
+        } else if (cols[j] === "S.NO.") {
+          cell.innerHTML = i + 1;
+          cell.style.width = "20px";
+
+        } else {
+          if (list[i][cols[j]] === undefined) {
+            list[i][cols[j]] = "-";
+          }
+          cell.append(getTrimData(list[i][cols[j]], cols[j]));
+        }
+      }
+    }
+    div.append(table);
+    return div;
+  }
+
+  function getExecutionDetailsTable(data) {
+    var div = $("<div/>").addClass(" mx-5 mt-5");
+    var exeHeading = $("<span/>")
+      .html("Execution Details")
+      .addClass("tableHeading mb-2")
+      .css("color", theme[0]);
+    $(div).append(exeHeading);
+    var table = $("<table/>")
+      .addClass(
+        "table table-borderless table-responsive w-100 d-block d-md-table"
+      )
+      .css("box-shadow", " 0px 3px 6px rgba(0, 71, 136, 0.05)")
+      .css("border-radius", "4px");
+    var cols = Headers(exeHeaders);
+    var headers = $("<tr>");
+    var content = $("<tr/>");
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[cols[colIndex]];
+      var backOpacity = theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      headers
+        .append($("<th/>").html(cols[colIndex]))
+        .css("color", "black")
+        .css("background-color", backOpacity);
+
+      $(table).append(headers);
+    }
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[exeHeaders[cols[colIndex]]];
+
+      if (cols[colIndex].toUpperCase().includes("STATUS")) {
+        val = document.createElement("div");
+        val.innerText = data[exeHeaders[cols[colIndex]]];
+        if (data[exeHeaders[cols[colIndex]]] === "PASS") {
+          val.className = "statusColorPass";
+        } else if (data[exeHeaders[cols[colIndex]]] === "FAIL") {
+          val.className = "statusColorFail";
+        } else if (data[exeHeaders[cols[colIndex]]] === "INFO") {
+          val.className = "statusColorInfo";
+        } else if (data[exeHeaders[cols[colIndex]]] === "WARN") {
+          val.className = "statusColorWarn";
+        } else if (data[exeHeaders[cols[colIndex]]] === "INCOMPLETE") {
+          val.className = "statusColorIncomplete";
+        } else {
+          val.className = "statusColorOthers";
+        }
+      }
+      else if((cols[colIndex].toUpperCase().includes("START TIME"))){
+        val = changeTime(data[exeHeaders[cols[colIndex]]]);
+      }
+
+      else if ((cols[colIndex].toUpperCase().includes("END TIME"))) {
+        if(data[exeHeaders[cols[0]]] === "EXE"){
+        val = "-------------";
+        }
+        else{
+          val=changeTime(data[exeHeaders[cols[colIndex]]]);
+        }
+      }
+
+      else if (cols[colIndex].toUpperCase().includes("DURATION")) {
+        if(data[exeHeaders[cols[0]]] === "EXE"){
+        val = "-------------";
+        }
+        else{
+        val = getDuration(
+          data[exeHeaders["START TIME"]],
+          data[exeHeaders["END TIME"]],
+          colIndex + "_col"
+        )["value"];
+        }
+      }
+      else if (val === undefined) {
+        val = "None";
+      }
+
+
+
+
+      content.append($("<td/>").html(val).css("background-color", "white"));
+
+      $(table).append(content);
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function createAccordionMetaDetails(data) {
+    var div = $("<div/>")
+      .addClass("mt-4 mx-5 card p-3")
+      .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+      .css("border-radius", "6px")
+      .css("display", "block")
+      .hover(
+        function () {
+          var col = "1px solid " + theme[0];
+          $(this).css("border", col).css("cursor", "pointer");
+        },
+        function () {
+          $(this).css("border", "none");
+        }
+      );
+    var table = $("<table/>").addClass(
+      "table table-borderless table-responsive w-100 d-block d-md-table"
+    );
+    for (var m = 0; m < data.length - 1; m++) {
+      var headers = $("<tr>");
+      headers.addClass("accordRow");
+      var content = $("<tr/>");
+      content.addClass("accordRow");
+      var cols = Headers(data[m]);
+      for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+        var val = data[m][cols[colIndex]];
+
+        headers
+          .append($("<th/>").html(cols[colIndex]))
+          .css("color", theme[0])
+          .css("max-width", "3px");
+
+        $(table).append(headers);
+      }
+
+      for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+        var val = data[m][cols[colIndex]];
+        if (val === undefined) {
+          val = "None";
+        }
+        if (val.type) {
+          content.append($("<td/>").html(changeDate(val)));
+        } else {
+          content.append($("<td/>").html(val));
+        }
+        $(table).append(content);
+      }
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function getInfraDetailsTable(data) {
+    var div = $("<div/>")
+      .addClass("mt-4 mx-5 card p-3")
+      .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+      .css("border-radius", "6px")
+      .css("display", "block")
+      .hover(
+        function () {
+          var col = "1px solid " + theme[0];
+          $(this).css("border", col).css("cursor", "pointer");
+        },
+        function () {
+          $(this).css("border", "none");
+        }
+      );
+
+    var infraHeading = $("<span/>")
+      .html("Infra Details")
+      .addClass("tableHeading mb-2 ml-2");
+    infraHeading.css("color", theme[0]);
+    $(div).append(infraHeading);
+    var table = $("<table/>").addClass(
+      "table table-borderless table-responsive w-100 d-block d-md-table"
+    );
+    var cols = Headers(infraHeaders);
+    var headers = $("<tr>");
+    var content = $("<tr/>");
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[cols[colIndex]];
+
+      headers.append($("<th/>").html(cols[colIndex])).css("color", theme[0]);
+
+      $(table).append(headers);
+    }
+
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[infraHeaders[cols[colIndex]]];
+      if (val === undefined) {
+        val = "None";
+      }
+
+      content.append($("<td/>").html(val));
+
+      $(table).append(content);
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function createAccordionCards(val, index) {
+    var key, keys = Object.keys(val);
+    var n = keys.length;
+    var newobj = {}
+    while (n--) {
+      key = keys[n];
+      newobj[key.toUpperCase()] = val[key];
+    }
+    val = newobj;
+    var cards = Object.keys(val);
+    var dummy_card = new Set();
+    dummy_card.add("TOTAL");
+    dummy_card.add("PASS");
+    dummy_card.add("FAIL");
+    cards.forEach((ele) => {
+      dummy_card.add(ele.toUpperCase());
+    });
+    cards = Array.from(dummy_card);
+
+    var div = $("<div/>").addClass("mx-4 mt-4");
+    var flex = $("<div/>").addClass("d-flex flex-wrap justify-content-start");
+    for (var i = 0; i < cards.length; i++) {
+      var card = $("<div/>")
+        .addClass("card mx-4 mt-2")
+        .css("height", "92px")
+        .css("width", "170px")
+        .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+        .css("border-radius", "6px")
+        .hover(
+          function () {
+            var col = "1px solid " + theme[0];
+
+            $(this).css("border", col).css("cursor", "pointer");
+
+          },
+          function () {
+            $(this).css("border", "1px solid rgba(0,0,0,.125)");
+          }
+        );
+
+      var cardBody = $("<div/>")
+        .addClass("card-body")
+        .css("align-self", "flex-start");
+      var cardTitle = $("<span/>")
+        .addClass("title-card")
+        .css("color", theme[0]);
+      // if(data[cards[i]]){
+      cardTitle.html(cards[i]);
+      //         }else{
+      // cardTitle.html(0);
+      //         }
+      var cardText = $("<span/>").addClass("text-card");
+      if (val[cards[i]]) {
+
+        card.attr("title", "Click to Filter");
+
+
+        cardText.html(val[cards[i]]);
+      } else {
+
+        card.css("background-color", "#EEEEEE");
+        card.hover(function () {
+          $(this).css('cursor', 'not-allowed');
+        });
+        cardText.html(0);
+      }
+      if (cards[i] === "PASS") {
+        cardText.addClass("passTest");
+      } else if (cards[i] === "FAIL") {
+        cardText.addClass("failTest");
+      } else if (cards[i] === "WARN") {
+        cardText.addClass("warnTest");
+      } else if (cards[i] === "INFO") {
+        cardText.addClass("infoTest");
+      } else if (cards[i] === "INCOMPLETE") {
+        cardText.addClass("incompleteTest");
+      } else if (cards[i] === "TOTAL") {
+        cardText.css("color", theme[0]);
+      } else {
+        cardText.addClass("othersTest");
+      }
+      cardBody.append(cardTitle).append("<br/>").append(cardText);
+      card.append(cardBody);
+
+      flex.append(card);
+      card.click(function (event) {
+        filterTable(
+          event.currentTarget.firstChild.firstChild.innerText,
+          index,
+          event.currentTarget.firstChild.lastChild.innerText
+        );
+      });
+    }
+
+    div.append(flex);
+    return div;
+  }
+  function filterTable(val, index, check) {
+    if (check > 0) {
+      var $filterableRows = $("#tabAccord" + index)
+        .find("tbody")
+        .find("tr")
+        .not(":first");
+      $filterableRows
+        .hide()
+        .filter(function () {
+          return (
+            $(this).filter(function () {
+              var tdText = $(this).find(".statusAccord").text().toLowerCase();
+
+              if (val === "TOTAL") {
+                val = "";
+              }
+              if (val === undefined) {
+                val = "";
+              } else {
+                val = val.toLowerCase();
+              }
+
+              return tdText.includes(val);
+            }).length === $(this).length
+          );
+        })
+        .show();
+    }
+  }
+
+  function getCardDetails(data, type) {
+    var key, keys = Object.keys(data);
+    var n = keys.length;
+    var newobj = {}
+    while (n--) {
+      key = keys[n];
+      newobj[key.toUpperCase()] = data[key];
+    }
+    data = newobj;
+    var cards = Object.keys(data);
+    var dummy_card = new Set();
+    dummy_card.add("TOTAL");
+    dummy_card.add("PASS");
+    dummy_card.add("FAIL");
+    cards.forEach((ele) => {
+      dummy_card.add(ele.toUpperCase());
+    });
+    cards = Array.from(dummy_card);
+
+    var cardValues = Object.values(data);
+    var div = $("<div/>").addClass("col-12 mx-2 mt-4");
+    var flex = $("<div/>").addClass("d-flex flex-wrap justify-content-start");
+    for (var i = 0; i < cards.length; i++) {
+      var card = $("<div/>")
+        .addClass("card mx-4 mt-2")
+        .css("height", "92px")
+        .css("width", "170px")
+        .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+        .css("border-radius", "6px")
+        .hover(
+          function () {
+            var col = "1px solid " + theme[0];
+            $(this).css("border", col);
+            if (type === 'testcase') {
+              $(this).css("cursor", "pointer");
+            }
+          },
+          function () {
+
+            $(this).css("border", "1px solid rgba(0,0,0,.125)");
+
+          }
+        );
+
+      var cardBody = $("<div/>").addClass("card-body");
+      var cardTitle = $("<span/>")
+        .addClass("title-card")
+        .css("color", theme[0]);
+      // if(data[cards[i]]){
+      cardTitle.html(cards[i]);
+      //         }else{
+      // cardTitle.html(0);
+      //         }
+      var cardText = $("<span/>").addClass("text-card");
+      if (data[cards[i]]) {
+        if (type === 'testcase') {
+          card.attr("title", "Click to Filter");
+        }
+        cardText.html(data[cards[i]]);
+      } else {
+        if (type === 'testcase') {
+          card.css("background-color", "#EEEEEE");
+          card.hover(function () {
+            $(this).css('cursor', 'not-allowed');
+          });
+        }
+        cardText.html(0);
+      }
+      if (cards[i] === "PASS") {
+        cardText.addClass("passTest");
+      } else if (cards[i] === "FAIL") {
+        cardText.addClass("failTest");
+      } else if (cards[i] === "WARN") {
+        cardText.addClass("warnTest");
+      } else if (cards[i] === "INFO") {
+        cardText.addClass("infoTest");
+      } else if (cards[i] === "INCOMPLETE") {
+        cardText.addClass("incompleteTest");
+      } else if (cards[i] === "TOTAL") {
+        cardText.css("color", theme[0]);
+      } else {
+        cardText.addClass("othersTest");
+      }
+      cardBody.append(cardTitle).append("<br/>").append(cardText);
+      card.append(cardBody);
+      if (type === 'testcase') {
+        card.attr("data-toggle", "tooltip");
+        card.attr("data-placement", "bottom");
+
+        card.click(function (event) {
+
+          $("#tab").find("tbody").find("tr").not(".accordRow").not(".checkCollapse").not(":first").fadeOut("fast");
+
+          statusSearch(event.currentTarget.firstChild.firstChild.innerText, event.currentTarget.firstChild.lastChild.innerText);
+        });
+      }
+      flex.append(card);
+    }
+    div.append(flex);
+    return div;
+  }
+
+  function changeSerial(val) {
+    var serialobj = {
+      value: val + 1,
+      sortValue: val + 1,
+    };
+    return serialobj;
+  }
+
+  function changeTime(val) {
+    var data = new Date(val);
+    var abbrTZ = data.toString().match(/\(([A-Za-z\s].*)\)/)[1].split(' ').map(function (item) { return item[0] }).join('');
+    return data.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' }) + " " + data.toLocaleTimeString() + " (" + abbrTZ + ")";
+
+  }
+
+  function getDuration(start, end, index) {
+    var startTime = new Date(start).getTime();
+    var endTime = new Date(end).getTime();
+    var dur = (endTime - startTime) / 1000;
+    var objans = {
+      value: ans,
+      sortValue: dur,
+    };
+    if (dur < 60) {
+      objans.value = dur + " sec(s)";
+    } else if (dur >= 60 && dur < 3600) {
+      var ans = Math.floor(dur / 60) + " min ";
+      if (Math.floor(dur % 60) !== 0) {
+        ans = ans + Math.floor(dur % 60) + " sec(s)";
+      }
+      objans.value = ans;
+    } else if (dur >= 60 && dur < 86400) {
+      var ans = Math.floor(dur / 3600) + " hour ";
+      if (Math.floor((dur % 3600) / 60) !== 0) {
+        ans = ans + Math.floor((dur % 3600) / 60) + " min";
+      }
+      if (Math.floor((dur % 3600) % 60) !== 0) {
+        ans = ans + Math.floor((dur % 3600) % 60) + " sec(s)";
+      }
+
+      objans.value = ans;
+    }
+    if (!isNaN(index)) {
+      obj.Suits_Details.TestCase_Details[index]["DURATION"] = objans;
+    }
+    return objans;
+  }
+
+  function getOptions(val) {
+    var options = new Set();
+    options.add("All");
+    for (var i = 0; i < val.length; i++) {
+      options.add(val[i]["STATUS"]["value"]);
+    }
+    return Array.from(options);
+  }
+
+  function getsort(val) {
+    if (
+      val.target.className === "fa fa-angle-up ml-1" ||
+      val.target.className === "fa fa-angle-down ml-1"
+    ) {
+      if (lastsortHeader === "") {
+        lastsortHeader = val.target.id;
+        sortType = "asc";
+      } else if (val.target.id === lastsortHeader) {
+        if (sortType === "asc") {
+          sortType = "desc";
+        } else {
+          sortType = "asc";
+        }
+        lastsortHeader = val.target.id;
+      } else {
+        sortType = "asc";
+        lastsortHeader = val.target.id;
+      }
+      var tab = [...obj.Suits_Details.TestCase_Details];
+      if (sortType === "asc") {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.id]["sortValue"] >
+              tab[j][val.target.id]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.id]["sortValue"] <
+              tab[j][val.target.id]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      }
+      obj.Suits_Details.TestCase_Details = tab;
+      $("#pills-testcase").children("div")[2].remove();
+      var testcaseDetailsTable = getTestcaseDetailsTable(tab);
+      $("#pills-testcase").append(testcaseDetailsTable);
+      myFunction();
+      var icon = $("<i/>").addClass("fa").css("font-size", "18px");
+      if (sortType === "asc") {
+        icon.addClass("fa-angle-up ml-1").css("vertical-align", "middle");
+      }
+      if (sortType === "desc") {
+        icon.addClass("fa-angle-down ml-1").css("vertical-align", "middle");
+      }
+      icon.attr("id", lastsortHeader);
+      if(lastsortHeader.includes('TIME'))
+      {
+        const arrid = lastsortHeader.split(' ');
+        var targetId = "#" + arrid[0] + "_" + arrid[1] + "_tc";
+        $(targetId).append(icon);
+
+      }
+      else
+      {
+      // icon.addEventListener("click",(e)=>{
+      // e.stopPropagation();
+      // });
+      var targetId = "#" + lastsortHeader + "_tc";
+      $(targetId).append(icon);
+      }
+
+      var $filterableRows = $("#tab").find("tbody").find("tr").not(":first");
+    }
+
+
+    else {
+      if (lastsortHeader === "") {
+        lastsortHeader = val.target.innerText;
+        sortType = "asc";
+      } else if (val.target.innerText === lastsortHeader) {
+        if (sortType === "asc") {
+          sortType = "desc";
+        } else {
+          sortType = "asc";
+        }
+        lastsortHeader = val.target.innerText;
+      } else {
+        sortType = "asc";
+        lastsortHeader = val.target.innerText;
+      }
+      var tab = [...obj.Suits_Details.TestCase_Details];
+      tab = changeFormat(tab);
+      if (sortType === "asc") {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.innerText]["sortValue"] >
+              tab[j][val.target.innerText]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.innerText]["sortValue"] <
+              tab[j][val.target.innerText]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      }
+      obj.Suits_Details.TestCase_Details = tab;
+      $("#pills-testcase").children("div")[2].remove();
+      var testcaseDetailsTable = getTestcaseDetailsTable(tab);
+      $("#pills-testcase").append(testcaseDetailsTable);
+      myFunction();
+
+      var icon = $("<i/>").addClass("fa").css("font-size", "18px");
+      if (sortType === "asc") {
+        icon.addClass("fa-angle-up ml-1").css("vertical-align", "middle");
+      }
+      if (sortType === "desc") {
+        icon.addClass("fa-angle-down ml-1").css("vertical-align", "middle");
+      }
+
+      icon.attr("id", lastsortHeader);
+      if(lastsortHeader.includes('TIME'))
+      {
+        const arrid = lastsortHeader.split(' ');
+        var targetId = "#" + arrid[0] + "_" + arrid[1] + "_tc";
+        $(targetId).append(icon);
+
+      }
+      else
+      {
+      // icon.addEventListener("click",(e)=>{
+      // e.stopPropagation();
+      // });
+      var targetId = "#" + lastsortHeader + "_tc";
+      $(targetId).append(icon);
+      }
+
+      var $filterableRows = $("#tab").find("tbody").find("tr").not(":first");
+    }
+  }
+
+  function clickFunc(event) {
+    event.stopPropagation();
+  }
+  function Headers(list) {
+    var columns = [];
+    row = list;
+    for (var k in row) {
+      if ($.inArray(k, columns) == -1) {
+        columns.push(k);
+      }
+    }
+    return columns;
+  }
+
+
+  function showFilterCards(val) {
+    if (val === "show") {
+      $("#filtercard").css("display", "block");
+    } else {
+      $("#filtercard").css("display", "none");
+    }
+  }
+
+  function showFilter(val) {
+    if (val !== "overview") {
+      $("#filters").css("display", "block");
+    } else {
+      $("#filters").css("display", "none");
+    }
+  }
+
+  function myFunction() {
+    var inputs = $(".search-key");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].id === "status") {
+        inputs[i].value = "All";
+      } else {
+        inputs[i].value = "";
+      }
+    }
+
+    var $filterableRows = $("#tab tbody tr");
+    $filterableRows.show();
+  }
+
+  function openDialog() {
+    $("a[name=Test]").on("click", function (e) {
+      e.preventDefault();
+      $("#modal").load(this.href).dialog({ modal: true });
+    });
+  }
+
+  function changeDate(val) {
+    var temp = val.type.toLowerCase();
+    var d = new Date(val.value);
+    if (temp === "date") {
+      return d.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' });
+    } else if (temp === "time") {
+      return d.toLocaleTimeString();
+    } else if (temp === "datetime") {
+      return d.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+    }
+  }
+
+  function convertIntoDateTime(value) {
+    var date = new Date(value);
+    return date.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+  }
+  function closeModal(id) {
+    var modal = document.getElementById(id);
+    document.getElementById("trimModalcontent").innerHTML = "";
+    document.getElementById("trimModaltitle").innerHTML = "";
+    modal.style.display = "none";
+
+  }
+  function getTrimData(data, column) {
+    var div = document.createElement("div");
+    var span = document.createElement("span");
+    var button = document.createElement("button");
+    button.innerHTML = "See More";
+    button.addEventListener("click", function () {
+      var trimModal = document.getElementById("trimModal");
+      trimModal.style.display = "block";
+      var trimModalcontent = document.getElementById("trimModalcontent");
+      trimModalcontent.innerHTML = data;
+      var trimModaltitle = document.getElementById("trimModaltitle");
+      trimModaltitle.innerHTML = column.toUpperCase();
+      trimModal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
+    });
+    button.setAttribute("class", "ml-2 btn btn-link");
+    if (data && data.length > 150) {
+      span.innerHTML = data.slice(0, 150) + "...";
+      span.appendChild(button);
+    } else {
+      span.innerHTML = data;
+    }
+    div.appendChild(span);
+
+    return div;
+  }
+
+
+
+  function createSubsteps(val, event) {
+    var modal = document.getElementById("trimModal");
+    modal.style.display = "block";
+    var trimModaltitle = document.getElementById("trimModaltitle");
+    trimModaltitle.innerHTML = "SUBSTEPS";
+    var trimModalcontent = document.getElementById("trimModalcontent");
+    var list = val[parseInt(event.target.id)]['subSteps'];
+    var cols = [];
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+
+          cols.push(k);
+        }
+      }
+    }
+
+
+
+    var table = document.createElement("table");
+    table.className =
+      "table table-borderless d-block d-md-table text-center";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i];
+
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+
+
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      trow = table.insertRow(-1);
+
+      trow.style.backgroundColor = "#FFFFFF";
+      for (var j = 0; j < cols.length; j++) {
+        var cell = trow.insertCell(-1);
+        cell.setAttribute("class", "align-middle setWidth");
+        if (cols[j] === "status") {
+          // cell.innerHTML = list[i][cols[j]];
+          var link = document.createElement("div");
+          link.className = "btn-sm";
+          link.innerHTML = list[i][cols[j]];
+          cell.appendChild(link);
+          if (list[i][cols[j]] === "PASS") {
+            link.className = "statusColorPass";
+          } else if (list[i][cols[j]] === "FAIL") {
+            link.className = "statusColorFail";
+          } else if (list[i][cols[j]] === "INFO") {
+            link.className = "statusColorInfo";
+          } else if (list[i][cols[j]] === "WARN") {
+            link.className = "statusColorWarn";
+          } else if (list[i][cols[j]] === "INCOMPLETE") {
+            link.className = "statusColorIncomplete";
+          } else {
+            link.className = "statusColorOthers";
+          }
+        } else {
+          cell.innerHTML = list[i][cols[j]];
+        }
+      }
+    }
+
+    trimModalcontent.append(table);
+    console.log(cols);
+  }
+
+
+  function statusSearch(val, count) {
+    if (count > 0) {
+      var $filterableRows = $("#tab")
+        .find("tbody")
+        .find(".checkCollapse")
+
+      $filterableRows
+        .hide()
+        .filter(function () {
+          return (
+            $(this).filter(function () {
+              var tdText = $(this).find(".status").text().toLowerCase();
+              console.log(tdText);
+
+
+              if (val === "TOTAL") {
+                val = "";
+              }
+              if (val === undefined) {
+                val = "";
+              } else {
+                val = val.toLowerCase();
+              }
+
+              return tdText.includes(val);
+            }).length === $(this).length
+          );
+        })
+        .show();
+    }
+  }
+
+</script>
+
+</html>

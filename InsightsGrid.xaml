@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1514,3322</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1524,3985</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InsightsGrid_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="78">
@@ -120,20 +120,20 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InsightsGrid" sap:VirtualizedContainerService.HintSize="1280,3257" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InsightsGrid" sap:VirtualizedContainerService.HintSize="1280,3920" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="1218,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="InsightGrid" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1218,2848" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2e7190ad-48f8-4e5e-9d1a-a56230589498" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1218,3511" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2e7190ad-48f8-4e5e-9d1a-a56230589498" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1184,2681" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1184,3344" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="flag" />
               <Variable x:TypeArguments="x:String" Name="Heading" />
@@ -156,6 +156,7 @@
                 <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/case-studies" DesignTimeRectangle="1397, 184, 53, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Contact'" FullSelectorArgument="&lt;webctrl aaname='Contact ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contact ' tag='A' type='' class='' check:innerText='Contact' /&gt;" Guid="bc136e5a-8148-4f6e-8779-4c47a8fd1ea2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAcCAYAAADbeRcAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANjSURBVFhH7VbPS2JRGPXPcNvGta7ibUYKghgGAoNggoihgqBhFsososBF4SJchMzADAlBYCuFwZAoEAkGaSG2eBA4kM2icJEoIvIMhDPfve97vudTs6Y2mQce3Pvdn+fec8/3HHgDGJEcFoxIDgtGJIcFvUm27lFUc0j/Fp+KywrHXym6SFYvDuEbV+BwTUHxLWLynZfKXkxuZlBscadXhk6Sl/tQBKFQFiULoeplHEtE3BnMQuPYSyC7Q4e5o3LtJVBGbFmBL17mug4LyToSX2jR5SRKHLFCy0Xgca0g+pcDDK1SR1V8TQ4YaFCsoRe1mt5HsxyciKW2aL2tbFebeC5yTnvcQJ92rVJAdIFIHhQ62kySdyeYdykInN1zoBuSUIPbbzIIzAgpC2nr8vbtFdo3LW8plKSDmzL7uBexnRPj9RM3xyoU18cVj0OYdFvaxtcR/WPuSVON58SfmPO8Ti0qto2Y/PyI8W2ZJOmmrA0PolVAeFqBQrdgyFpIet7txdqxWJBJuj5iI83SadWRDs3CMRdHUY90y7VygiXXLAKnfcZUMlijNebFTfG6pdMwPG4/EnLfg+T6FJLU1+laR8LmuvnvtCGWuySwkGwTkpBrBJGq6dUuklKGNiXJMRFkqViK++GY2Ee+Q8JlpPd+InYhDncQSTIdj+szYjdcfwByMTsBgXNzQ5KA/X3bDrKLpEBJRYw2HQ4F4RPuPi3kbpkzxLruiUEkm1kESMtLR7rcekG+STIYSdJnys6AdhZ+Hkl29/f0llMiR+euUUrb5nzQ4Qe66z3SW2Qk0zQhu6IVGt1S213lrfeRqz+DKpX/h2T+B423KaR6tN4mWfr1XLkKNMihyFCcMxEkrsps07fIHuqOp+yqfIplJFa9cK7Gkb+jNyT+kOjEFTKa7Qv9TT2GZH6XDnU5Tn9Uut1Xj4PklkE2EaqrSXZwnSQaOWxM6IZXFBfRLCN/4IeTxqTkgYt9KfCIPN8zhRioqYh+XcGY1Y7HVxCIX3fKpFHAt9UPZECWPse33Pg4kriKt9OBTCGtW6Q2F9tzjn06RD4txjBJAZG65sy05JwJIWZJMdWzCKcgc51ukgaMhFuzuZ0dot+gPk9FU+RjLvfDY/ow+pMcIoxIDgtGJIcFI5LDgjdAEvgHeUU/N28BO1sAAAAASUVORK5CYII=" InformativeScreenshot="49ab2c2ece215c193cc1aa946b00aab2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
+            <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="1122,181" sap2010:WorkflowViewState.IdRef="LogStatus_3" ScreenShot="Yes" TestStep="Click on Contact button" TestStepDesciption="Successfully clicked on Contact button" TestStepStatus="PASS" />
             <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'View Case Studies'" sap:VirtualizedContainerService.HintSize="1122,257" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="2e7190ad-48f8-4e5e-9d1a-a56230589498" Version="V3">
               <uix:NMouseScroll.SearchedElement>
                 <uix:SearchedElement>
@@ -194,13 +195,14 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1122,993" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[TestData(0).ToArray]">
+            <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="1122,181" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="Click on View Case Studies button" TestStepDesciption="Successfully clicked on View case studies button" TestStepStatus="PASS" />
+            <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1122,1214" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[TestData(0).ToArray]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="njl:JToken">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="1088,807" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="1088,1028" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="element" />
                     </Sequence.Variables>
@@ -217,9 +219,9 @@
                         <InArgument x:TypeArguments="x:String">[SelectorMap("ContactUsLocations").ToString.Replace("{value}",currentJToken.ToString)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1046,597" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="5" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1046,818" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="5" Version="V3">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,380" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,601" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -234,10 +236,11 @@
                             </Assign.Value>
                           </Assign>
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[currentJToken.ToString +&quot; is present on screen&quot;]" />
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_5" ScreenShot="Yes" TestStep="[&quot;Verify if &quot;+ currentJToken.ToString+&quot; is present on page&quot;]" TestStepDesciption="[currentJToken.ToString +&quot; is present on screen&quot;]" TestStepStatus="PASS" />
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,262" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,483" sap2010:WorkflowViewState.IdRef="Sequence_14">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -251,6 +254,7 @@
                               <InArgument x:TypeArguments="x:String">false</InArgument>
                             </Assign.Value>
                           </Assign>
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_6" ScreenShot="Yes" TestStep="[&quot;Verify if &quot;+ currentJToken.ToString+&quot; is present on page&quot;]" TestStepDesciption="[currentJToken.ToString +&quot; is not present on screen&quot;]" TestStepStatus="FAIL" />
                           <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_2" />
                         </Sequence>
                       </uix:NCheckState.IfNotExists>

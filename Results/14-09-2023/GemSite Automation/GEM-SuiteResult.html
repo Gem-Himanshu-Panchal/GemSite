@@ -1,0 +1,1992 @@
+<!--version1.0.7-->
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+            integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+          integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+            integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+  .thumb {
+    border: 1px solid #ddd;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded border */
+    padding: 5px;
+    /* Some padding */
+    width: 100px;
+    /* Set a small width */
+    min-height: 86px;
+    max-height: 86px;
+  }
+
+  .thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  body {
+    background: #fafbff;
+    /* transform: scale(0.9);
+      transform-origin: top center; */
+      /* overflow: auto !important; */
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+.tableEx{
+  display: block !important;
+  overflow-x: auto !important;
+}
+
+  #heading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-pills.gempyp .nav-link.active {
+    background: rgba(33, 98, 132, 1);
+    border-radius: 5px;
+    color: white !important;
+  }
+
+  .nav-pills.gempyp .nav-link {
+    color: rgba(33, 98, 132, 1);
+  }
+
+  .nav-pills.gemsurf .nav-link.active {
+    background: rgba(48, 122, 100);
+    border-radius: 5px;
+    color: white !important;
+  }
+
+  .nav-pills.gemsurf .nav-link {
+    color: rgba(48, 122, 100);
+  }
+
+  .tableHeading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+    float: left;
+  }
+
+  .accordHeading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+  }
+
+  .title-card {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    float: left;
+  }
+
+  .text-card {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    float: left;
+  }
+
+  table {
+    font-size: 13px !important;
+  }
+
+  .passTest {
+    color: #2cae21 !important;
+    border-radius: 5px;
+  }
+
+  .failTest {
+    color: #ea3e3e !important;
+    border-radius: 5px;
+  }
+
+  .warnTest {
+    color: #ff6c37 !important;
+    border-radius: 5px;
+  }
+
+  .infoTest {
+    color: #f3bb2a !important;
+    border-radius: 5px;
+  }
+
+  .incompleteTest {
+    color: #f25c5c !important;
+    border-radius: 5px;
+  }
+
+  .othersTest {
+    color: #9e9e9e !important;
+    border-radius: 5px;
+  }
+
+  /* a{
+          color: white !important
+      } */
+  .head {
+    background-color: #375a64;
+    color: white;
+  }
+
+  .statusColorPass {
+    background-color: #2cae21 !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorInfo {
+    background-color: #f3bb2a !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorFail {
+    background-color: #ea3e3e !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorWarn {
+    background-color: #ff6c37 !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorIncomplete {
+    background-color: #f25c5c !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorOthers {
+    background-color: #9e9e9e !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .hiddenRow {
+    padding: 0px !important;
+  }
+
+  #myImg {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #myImg:hover {
+    opacity: 0.7;
+  }
+
+  /* The Modal (background) */
+  .modal-img {
+    display: none;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    padding-top: 5%;
+    position: fixed;
+    z-index: 1;
+    height: fit-content;
+    background-color: rgb(129, 125, 125);
+    background-color: rgba(129, 125, 125, 0.9);
+
+  }
+
+  .modal {
+    overflow-y: auto;
+  }
+
+  .modal-body {
+    word-wrap: break-word;
+  }
+
+  /* Modal Content (image) */
+  .modal-img-content {
+    /* max-height: 700px;
+height: 100%;
+  display: block;
+  width: 100vw; */
+
+  }
+
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation */
+  .modal-img-content,
+  #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(0)
+    }
+
+    to {
+      -webkit-transform: scale(1)
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0)
+    }
+
+    to {
+      transform: scale(1)
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Absolute Center Spinner */
+  .loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Transparent Overlay */
+  .loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fafbff;
+
+    background: #fafbff;
+  }
+
+  /* :not(:required) hides these rules from IE9 and below */
+  .loading:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 150ms infinite linear;
+    -moz-animation: spinner 150ms infinite linear;
+    -ms-animation: spinner 150ms infinite linear;
+    -o-animation: spinner 150ms infinite linear;
+    animation: spinner 150ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: black 1.5em 0 0 0, black 1.1em 1.1em 0 0, black 0 1.5em 0 0, black -1.1em 1.1em 0 0, black -1.5em 0 0 0, black -1.1em -1.1em 0 0, black 0 -1.5em 0 0, black 1.1em -1.1em 0 0;
+    box-shadow: black 1.5em 0 0 0, black 1.1em 1.1em 0 0, black 0 1.5em 0 0, black -1.1em 1.1em 0 0, black -1.5em 0 0 0, black -1.1em -1.1em 0 0, black 0 -1.5em 0 0, black 1.1em -1.1em 0 0;
+  }
+
+  /* Animation */
+
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-o-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .setWidth {
+    word-wrap: break-word;
+    max-width: 80px;
+  }
+
+  .substepIcon {
+    font-size: 20px;
+    color: #215c1e;
+    cursor: pointer;
+  }
+
+  .substepIcon:hover {
+    transform: scale(1.2);
+  }
+
+
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #918b92 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #918b92;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  *::-webkit-scrollbar:horizontal {
+    background-color: #918b92;
+    width: 5px !important;
+    border: 3px solid #ffffff;
+  }
+</style>
+
+<body onload="constructPage()">
+<div id="loading" class="loading">Loading&#8230;
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-keyboard="false" data-toggle="modal"
+     data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true" data-scroll="false">
+    <div class="modal-dialog modal-xl vertically-centered" role="document">
+        <div class="modal-content" style="width:80vw !important">
+            <!-- Modal heading -->
+            <div class="mb-5 float-right">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span style="color:black !important" aria-hidden="true">
+              ×
+            </span>
+                </button>
+            </div>
+
+            <!-- Modal body with image -->
+            <div class="modal-body mt-2 text-center mb-2">
+                <img style="width:70vw !important; max-height:450px" class="modal-img-content" id="img01">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------Extra Text Modal---------------- -->
+<div class="modal" id="trimModal" tabindex="-1" role="dialog" data-keyboard="false" data-toggle="modal"
+     data-backdrop="static" aria-labelledby="exampleModalLabel2" aria-hidden="true" data-scroll="false">
+    <div class="modal-dialog modal-xl vertically-centered" role="document">
+        <div class="modal-content" style="width:80vw !important">
+            <!-- Modal heading -->
+            <div class="modal-title mt-3 text-center">
+                <h2 id="trimModaltitle"></h2>
+            </div>
+            <div class="mb-3 float-right">
+                <button type="button" class="close" data-dismiss="modal" onClick="closeModal('trimModal')" aria-label="Close">
+
+            <span style="color:black !important" aria-hidden="true">
+              ×
+            </span>
+                </button>
+            </div>
+
+
+            <!-- Modal body with image -->
+            <div class="modal-body mt-2 text-center mb-2" id="trimModalcontent">
+                <!-- <img style="width:70vw !important; max-height:450px" class="modal-img-content" id="img01"> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onClick="closeModal('trimModal')">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------Extra Text Modal---------------- -->
+
+<div class="container-fluid">
+    <!-- <div class="mt-3 text-center">
+          <div id="myModal" class="modal-img">
+       <span onClick="closeImage()" class="close" style="color:black !important">&times;</span>
+        <img class="modal-img-content" id="img01">
+           <div id="caption"></div>
+         </div>
+        <div> -->
+
+
+
+    <h4 class="my-4" id="heading">
+        <b><span id="productType"></span> AUTOMATED TEST EXECUTION REPORT</b>
+    </h4>
+    <div class="ml-5 mt-3">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item mr-1" role="presentation">
+                <button class="btn nav-link active" id="pills-overview-tab" data-toggle="pill" data-target="#pills-overview"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="showFilter('overview')">
+                    Overview
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="btn nav-link" id="pills-testcase-tab" data-toggle="pill" data-target="#pills-testcase"
+                        type="button" role="tab" aria-controls="pills-profile" aria-selected="false"
+                        onclick="showFilter('testcase')">
+                    Testcase Details
+                </button>
+            </li>
+            <li id="filters" class="nav-item ml-auto" style="float: right; display: none">
+                <!-- <button
+                              class="btn"
+                              style="
+                          background: white;
+                          border-radius: 5px !important;
+                          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                        "
+                              onclick="showFilterCards('show')"
+                      >
+                          <i class="fa fa-filter"></i> Filters
+                      </button> -->
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active overview" id="pills-overview" role="tabpanel"
+             aria-labelledby="pills-overview-tab"></div>
+        <div class="tab-pane fade" id="pills-testcase" role="tabpanel" aria-labelledby="pills-testcase-tab">
+            <div class="mt-3 ml-5 mr-1">
+                <div class="card pt-3 pb-3" id="filtercard" style="
+                    display: none;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                    border-radius: 4px !important;
+                  ">
+                    <div class="d-flex mx-4 mb-3">
+                        <span id="filterHeading" class="tableHeading">Filters</span>
+                        <span class="ml-auto"><i class="fa fa-times" style="cursor: pointer" aria-hidden="true"
+                                                 onclick="showFilterCards('close')"></i>
+              </span>
+                    </div>
+                    <div class="d-flex ml-4">
+                        <div class="">
+                            <input class="form-control search-key" type="text" id="name" placeholder="Search by Tc_name"
+                                   style="width: 270px" />
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <select class="custom-select search-key" style="width: 270px" id="status"></select>
+                        </div>
+                    </div>
+                    <div class="mx-4 mt-3">
+                        <div class="d-flex">
+                            <!-- <button class="btn" id="applyfilter" onclick="applyfilter()" style="display:block; border-radius:5px !important; color: white !important">Apply Filters</button> -->
+                            <button class="btn ml-2" id="clear" onclick="myFunction()" style="
+                          display: block;
+                          border-radius: 5px !important;
+                          color: white !important;
+                        ">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script>
+  theme = {};
+  gempypThemes = {
+    0: "rgba(2, 59, 89)",
+    1: "rgba(33, 98, 132)",
+    2: "rgba(73, 132, 163)",
+  };
+  gemsurfThemes = {
+    0: "rgba(48, 122, 100)",
+    1: "rgba(91, 170, 147)",
+    2: "rgba(143, 210, 190)",
+  };var obj = {"reportProduct":"GEMSURF","Suits_Details":{"report_type":"GemSite Automation","s_end_time":null,"status":"EXE","project_name":"GemSite","run_type":"GemSite Automation","user":"Himanshu.panchal","env":"dev","machine":"GEMGN-200141","initiated_by":"Himanshu.panchal","run_mode":"Windows 10","TestCase_Details":[{"tc_run_id":"AboutusSection_ff8b5723-5a62-41f0-8e68-b89a25003523","start_time":1694686949204,"end_time":1694687007718,"name":"AboutusSection","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9","start_time":1694689504255,"end_time":1694689568801,"name":"AboutusSection","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb","start_time":1694691156132,"end_time":1694691313023,"name":"TechnologiesNavigation","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false},{"tc_run_id":"Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe","start_time":1694691539095,"end_time":1694691553896,"name":"Technologies Options","category":"None","status":"PASS","user":"Himanshu.panchal","machine":"GEMGN-200141","ignore":false}],"Testcase_Info":{"FAIL":0,"PASS":4,"TOTAL":4},"s_run_id":"GemSite_dev_b01c2292-f064-4c7d-9887-28cc0b53e4a0","s_start_time":1694686946730},"TestStep_Details":{"AboutusSection_ff8b5723-5a62-41f0-8e68-b89a25003523":{"steps":[{"Title":"Click on About Us button","Description":"Successfully clicked on About Us button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_ff8b5723-5a62-41f0-8e68-b89a25003523/Screenshots/a7ab9e2b-91ea-4b3c-af23-102735955996.png"},{"Title":"Click on About Us button","Description":"Successfully clicked on About Us button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_ff8b5723-5a62-41f0-8e68-b89a25003523/Screenshots/480633de-a524-4752-a185-1fc51f75f4d7.png"},{"Title":"Verify if About Us page have correct details","Description":"All values are correct on About Us page","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_ff8b5723-5a62-41f0-8e68-b89a25003523/Screenshots/0bd01ad0-34eb-4631-9716-a46f035f5dcb.png"}],"metaData":[{"TESTCASE NAME":"AboutusSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694686949206,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694686949206,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694687007717,"type":"datetime"},"EXECUTION DURATION":"00h:00m:58s"},{"TOTAL":3,"PASS":3,"FAIL":0,"INFO":0}]},"AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9":{"steps":[{"Title":"Click on About Us button","Description":"Successfully clicked on About Us button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/3d9324bb-432d-4eab-ac87-0f1f429e0fdb.png"},{"Title":"Click on About Us button","Description":"Successfully clicked on About Us button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/89e3a4be-1dec-4362-93e5-d5c8676a5f33.png"},{"Title":"Extract heading from the About Us page","Description":"Successfully extracted heading from the page","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/c5838aef-37d9-4464-a97a-391d19aad9c3.png"},{"Title":"Extract Our Story content","Description":"Successfully extracted Our Story text","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/24c0639b-a8a9-4c89-835b-02d86921f58f.png"},{"Title":"Click on Meet the Team button","Description":"Clicked on Meet the Team button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/650c7f73-fe91-4408-9905-2d10d7049a4f.png"},{"Title":"Verify if Customer Focus is present on the page","Description":"Customer Focus is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/802423d4-fb2b-4f59-929d-face94a1f63c.png"},{"Title":"Verify if Agility is present on the page","Description":"Agility is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/5ab3187f-23c0-4653-99cd-6bf19fbe6ec3.png"},{"Title":"Verify if Entrepreneurial spirit is present on the page","Description":"Entrepreneurial spirit is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/264ff1ba-08d1-40f6-98fe-8c7ab754898b.png"},{"Title":"Verify if Integrity is present on the page","Description":"Integrity is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/0825bc6a-49ea-4549-ab09-b639f0d532ad.png"},{"Title":"Verify if Team Spirit is present on the page","Description":"Team Spirit is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/8e65c9da-8edc-4c77-bb85-7fde91a06e98.png"},{"Title":"Verify if Meritocracy is present on the page","Description":"Meritocracy is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/d8773c1a-a41e-441c-86c7-06b63bc97f29.png"},{"Title":"Verify if Better &amp; Faster Delivery is present on page","Description":"Better &amp; Faster Delivery is present on screen","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/ca843dc2-ea59-4ee2-8789-5f6d7ff45848.png"},{"Title":"Verify if Transparency &amp; Honesty is present on page","Description":"Transparency &amp; Honesty is present on screen","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/f9497a3c-cdb9-4f8e-9723-d76bfdfff70e.png"},{"Title":"Verify if Creative Problem Solving is present on page","Description":"Creative Problem Solving is present on screen","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/2e17471a-479a-4ca7-af9f-6034ff27997f.png"},{"Title":"Verify if Striving for Perfection is present on page","Description":"Striving for Perfection is present on screen","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/4c59a459-0427-4cb8-ab42-11f19b395b6b.png"},{"Title":"Verify if About Us page have correct details","Description":"All values are correct on About Us page","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/AboutusSection_3c747d97-31d1-4087-bb45-8d00f52a4ef9/Screenshots/ae5fb3de-ebd0-4460-9151-ff37cfe17bf9.png"}],"metaData":[{"TESTCASE NAME":"AboutusSection","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694689504256,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694689504255,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694689568799,"type":"datetime"},"EXECUTION DURATION":"00h:01m:04s"},{"TOTAL":16,"PASS":16,"FAIL":0,"INFO":0}]},"TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb":{"steps":[{"Title":"Click on Technologies button","Description":"Successfully clicked on Technologies button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/9167639a-1f06-4017-9aca-142e5a957223.png"},{"Title":"Click on Front-End button","Description":"Successfully clicked on Front-End button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/d435f7ae-a0fd-48e8-88e6-6ca7662a803b.png"},{"Title":"Verify if correct link is opened","Description":"Correct link is clicked for Front-End","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/e16933c1-ef44-479e-bf60-7681984212e8.png"},{"Title":"Click on Core Development button","Description":"Successfully clicked on Core Development button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/e63e4def-5580-43c4-8ed2-d8000e61394e.png"},{"Title":"Verify if correct link is opened","Description":"Correct link is clicked for Core Development","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/0a6b6431-d374-4f28-bec6-937a39d5965f.png"},{"Title":"Click on Databases button","Description":"Successfully clicked on Databases button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/1616cfb1-3911-4259-aed6-6ed2de9912df.png"},{"Title":"Verify if correct link is opened","Description":"Correct link is clicked for Databases","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/a0235149-632d-466e-a37e-6dc1f9b62c53.png"},{"Title":"Click on Cloud Services button","Description":"Successfully clicked on Cloud Services button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/bc1040d8-7fd3-4ad2-9fd5-31eec20ee1fa.png"},{"Title":"Verify if correct link is opened","Description":"Correct link is clicked for Cloud Services","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/6f4d4c13-cd1c-4c83-901e-dcd8fea7ba0b.png"},{"Title":"Click on BI &amp; Analytics button","Description":"Successfully clicked on BI &amp; Analytics button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/9a4fcbd1-47ed-4a87-9fad-8e79476c96c0.png"},{"Title":"Verify if correct link is opened","Description":"Correct link is clicked for BI & Analytics","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/884bb42e-117b-4367-8174-fd8099133fb3.png"},{"Title":"Click on Mobility button","Description":"Successfully clicked on Mobility button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/9d511a10-ba39-44c0-bcb5-ec857e38f460.png"},{"Title":"Verify if correct link is opened","Description":"Correct link is clicked for Mobility","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/a207e37e-74f5-4e1e-8f66-92f39bf19c87.png"},{"Title":"Verifying if user is able to move to all technology page or not","Description":"User is able to navigate to tech pages","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/TechnologiesNavigation_4f41b68a-0b9d-4aca-a563-7bf46dac80fb/Screenshots/7b4dfbb2-b5a2-4a8b-96bf-dcbe7acc3d46.png"}],"metaData":[{"TESTCASE NAME":"TechnologiesNavigation","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694691156133,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694691156133,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694691313022,"type":"datetime"},"EXECUTION DURATION":"00h:02m:36s"},{"TOTAL":14,"PASS":14,"FAIL":0,"INFO":0}]},"Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe":{"steps":[{"Title":"Click on Technology button","Description":"Successfully clicked on Technology button","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe/Screenshots/bd0f1d10-8601-4d4a-9794-39490b6a8baa.png"},{"Title":"Verify if Front-End element is present on screen","Description":"Front-End element is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe/Screenshots/5c2a4efa-bce6-4689-98f0-cce4943c12ef.png"},{"Title":"Verify if Core Development element is present on screen","Description":"Core Development element is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe/Screenshots/a6cd7c85-2f19-44bb-9a1b-af1c25578db9.png"},{"Title":"Verify if Databases element is present on screen","Description":"Databases element is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe/Screenshots/86d67e24-6703-4d10-8874-86ff37d72a80.png"},{"Title":"Verify if Cloud Services element is present on screen","Description":"Cloud Services element is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe/Screenshots/bc130641-582d-4092-8006-a24a2775fe75.png"},{"Title":"Verify if BI &amp; Analytics element is present on screen","Description":"BI &amp; Analytics element is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe/Screenshots/053f4c50-1b10-4527-b87c-60d19e7e108b.png"},{"Title":"Verify if Mobility element is present on screen","Description":"Mobility element is present","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe/Screenshots/6b80bf8d-eda2-4e89-b08f-8c2d83ccb6e0.png"},{"Title":"Verifying all type of technologies are availble","Description":"All options are available","status":"PASS","Screenshot":".//Results/14-09-2023/GemSite Automation/Technologies Options_a4d5a0bf-05d6-4f4a-8a99-265b75ad82fe/Screenshots/5cb5aab4-498e-45d1-96bd-a5ee749ea2d7.png"}],"metaData":[{"TESTCASE NAME":"Technologies Options","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1694691539096,"type":"date"}},{"EXECUTION STARTED ON":{"value":1694691539095,"type":"datetime"},"EXECUTION ENDED ON":{"value":1694691553894,"type":"datetime"},"EXECUTION DURATION":"00h:00m:14s"},{"TOTAL":8,"PASS":8,"FAIL":0,"INFO":0}]}}};console.log(obj);
+  if (obj.reportProduct === "GEMPYP") {
+    theme = gempypThemes;
+  } else if (obj.reportProduct === "GEMSURF") {
+    theme = gemsurfThemes;
+  } else {
+  }
+  obj.Suits_Details.TestCase_Details = changeFormat(
+    obj.Suits_Details.TestCase_Details
+  );
+  var excludeHeader = [
+    "TC_RUN_ID",
+    "STEPS",
+    "EXECUTION_METADATA",
+    "RESULT_FILE",
+    "IGNORE",
+  ];
+  var sortType = "";
+  var lastsortHeader = "";
+  var exeHeaders = {
+    STATUS: "status",
+    "PROJECT NAME": "project_name",
+    "REPORT TYPE": "report_type",
+    ENV: "env",
+    "START TIME": "s_start_time",
+    "END TIME": "s_end_time",
+    DURATION: "duration",
+  };
+  var infraHeaders = {
+    "EXECUTED BY": "user",
+    "EXECUTED ON": "machine",
+    RUN_TYPE: "run_type",
+    RUN_MODE: "run_mode",
+  };
+  var options = getOptions(obj.Suits_Details.TestCase_Details);
+  for (var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    $("#status").append(el);
+  }
+
+  function changeFormat(value) {
+
+    for (var j in value) {
+      var keys = Object.keys(value[j]);
+      var key, newkey, i = 0, n = keys.length;
+      var newobj = {}
+      while (i < n) {
+        key = keys[i];
+        if (key.includes('_time')) {
+          newobj[key.replace('_', " ").toUpperCase()] = value[j][key];
+        }
+        else
+        {
+          newobj[key.toUpperCase()] = value[j][key];
+        }
+        i++;
+      }
+      value[j] = newobj;
+    }
+
+    for (var i = 0; i < value.length; i++) {
+      var keys = Object.keys(value[i]);
+      for (var j = 0; j < keys.length; j++) {
+        if (typeof value[i][keys[j]] != "object") {
+          value[i][keys[j]] = {
+            value: value[i][keys[j]],
+            sortValue: value[i][keys[j]],
+          };
+        }
+      }
+    }
+    return value;
+  }
+  function constructPage() {
+
+    var infraTable = getInfraDetailsTable(obj.Suits_Details);
+    $("#pills-overview").append(infraTable);
+    var cardDetailsOverview = getCardDetails(obj.Suits_Details.Testcase_Info, 'overview');
+    var cardDetailsTestcase = getCardDetails(obj.Suits_Details.Testcase_Info, 'testcase');
+
+    $("#pills-overview").append(cardDetailsOverview);
+    $("#pills-testcase").append(cardDetailsTestcase);
+    var exeTable = getExecutionDetailsTable(obj.Suits_Details);
+    $("#pills-overview").append(exeTable);
+
+    document.getElementById("productType").innerText = obj.reportProduct;
+    $("#heading").css("color", theme[0]);
+    $("#filterHeading").css("color", theme[0]);
+    $("#filtercard").hover(
+      function () {
+        var col = "1px solid " + theme[0];
+        $(this).css("border", col);
+      },
+      function () {
+        $(this).css("border", "none");
+      }
+    );
+    $("#clear").css("background-color", theme[2]);
+    if (obj.reportProduct === "GEMPYP") {
+      $(".nav-pills").addClass("gempyp");
+    } else if (obj.reportProduct === "GEMSURF") {
+      $(".nav-pills").addClass("gemsurf");
+    } else {
+    }
+
+    var testcaseDetailsTable = getTestcaseDetailsTable(
+      obj.Suits_Details.TestCase_Details
+    );
+    $("#pills-testcase").append(testcaseDetailsTable);
+
+    $('#loading').hide();
+
+  }
+
+  function getTestcaseDetailsTable(list) {
+    var div = $("<div/>").addClass("mt-5 mx-4 container-fluid tableEx");
+    var cols = [];
+
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+          if (!excludeHeader.includes(k)) {
+            cols.push(k.toUpperCase());
+          }
+        }
+      }
+    }
+
+    if (!cols.includes("DURATION")) {
+      cols.push("DURATION");
+    }
+    if (!cols.includes("S.No.")) {
+      cols.unshift("S.NO.");
+    }
+    // Create a table element
+    var table = document.createElement("table");
+    table.id = "tab";
+    table.className =
+      "table table-borderless table-responsive d-block d-md-table";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i];
+      if((cols[i].includes('START TIME')) || (cols[i].includes('END TIME')))
+      {
+        theader.style.minWidth = "120px";
+      }
+      if(cols[i].includes('TIME'))
+      {
+        const col_id = cols[i].split(' ')
+        theader.id = col_id[0] + '_' + col_id[1] + "_tc";
+      }
+      else
+      {
+      theader.id = cols[i] + "_tc";
+      }
+
+      theader.addEventListener("click", getsort, true);
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+
+    // Adding the data to the table
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      if (list[i]["IGNORE"] !== true) {
+        trow = table.insertRow(-1);
+        trow.setAttribute("data-toggle", "collapse");
+        trow.setAttribute("data-target", "#accord" + i);
+        trow.className = "checkCollapse";
+        trow.style.background = "white";
+        for (var j = 0; j < cols.length; j++) {
+          var cell = trow.insertCell(-1);
+          cell.addEventListener("click", function () {
+            $("#tab").find("tbody").find("tr").not(".accordRow").not(".checkCollapse").not(":first").fadeIn("fast");
+          });
+
+          var att = document.createAttribute("data-input");
+
+          if (cols[j].includes("_")) {
+            var v = cols[j].replace("_", " ");
+            att.value = v;
+          } else {
+            att.value = cols[j];
+          }
+          cell.setAttributeNode(att);
+          if (cols[j] === "STATUS") {
+            // cell.innerHTML = list[i][cols[j]];
+            var link = document.createElement("div");
+            link.className = "btn-sm";
+            cell.setAttribute("class", "status");
+            link.innerHTML = list[i][cols[j]]["value"];
+            cell.appendChild(link);
+            if (list[i][cols[j]]["value"] === "PASS") {
+              link.className = "statusColorPass";
+            } else if (list[i][cols[j]]["value"] === "FAIL") {
+              link.className = "statusColorFail";
+            } else if (list[i][cols[j]]["value"] === "INFO") {
+              link.className = "statusColorInfo";
+            } else if (list[i][cols[j]]["value"] === "WARN") {
+              link.className = "statusColorWarn";
+            } else if (list[i][cols[j]]["value"] === "INCOMPLETE") {
+              link.className = "statusColorIncomplete";
+            } else {
+              link.className = "statusColorOthers";
+            }
+            // link.style.width='fit-content';
+          } else if ((cols[j].includes("START TIME")) || (cols[j].includes("END TIME"))) {
+            cell.innerHTML = changeTime(list[i][cols[j]]["value"]);
+          } else if (cols[j].includes("S.NO.")) {
+            cell.innerHTML = changeSerial(i)["value"];
+            // cell.style.maxWidth ="20px !important";
+          } else if (cols[j].includes("DURATION")) {
+            cell.innerHTML = getDuration(
+              list[i]["START TIME"]["value"],
+              list[i]["END TIME"]["value"],
+              i
+            )["value"];
+          }
+          else if (cols[j].includes("LOG_FILE")) {
+            if (!list[i][cols[j]]) {
+              cell.innerHTML = "None";
+            }
+            else {
+              var link = document.createElement("a");
+              if(list[i][cols[j]]["value"])
+              {
+                link.href = list[i][cols[j]]["value"];
+              }
+              else {
+                link.href = list[i][cols[j].toLowerCase()]["value"];
+              }
+              // link.href = list[i][cols[j].toLowerCase()]["value"];
+              // link.href = list[i][cols[j]]["value"];
+              link.target = "_blank";
+              link.innerHTML = "View";
+              link.addEventListener("click", function (e) {
+                e.stopImmediatePropagation();
+              });
+              cell.appendChild(link);
+            }
+          }
+          else if (cols[j].toUpperCase().includes("NAME")) {
+            cell.setAttribute("class", "testfilt");
+            cell.innerHTML = list[i][cols[j]]["value"];
+          }
+          else {
+            if (!list[i][cols[j]]) {
+              cell.innerHTML = "None";
+            } else {
+              cell.innerHTML = list[i][cols[j]]["value"];
+            }
+          }
+        }
+      }
+      trowAccor = table.insertRow(-1);
+      tcellAccord = trowAccor.insertCell(-1);
+      tcellAccord.className = "hiddenRow";
+      tcellAccord.setAttribute("colspan", cols.length);
+
+
+
+
+      var accordDiv = document.createElement("div");
+      accordDiv.className = "accordion-body collapse";
+      accordDiv.id = "accord" + i;
+      accordDiv.setAttribute("data-parent", "#tab");
+      var accordHeading = $("<div/>")
+        .html("Test Step Report")
+        .addClass("mb-2 accordHeading mt-4 text-center")
+        .css("color", theme[0]);
+      accordDiv.append(accordHeading[0]);
+      var stepCard = createAccordionCards(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].metaData[2],
+        i
+      );
+      stepCard.addClass("mt-4");
+      accordDiv.append(stepCard[0]);
+      var stepDetails = createAccordionMetaDetails(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].metaData
+      );
+      accordDiv.append(stepDetails[0]);
+      var tableAccord = createAccordionTable(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].steps,
+        i
+      );
+      accordDiv.append(tableAccord[0]);
+      // tcellAccord.append(imgmodaldiv);
+      tcellAccord.append(accordDiv);
+    }
+
+    div.append(table);
+    return div;
+  }
+  function createAccordionTable(list, index) {
+    var div = $("<div/>").addClass("mt-5 mx-5 mb-2");
+
+    var cols = [];
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+          if (!excludeHeader.includes(k)) {
+            cols.push(k);
+          }
+        }
+      }
+    }
+    if (!cols.includes("S.No.")) {
+      cols.unshift("S.NO.");
+    }
+
+    var table = document.createElement("table");
+    table.id = "tabAccord" + index;
+    table.className =
+      "table table-borderless table-responsive d-block d-md-table w-100";
+    //  table.style.width="100%";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i].toUpperCase();
+      theader.id = cols[i] + "_tcaccord";
+      if (cols[i] === "STATUS" || cols[i] === "status") {
+        theader.style.width = "130px";
+      }
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      trow = table.insertRow(-1);
+      trow.className = "accordRow";
+      trow.style.backgroundColor = "#FFFFFF";
+      for (var j = 0; j < cols.length; j++) {
+        var cell = trow.insertCell(-1);
+        cell.setAttribute("class", "align-middle setWidth");
+
+        var att = document.createAttribute("data-input");
+
+        if (cols[j].includes(" ")) {
+          var v = cols[j].replace(" ", "_");
+          att.value = v;
+        } else {
+          att.value = cols[j];
+        }
+        cell.setAttributeNode(att);
+        if (cols[j].toLowerCase() === "substeps") {
+          cell.style.width = "20px";
+          cell.style.verticalAlign = "middle";
+          cell.setAttribute("class", "text-center");
+          if (list[i][cols[j]]) {
+            var divIcon = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.id = i;
+            icon.setAttribute("title", "View Substeps");
+            icon.setAttribute("class", "fa fa-eye substepIcon");
+            var index = i;
+            console.log(list[index]);
+            console.log(cols[j]);
+            divIcon.addEventListener("click", (event) => {
+              console.log(list);
+              createSubsteps(list, event);
+
+              trimModal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+            });
+            divIcon.appendChild(icon);
+            cell.appendChild(divIcon);
+
+          }
+          else {
+            cell.innerHTML = "-";
+
+          }
+        }
+        else if (cols[j] && cols[j].toLowerCase() === 'screenshot') {
+          if (list[i][cols[j]] !== "N/A") {
+            var image = document.createElement("img");
+			var temp=list[i][cols[j]].split("/");
+			var relativePath=temp[temp.length-3]+"/"+temp[temp.length-2]+"/"+temp[temp.length-1];
+            image.setAttribute('src', relativePath);
+            image.setAttribute('class', "thumb");
+            image.setAttribute('image', "Screenshot");
+            image.addEventListener("click", function () {
+              var modal = document.getElementById("myModal");
+
+              // Get the image and insert it inside the modal - use its "alt" text as a caption
+              var img = document.getElementById("myImg");
+              var modalImg = document.getElementById("img01");
+              var captionText = document.getElementById("caption");
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            });
+
+            image.setAttribute('data-toggle', 'modal');
+            image.setAttribute('data-target', '#myModal');
+            // modal.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            image.setAttribute('id', "myImg");
+            cell.appendChild(image);
+
+          } else {
+            var divHandle = document.createElement("div");
+			divHandle.innerHTML="N/A";
+            // divHandle.setAttribute('class','text-center');
+            // divHandle.innerHTML="(blank)";
+            cell.appendChild(divHandle);
+          }
+        }
+        else if (list[i][cols[j]] && typeof list[i][cols[j]] === "object") {
+          var a = document.createElement("a");
+          a.href = list[i][cols[j]]["href"];
+          a.target = "_blank";
+          a.innerHTML = list[i][cols[j]]["LinkName"];
+          cell.appendChild(a);
+        } else if (cols[j] === "STATUS" || cols[j] === "status") {
+          var cont = document.createElement("div");
+
+          if (list[i][cols[j]] === "PASS") {
+            cont.className = "statusColorPass statusAccord ";
+          } else if (list[i][cols[j]] === "FAIL") {
+            cont.className = "statusColorFail statusAccord";
+          } else if (list[i][cols[j]] === "INFO") {
+            cont.className = "statusColorInfo statusAccord";
+          } else if (list[i][cols[j]] === "WARN") {
+            cont.className = "statusColorWarn statusAccord";
+          } else if (list[i][cols[j]] === "INCOMPLETE") {
+            cont.className = "statusColorIncomplete statusAccord";
+          } else {
+            cont.className = "statusColorOthers statusAccord";
+          }
+          cont.innerText = list[i][cols[j]];
+          cell.appendChild(cont);
+        } else if (cols[j] === "TIME" || cols[j] === "time") {
+          cell.innerHTML = convertIntoDateTime(list[i][cols[j]]);
+        } else if (cols[j] === "S.NO.") {
+          cell.innerHTML = i + 1;
+          cell.style.width = "20px";
+
+        } else {
+          if (list[i][cols[j]] === undefined) {
+            list[i][cols[j]] = "-";
+          }
+          cell.append(getTrimData(list[i][cols[j]], cols[j]));
+        }
+      }
+    }
+    div.append(table);
+    return div;
+  }
+
+  function getExecutionDetailsTable(data) {
+    var div = $("<div/>").addClass(" mx-5 mt-5");
+    var exeHeading = $("<span/>")
+      .html("Execution Details")
+      .addClass("tableHeading mb-2")
+      .css("color", theme[0]);
+    $(div).append(exeHeading);
+    var table = $("<table/>")
+      .addClass(
+        "table table-borderless table-responsive w-100 d-block d-md-table"
+      )
+      .css("box-shadow", " 0px 3px 6px rgba(0, 71, 136, 0.05)")
+      .css("border-radius", "4px");
+    var cols = Headers(exeHeaders);
+    var headers = $("<tr>");
+    var content = $("<tr/>");
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[cols[colIndex]];
+      var backOpacity = theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      headers
+        .append($("<th/>").html(cols[colIndex]))
+        .css("color", "black")
+        .css("background-color", backOpacity);
+
+      $(table).append(headers);
+    }
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[exeHeaders[cols[colIndex]]];
+
+      if (cols[colIndex].toUpperCase().includes("STATUS")) {
+        val = document.createElement("div");
+        val.innerText = data[exeHeaders[cols[colIndex]]];
+        if (data[exeHeaders[cols[colIndex]]] === "PASS") {
+          val.className = "statusColorPass";
+        } else if (data[exeHeaders[cols[colIndex]]] === "FAIL") {
+          val.className = "statusColorFail";
+        } else if (data[exeHeaders[cols[colIndex]]] === "INFO") {
+          val.className = "statusColorInfo";
+        } else if (data[exeHeaders[cols[colIndex]]] === "WARN") {
+          val.className = "statusColorWarn";
+        } else if (data[exeHeaders[cols[colIndex]]] === "INCOMPLETE") {
+          val.className = "statusColorIncomplete";
+        } else {
+          val.className = "statusColorOthers";
+        }
+      }
+      else if((cols[colIndex].toUpperCase().includes("START TIME"))){
+        val = changeTime(data[exeHeaders[cols[colIndex]]]);
+      }
+
+      else if ((cols[colIndex].toUpperCase().includes("END TIME"))) {
+        if(data[exeHeaders[cols[0]]] === "EXE"){
+        val = "-------------";
+        }
+        else{
+          val=changeTime(data[exeHeaders[cols[colIndex]]]);
+        }
+      }
+
+      else if (cols[colIndex].toUpperCase().includes("DURATION")) {
+        if(data[exeHeaders[cols[0]]] === "EXE"){
+        val = "-------------";
+        }
+        else{
+        val = getDuration(
+          data[exeHeaders["START TIME"]],
+          data[exeHeaders["END TIME"]],
+          colIndex + "_col"
+        )["value"];
+        }
+      }
+      else if (val === undefined) {
+        val = "None";
+      }
+
+
+
+
+      content.append($("<td/>").html(val).css("background-color", "white"));
+
+      $(table).append(content);
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function createAccordionMetaDetails(data) {
+    var div = $("<div/>")
+      .addClass("mt-4 mx-5 card p-3")
+      .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+      .css("border-radius", "6px")
+      .css("display", "block")
+      .hover(
+        function () {
+          var col = "1px solid " + theme[0];
+          $(this).css("border", col).css("cursor", "pointer");
+        },
+        function () {
+          $(this).css("border", "none");
+        }
+      );
+    var table = $("<table/>").addClass(
+      "table table-borderless table-responsive w-100 d-block d-md-table"
+    );
+    for (var m = 0; m < data.length - 1; m++) {
+      var headers = $("<tr>");
+      headers.addClass("accordRow");
+      var content = $("<tr/>");
+      content.addClass("accordRow");
+      var cols = Headers(data[m]);
+      for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+        var val = data[m][cols[colIndex]];
+
+        headers
+          .append($("<th/>").html(cols[colIndex]))
+          .css("color", theme[0])
+          .css("max-width", "3px");
+
+        $(table).append(headers);
+      }
+
+      for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+        var val = data[m][cols[colIndex]];
+        if (val === undefined) {
+          val = "None";
+        }
+        if (val.type) {
+          content.append($("<td/>").html(changeDate(val)));
+        } else {
+          content.append($("<td/>").html(val));
+        }
+        $(table).append(content);
+      }
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function getInfraDetailsTable(data) {
+    var div = $("<div/>")
+      .addClass("mt-4 mx-5 card p-3")
+      .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+      .css("border-radius", "6px")
+      .css("display", "block")
+      .hover(
+        function () {
+          var col = "1px solid " + theme[0];
+          $(this).css("border", col).css("cursor", "pointer");
+        },
+        function () {
+          $(this).css("border", "none");
+        }
+      );
+
+    var infraHeading = $("<span/>")
+      .html("Infra Details")
+      .addClass("tableHeading mb-2 ml-2");
+    infraHeading.css("color", theme[0]);
+    $(div).append(infraHeading);
+    var table = $("<table/>").addClass(
+      "table table-borderless table-responsive w-100 d-block d-md-table"
+    );
+    var cols = Headers(infraHeaders);
+    var headers = $("<tr>");
+    var content = $("<tr/>");
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[cols[colIndex]];
+
+      headers.append($("<th/>").html(cols[colIndex])).css("color", theme[0]);
+
+      $(table).append(headers);
+    }
+
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[infraHeaders[cols[colIndex]]];
+      if (val === undefined) {
+        val = "None";
+      }
+
+      content.append($("<td/>").html(val));
+
+      $(table).append(content);
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function createAccordionCards(val, index) {
+    var key, keys = Object.keys(val);
+    var n = keys.length;
+    var newobj = {}
+    while (n--) {
+      key = keys[n];
+      newobj[key.toUpperCase()] = val[key];
+    }
+    val = newobj;
+    var cards = Object.keys(val);
+    var dummy_card = new Set();
+    dummy_card.add("TOTAL");
+    dummy_card.add("PASS");
+    dummy_card.add("FAIL");
+    cards.forEach((ele) => {
+      dummy_card.add(ele.toUpperCase());
+    });
+    cards = Array.from(dummy_card);
+
+    var div = $("<div/>").addClass("mx-4 mt-4");
+    var flex = $("<div/>").addClass("d-flex flex-wrap justify-content-start");
+    for (var i = 0; i < cards.length; i++) {
+      var card = $("<div/>")
+        .addClass("card mx-4 mt-2")
+        .css("height", "92px")
+        .css("width", "170px")
+        .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+        .css("border-radius", "6px")
+        .hover(
+          function () {
+            var col = "1px solid " + theme[0];
+
+            $(this).css("border", col).css("cursor", "pointer");
+
+          },
+          function () {
+            $(this).css("border", "1px solid rgba(0,0,0,.125)");
+          }
+        );
+
+      var cardBody = $("<div/>")
+        .addClass("card-body")
+        .css("align-self", "flex-start");
+      var cardTitle = $("<span/>")
+        .addClass("title-card")
+        .css("color", theme[0]);
+      // if(data[cards[i]]){
+      cardTitle.html(cards[i]);
+      //         }else{
+      // cardTitle.html(0);
+      //         }
+      var cardText = $("<span/>").addClass("text-card");
+      if (val[cards[i]]) {
+
+        card.attr("title", "Click to Filter");
+
+
+        cardText.html(val[cards[i]]);
+      } else {
+
+        card.css("background-color", "#EEEEEE");
+        card.hover(function () {
+          $(this).css('cursor', 'not-allowed');
+        });
+        cardText.html(0);
+      }
+      if (cards[i] === "PASS") {
+        cardText.addClass("passTest");
+      } else if (cards[i] === "FAIL") {
+        cardText.addClass("failTest");
+      } else if (cards[i] === "WARN") {
+        cardText.addClass("warnTest");
+      } else if (cards[i] === "INFO") {
+        cardText.addClass("infoTest");
+      } else if (cards[i] === "INCOMPLETE") {
+        cardText.addClass("incompleteTest");
+      } else if (cards[i] === "TOTAL") {
+        cardText.css("color", theme[0]);
+      } else {
+        cardText.addClass("othersTest");
+      }
+      cardBody.append(cardTitle).append("<br/>").append(cardText);
+      card.append(cardBody);
+
+      flex.append(card);
+      card.click(function (event) {
+        filterTable(
+          event.currentTarget.firstChild.firstChild.innerText,
+          index,
+          event.currentTarget.firstChild.lastChild.innerText
+        );
+      });
+    }
+
+    div.append(flex);
+    return div;
+  }
+  function filterTable(val, index, check) {
+    if (check > 0) {
+      var $filterableRows = $("#tabAccord" + index)
+        .find("tbody")
+        .find("tr")
+        .not(":first");
+      $filterableRows
+        .hide()
+        .filter(function () {
+          return (
+            $(this).filter(function () {
+              var tdText = $(this).find(".statusAccord").text().toLowerCase();
+
+              if (val === "TOTAL") {
+                val = "";
+              }
+              if (val === undefined) {
+                val = "";
+              } else {
+                val = val.toLowerCase();
+              }
+
+              return tdText.includes(val);
+            }).length === $(this).length
+          );
+        })
+        .show();
+    }
+  }
+
+  function getCardDetails(data, type) {
+    var key, keys = Object.keys(data);
+    var n = keys.length;
+    var newobj = {}
+    while (n--) {
+      key = keys[n];
+      newobj[key.toUpperCase()] = data[key];
+    }
+    data = newobj;
+    var cards = Object.keys(data);
+    var dummy_card = new Set();
+    dummy_card.add("TOTAL");
+    dummy_card.add("PASS");
+    dummy_card.add("FAIL");
+    cards.forEach((ele) => {
+      dummy_card.add(ele.toUpperCase());
+    });
+    cards = Array.from(dummy_card);
+
+    var cardValues = Object.values(data);
+    var div = $("<div/>").addClass("col-12 mx-2 mt-4");
+    var flex = $("<div/>").addClass("d-flex flex-wrap justify-content-start");
+    for (var i = 0; i < cards.length; i++) {
+      var card = $("<div/>")
+        .addClass("card mx-4 mt-2")
+        .css("height", "92px")
+        .css("width", "170px")
+        .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+        .css("border-radius", "6px")
+        .hover(
+          function () {
+            var col = "1px solid " + theme[0];
+            $(this).css("border", col);
+            if (type === 'testcase') {
+              $(this).css("cursor", "pointer");
+            }
+          },
+          function () {
+
+            $(this).css("border", "1px solid rgba(0,0,0,.125)");
+
+          }
+        );
+
+      var cardBody = $("<div/>").addClass("card-body");
+      var cardTitle = $("<span/>")
+        .addClass("title-card")
+        .css("color", theme[0]);
+      // if(data[cards[i]]){
+      cardTitle.html(cards[i]);
+      //         }else{
+      // cardTitle.html(0);
+      //         }
+      var cardText = $("<span/>").addClass("text-card");
+      if (data[cards[i]]) {
+        if (type === 'testcase') {
+          card.attr("title", "Click to Filter");
+        }
+        cardText.html(data[cards[i]]);
+      } else {
+        if (type === 'testcase') {
+          card.css("background-color", "#EEEEEE");
+          card.hover(function () {
+            $(this).css('cursor', 'not-allowed');
+          });
+        }
+        cardText.html(0);
+      }
+      if (cards[i] === "PASS") {
+        cardText.addClass("passTest");
+      } else if (cards[i] === "FAIL") {
+        cardText.addClass("failTest");
+      } else if (cards[i] === "WARN") {
+        cardText.addClass("warnTest");
+      } else if (cards[i] === "INFO") {
+        cardText.addClass("infoTest");
+      } else if (cards[i] === "INCOMPLETE") {
+        cardText.addClass("incompleteTest");
+      } else if (cards[i] === "TOTAL") {
+        cardText.css("color", theme[0]);
+      } else {
+        cardText.addClass("othersTest");
+      }
+      cardBody.append(cardTitle).append("<br/>").append(cardText);
+      card.append(cardBody);
+      if (type === 'testcase') {
+        card.attr("data-toggle", "tooltip");
+        card.attr("data-placement", "bottom");
+
+        card.click(function (event) {
+
+          $("#tab").find("tbody").find("tr").not(".accordRow").not(".checkCollapse").not(":first").fadeOut("fast");
+
+          statusSearch(event.currentTarget.firstChild.firstChild.innerText, event.currentTarget.firstChild.lastChild.innerText);
+        });
+      }
+      flex.append(card);
+    }
+    div.append(flex);
+    return div;
+  }
+
+  function changeSerial(val) {
+    var serialobj = {
+      value: val + 1,
+      sortValue: val + 1,
+    };
+    return serialobj;
+  }
+
+  function changeTime(val) {
+    var data = new Date(val);
+    var abbrTZ = data.toString().match(/\(([A-Za-z\s].*)\)/)[1].split(' ').map(function (item) { return item[0] }).join('');
+    return data.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' }) + " " + data.toLocaleTimeString() + " (" + abbrTZ + ")";
+
+  }
+
+  function getDuration(start, end, index) {
+    var startTime = new Date(start).getTime();
+    var endTime = new Date(end).getTime();
+    var dur = (endTime - startTime) / 1000;
+    var objans = {
+      value: ans,
+      sortValue: dur,
+    };
+    if (dur < 60) {
+      objans.value = dur + " sec(s)";
+    } else if (dur >= 60 && dur < 3600) {
+      var ans = Math.floor(dur / 60) + " min ";
+      if (Math.floor(dur % 60) !== 0) {
+        ans = ans + Math.floor(dur % 60) + " sec(s)";
+      }
+      objans.value = ans;
+    } else if (dur >= 60 && dur < 86400) {
+      var ans = Math.floor(dur / 3600) + " hour ";
+      if (Math.floor((dur % 3600) / 60) !== 0) {
+        ans = ans + Math.floor((dur % 3600) / 60) + " min";
+      }
+      if (Math.floor((dur % 3600) % 60) !== 0) {
+        ans = ans + Math.floor((dur % 3600) % 60) + " sec(s)";
+      }
+
+      objans.value = ans;
+    }
+    if (!isNaN(index)) {
+      obj.Suits_Details.TestCase_Details[index]["DURATION"] = objans;
+    }
+    return objans;
+  }
+
+  function getOptions(val) {
+    var options = new Set();
+    options.add("All");
+    for (var i = 0; i < val.length; i++) {
+      options.add(val[i]["STATUS"]["value"]);
+    }
+    return Array.from(options);
+  }
+
+  function getsort(val) {
+    if (
+      val.target.className === "fa fa-angle-up ml-1" ||
+      val.target.className === "fa fa-angle-down ml-1"
+    ) {
+      if (lastsortHeader === "") {
+        lastsortHeader = val.target.id;
+        sortType = "asc";
+      } else if (val.target.id === lastsortHeader) {
+        if (sortType === "asc") {
+          sortType = "desc";
+        } else {
+          sortType = "asc";
+        }
+        lastsortHeader = val.target.id;
+      } else {
+        sortType = "asc";
+        lastsortHeader = val.target.id;
+      }
+      var tab = [...obj.Suits_Details.TestCase_Details];
+      if (sortType === "asc") {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.id]["sortValue"] >
+              tab[j][val.target.id]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.id]["sortValue"] <
+              tab[j][val.target.id]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      }
+      obj.Suits_Details.TestCase_Details = tab;
+      $("#pills-testcase").children("div")[2].remove();
+      var testcaseDetailsTable = getTestcaseDetailsTable(tab);
+      $("#pills-testcase").append(testcaseDetailsTable);
+      myFunction();
+      var icon = $("<i/>").addClass("fa").css("font-size", "18px");
+      if (sortType === "asc") {
+        icon.addClass("fa-angle-up ml-1").css("vertical-align", "middle");
+      }
+      if (sortType === "desc") {
+        icon.addClass("fa-angle-down ml-1").css("vertical-align", "middle");
+      }
+      icon.attr("id", lastsortHeader);
+      if(lastsortHeader.includes('TIME'))
+      {
+        const arrid = lastsortHeader.split(' ');
+        var targetId = "#" + arrid[0] + "_" + arrid[1] + "_tc";
+        $(targetId).append(icon);
+
+      }
+      else
+      {
+      // icon.addEventListener("click",(e)=>{
+      // e.stopPropagation();
+      // });
+      var targetId = "#" + lastsortHeader + "_tc";
+      $(targetId).append(icon);
+      }
+
+      var $filterableRows = $("#tab").find("tbody").find("tr").not(":first");
+    }
+
+
+    else {
+      if (lastsortHeader === "") {
+        lastsortHeader = val.target.innerText;
+        sortType = "asc";
+      } else if (val.target.innerText === lastsortHeader) {
+        if (sortType === "asc") {
+          sortType = "desc";
+        } else {
+          sortType = "asc";
+        }
+        lastsortHeader = val.target.innerText;
+      } else {
+        sortType = "asc";
+        lastsortHeader = val.target.innerText;
+      }
+      var tab = [...obj.Suits_Details.TestCase_Details];
+      tab = changeFormat(tab);
+      if (sortType === "asc") {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.innerText]["sortValue"] >
+              tab[j][val.target.innerText]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.innerText]["sortValue"] <
+              tab[j][val.target.innerText]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      }
+      obj.Suits_Details.TestCase_Details = tab;
+      $("#pills-testcase").children("div")[2].remove();
+      var testcaseDetailsTable = getTestcaseDetailsTable(tab);
+      $("#pills-testcase").append(testcaseDetailsTable);
+      myFunction();
+
+      var icon = $("<i/>").addClass("fa").css("font-size", "18px");
+      if (sortType === "asc") {
+        icon.addClass("fa-angle-up ml-1").css("vertical-align", "middle");
+      }
+      if (sortType === "desc") {
+        icon.addClass("fa-angle-down ml-1").css("vertical-align", "middle");
+      }
+
+      icon.attr("id", lastsortHeader);
+      if(lastsortHeader.includes('TIME'))
+      {
+        const arrid = lastsortHeader.split(' ');
+        var targetId = "#" + arrid[0] + "_" + arrid[1] + "_tc";
+        $(targetId).append(icon);
+
+      }
+      else
+      {
+      // icon.addEventListener("click",(e)=>{
+      // e.stopPropagation();
+      // });
+      var targetId = "#" + lastsortHeader + "_tc";
+      $(targetId).append(icon);
+      }
+
+      var $filterableRows = $("#tab").find("tbody").find("tr").not(":first");
+    }
+  }
+
+  function clickFunc(event) {
+    event.stopPropagation();
+  }
+  function Headers(list) {
+    var columns = [];
+    row = list;
+    for (var k in row) {
+      if ($.inArray(k, columns) == -1) {
+        columns.push(k);
+      }
+    }
+    return columns;
+  }
+
+
+  function showFilterCards(val) {
+    if (val === "show") {
+      $("#filtercard").css("display", "block");
+    } else {
+      $("#filtercard").css("display", "none");
+    }
+  }
+
+  function showFilter(val) {
+    if (val !== "overview") {
+      $("#filters").css("display", "block");
+    } else {
+      $("#filters").css("display", "none");
+    }
+  }
+
+  function myFunction() {
+    var inputs = $(".search-key");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].id === "status") {
+        inputs[i].value = "All";
+      } else {
+        inputs[i].value = "";
+      }
+    }
+
+    var $filterableRows = $("#tab tbody tr");
+    $filterableRows.show();
+  }
+
+  function openDialog() {
+    $("a[name=Test]").on("click", function (e) {
+      e.preventDefault();
+      $("#modal").load(this.href).dialog({ modal: true });
+    });
+  }
+
+  function changeDate(val) {
+    var temp = val.type.toLowerCase();
+    var d = new Date(val.value);
+    if (temp === "date") {
+      return d.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' });
+    } else if (temp === "time") {
+      return d.toLocaleTimeString();
+    } else if (temp === "datetime") {
+      return d.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+    }
+  }
+
+  function convertIntoDateTime(value) {
+    var date = new Date(value);
+    return date.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+  }
+  function closeModal(id) {
+    var modal = document.getElementById(id);
+    document.getElementById("trimModalcontent").innerHTML = "";
+    document.getElementById("trimModaltitle").innerHTML = "";
+    modal.style.display = "none";
+
+  }
+  function getTrimData(data, column) {
+    var div = document.createElement("div");
+    var span = document.createElement("span");
+    var button = document.createElement("button");
+    button.innerHTML = "See More";
+    button.addEventListener("click", function () {
+      var trimModal = document.getElementById("trimModal");
+      trimModal.style.display = "block";
+      var trimModalcontent = document.getElementById("trimModalcontent");
+      trimModalcontent.innerHTML = data;
+      var trimModaltitle = document.getElementById("trimModaltitle");
+      trimModaltitle.innerHTML = column.toUpperCase();
+      trimModal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
+    });
+    button.setAttribute("class", "ml-2 btn btn-link");
+    if (data && data.length > 150) {
+      span.innerHTML = data.slice(0, 150) + "...";
+      span.appendChild(button);
+    } else {
+      span.innerHTML = data;
+    }
+    div.appendChild(span);
+
+    return div;
+  }
+
+
+
+  function createSubsteps(val, event) {
+    var modal = document.getElementById("trimModal");
+    modal.style.display = "block";
+    var trimModaltitle = document.getElementById("trimModaltitle");
+    trimModaltitle.innerHTML = "SUBSTEPS";
+    var trimModalcontent = document.getElementById("trimModalcontent");
+    var list = val[parseInt(event.target.id)]['subSteps'];
+    var cols = [];
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+
+          cols.push(k);
+        }
+      }
+    }
+
+
+
+    var table = document.createElement("table");
+    table.className =
+      "table table-borderless d-block d-md-table text-center";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i];
+
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+
+
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      trow = table.insertRow(-1);
+
+      trow.style.backgroundColor = "#FFFFFF";
+      for (var j = 0; j < cols.length; j++) {
+        var cell = trow.insertCell(-1);
+        cell.setAttribute("class", "align-middle setWidth");
+        if (cols[j] === "status") {
+          // cell.innerHTML = list[i][cols[j]];
+          var link = document.createElement("div");
+          link.className = "btn-sm";
+          link.innerHTML = list[i][cols[j]];
+          cell.appendChild(link);
+          if (list[i][cols[j]] === "PASS") {
+            link.className = "statusColorPass";
+          } else if (list[i][cols[j]] === "FAIL") {
+            link.className = "statusColorFail";
+          } else if (list[i][cols[j]] === "INFO") {
+            link.className = "statusColorInfo";
+          } else if (list[i][cols[j]] === "WARN") {
+            link.className = "statusColorWarn";
+          } else if (list[i][cols[j]] === "INCOMPLETE") {
+            link.className = "statusColorIncomplete";
+          } else {
+            link.className = "statusColorOthers";
+          }
+        } else {
+          cell.innerHTML = list[i][cols[j]];
+        }
+      }
+    }
+
+    trimModalcontent.append(table);
+    console.log(cols);
+  }
+
+
+  function statusSearch(val, count) {
+    if (count > 0) {
+      var $filterableRows = $("#tab")
+        .find("tbody")
+        .find(".checkCollapse")
+
+      $filterableRows
+        .hide()
+        .filter(function () {
+          return (
+            $(this).filter(function () {
+              var tdText = $(this).find(".status").text().toLowerCase();
+              console.log(tdText);
+
+
+              if (val === "TOTAL") {
+                val = "";
+              }
+              if (val === undefined) {
+                val = "";
+              } else {
+                val = val.toLowerCase();
+              }
+
+              return tdText.includes(val);
+            }).length === $(this).length
+          );
+        })
+        .show();
+    }
+  }
+
+</script>
+
+</html>

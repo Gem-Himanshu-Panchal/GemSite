@@ -78,10 +78,10 @@
 	"DataEngineeringOptions":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{Value}' />",
 	
 	"ContactUsLocations": "<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' />",
-	"teamsProfilePicture":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='teamGroups_image___9EDL teamGroups_imgZoom__bOEzA' parentclass='teamGroups_imageWrapper__D1Ne9' idx='{numb}' />
-"
+	"teamsProfilePicture":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='teamGroups_image___9EDL teamGroups_imgZoom__bOEzA' parentclass='teamGroups_imageWrapper__D1Ne9' idx='{numb}' />",
+	"perksAndBefefits":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl parentid='benefit' tag='H1' aaname='{value}' />",
 	
-	
+	"navbar":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' idx='1' />"
 
 
 }

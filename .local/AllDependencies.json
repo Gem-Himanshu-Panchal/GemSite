@@ -107,7 +107,7 @@
           }
         }
       },
-      "GemEcosystem.GemSURF.Activities/0.1.0": {
+      "GemEcosystem.GemSURF.Activities/0.1.0.912074607": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {
@@ -5476,7 +5476,7 @@
           }
         }
       },
-      "GemEcosystem.GemSURF.Activities/0.1.0": {
+      "GemEcosystem.GemSURF.Activities/0.1.0.912074607": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {
@@ -10716,13 +10716,13 @@
         "lib/netstandard2.0/ExcelNumberFormat.xml"
       ]
     },
-    "GemEcosystem.GemSURF.Activities/0.1.0": {
-      "sha512": "eWSWoTovV7Mv8u3140cZ7ctEyVGjWPnj3V88DRftrurQnlqMto/48LCpzlSiSeXl8bjeAR8VrWW37BCKqhwD8g==",
+    "GemEcosystem.GemSURF.Activities/0.1.0.912074607": {
+      "sha512": "3FfNMMWfx6+bsr80cWmN/cURMxv+ezpzAxmKOjzdjy76sCQaLZn+vKkMsEEaOzQs+sFiGTIfl4U2hr3RzU02Rg==",
       "type": "package",
-      "path": "gemecosystem.gemsurf.activities/0.1.0",
+      "path": "gemecosystem.gemsurf.activities/0.1.0.912074607",
       "files": [
         ".nupkg.metadata",
-        "gemecosystem.gemsurf.activities.0.1.0.nupkg.sha512",
+        "gemecosystem.gemsurf.activities.0.1.0.912074607.nupkg.sha512",
         "gemecosystem.gemsurf.activities.nuspec",
         "lib/net6.0-windows7.0/GemEcosystem.GemSURF.Activities.Design.dll",
         "lib/net6.0-windows7.0/GemEcosystem.GemSURF.Activities.Design.xml",
@@ -21146,7 +21146,7 @@
   "projectFileDependencyGroups": {
     "": [],
     "net6.0-windows7.0": [
-      "GemEcosystem.GemSURF.Activities >= 0.1.0 <= 0.1.0",
+      "GemEcosystem.GemSURF.Activities >= 0.1.0.912074607 <= 0.1.0.912074607",
       "UiPath.Excel.Activities >= 2.16.0 <= 2.16.0",
       "UiPath.Mail.Activities >= 1.18.1 <= 1.18.1",
       "UiPath.System.Activities >= 23.6.0-preview <= 23.6.0-preview",
@@ -21155,15 +21155,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\": {}
+    "C:\\Users\\himanshu.panchal\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "GemSite",
       "projectName": "GemSite",
-      "projectPath": "C:\\Users\\Ramesh Kumar\\Desktop\\GemSite\\GemSite\\.local",
-      "packagesPath": "C:\\Users\\Ramesh Kumar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ramesh Kumar\\Desktop\\GemSite\\GemSite\\.local"
+      "projectPath": "C:\\Users\\himanshu.panchal\\Desktop\\GemSite (GemSurf)\\GemSite (GemSuf)\\.local",
+      "packagesPath": "C:\\Users\\himanshu.panchal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\himanshu.panchal\\Desktop\\GemSite (GemSurf)\\GemSite (GemSuf)\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -21171,7 +21171,7 @@
           "GemEcosystem.GemSURF.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[0.1.0, 0.1.0]"
+            "version": "[0.1.0.912074607, 0.1.0.912074607]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
@@ -21199,7 +21199,7 @@
             "version": "[22.10.3, 22.10.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Ramesh Kumar\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\himanshu.panchal\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
